@@ -30,12 +30,13 @@ bool ComportamientoJugador::pathFinding(const estado &origen, const estado &dest
 }
 
 Action ComportamientoJugador::think(Sensores sensores) {
-  if (plan.empty()) {
+  /*if (plan.empty()) {
     pathFinding({fil, col, brujula}, destino, plan);
   }
   else {
     return plan.at(next_move++);
-  }
+  }*/
+  return actFORWARD;
 }
 
 int ComportamientoJugador::interact(Action accion, int valor) {
