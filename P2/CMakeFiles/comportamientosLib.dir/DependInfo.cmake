@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/aldeano.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/jugador.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/comportamientos/comportamiento.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.o"
+  "/home/antcc/practicas-IA/P2/Comportamientos_Jugador/aldeano.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.o"
+  "/home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/comportamientos/comportamiento.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

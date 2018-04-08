@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/aldeano.cpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/aldeano.cpp
 ../Comportamientos_Jugador/aldeano.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/aldeano.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/aldeano.hpp
 motorlib/util.h
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/motorlib/util.h
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/motorlib/util.h
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/aldeano.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/aldeano.hpp
 chrono
 -
 time.h
@@ -20,27 +20,27 @@ time.h
 thread
 -
 comportamientos/comportamiento.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/jugador.cpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.cpp
 ../Comportamientos_Jugador/jugador.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/jugador.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.hpp
 motorlib/util.h
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/motorlib/util.h
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/motorlib/util.h
 iostream
 -
 cmath
 -
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/jugador.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.hpp
 comportamientos/comportamiento.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
+/home/antcc/practicas-IA/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
 list
 -
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/comportamientos/comportamiento.cpp
+/home/antcc/practicas-IA/P2/src/comportamientos/comportamiento.cpp
 comportamientos/comportamiento.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/comportamientos/comportamientos/comportamiento.hpp
+/home/antcc/practicas-IA/P2/src/comportamientos/comportamientos/comportamiento.hpp
 
 include/comportamientos/comportamiento.hpp
 vector

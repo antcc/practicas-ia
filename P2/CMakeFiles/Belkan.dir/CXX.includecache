@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/bin_src/juego.cc
+/home/antcc/practicas-IA/P2/bin_src/juego.cc
 motorlib.hpp
-/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/bin_src/motorlib.hpp
+/home/antcc/practicas-IA/P2/bin_src/motorlib.hpp
 
 Comportamientos_Jugador/aldeano.hpp
 chrono

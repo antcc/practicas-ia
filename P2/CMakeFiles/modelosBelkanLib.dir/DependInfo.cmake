@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/aldeano.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/brazo.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/cabeza.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/cintura.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/pierna.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/aldeano/torso.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/arbol/arbol.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/item/item.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/jugador/jugador3d.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/jugador/quesito.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.o"
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/src/modelos/retrato.cpp" "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/aldeano.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/brazo.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/cabeza.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/cintura.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/pierna.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/aldeano/torso.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/arbol/arbol.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/item/item.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/jugador/jugador3d.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/jugador/quesito.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.o"
+  "/home/antcc/practicas-IA/P2/src/modelos/retrato.cpp" "/home/antcc/practicas-IA/P2/CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -25,7 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/antcc/DGIIM/3º/2cuatrimestre/IA/Prácticas/P2/CMakeFiles/obj3DLib.dir/DependInfo.cmake"
+  "/home/antcc/practicas-IA/P2/CMakeFiles/obj3DLib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
