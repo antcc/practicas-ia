@@ -31,10 +31,16 @@ iostream
 -
 cmath
 -
+queue
+-
+vector
+-
 
 /home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.hpp
 comportamientos/comportamiento.hpp
 /home/antcc/practicas-IA/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
+stack
+-
 list
 -
 
