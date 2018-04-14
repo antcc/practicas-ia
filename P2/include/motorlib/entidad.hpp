@@ -35,7 +35,7 @@ class Entidad {
 
 	  //vida
 	  int vida = 500;
-          int muertes_innecesarias = 0;
+    int muertes_innecesarias = 0;
 
 	  bool hitbox = true;
 	  int desactivado = 0;
@@ -81,6 +81,7 @@ class Entidad {
 
 	  vector< vector< unsigned char> > getMapaResultado() {return comportamiento -> getMapaResultado();}
 	  vector< vector< unsigned char> > getMapaEntidades() {return comportamiento -> getMapaEntidades();}
+    vector< vector< unsigned char> > getMapaPlan() {return comportamiento -> getMapaPlan();}
 
 	  bool vivo() {return vida > 0;}
 
@@ -90,9 +91,9 @@ class Entidad {
 
 	  void perderPV(int valor) {vida -= valor;}
 	  void ganarPV(int valor) {vida += valor;}
-	  
+
 	  int getColisiones() {return colisiones;}
-          int getMuertesI() {return muertes_innecesarias;}
+    int getMuertesI() {return muertes_innecesarias;}
 
 	  void setTiempo(double valor) {tiempo=valor;}
 	  double getTiempo() {return tiempo;}
@@ -108,7 +109,7 @@ class Entidad {
 	  void setResetOff() {reset = false;}
 	  void setHitbox(bool valor) {hitbox=valor;}
 
-          bool fin() {return done;}
+    bool fin() {return done;}
 	  void resetFin() {done = false;}
 };
 #endif

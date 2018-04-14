@@ -26,10 +26,11 @@ class Comportamiento {
   public:
     vector< vector< unsigned char> > mapaResultado;
     vector< vector< unsigned char> > mapaEntidades;
+    std::vector< std::vector<unsigned char> > mapaConPlan;
 
     Comportamiento(unsigned int size);
     Comportamiento(vector< vector< unsigned char> > mapaR);
-    Comportamiento(const Comportamiento & comport) : mapaEntidades(comport.mapaEntidades), mapaResultado(comport.mapaResultado) {}
+    Comportamiento(const Comportamiento & comport) : mapaEntidades(comport.mapaEntidades), mapaResultado(comport.mapaResultado), mapaConPlan(comport.mapaConPlan) {}
     Comportamiento * clone(){return new Comportamiento(*this);}
     ~Comportamiento(){}
 
@@ -39,6 +40,8 @@ class Comportamiento {
 
     vector< vector< unsigned char> > getMapaResultado(){return mapaResultado;}
     vector< vector< unsigned char> > getMapaEntidades(){return mapaEntidades;}
+    vector< vector< unsigned char> > getMapaPlan(){return mapaConPlan;}
+
 };
 
 #endif

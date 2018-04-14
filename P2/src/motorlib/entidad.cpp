@@ -13,64 +13,64 @@ void Entidad::resetEntidad() {
   colisiones = 0;
   reset = true;
   if (vida != 0) muertes_innecesarias++;
-  vida = 500;
+  vida = 0;
   done = false;
- 
+
   mensaje = true;
 }
 
 Action Entidad::think(int acc, vector <vector< unsigned char> > vision) {
-    Action accion = actIDLE;
-    Sensores sensor;
+  Action accion = actIDLE;
+  Sensores sensor;
 
-    if (desactivado == 0) {
-      vida--;
-      hitbox = true;
+  if (desactivado == 0) {
+    vida--;
+    hitbox = true;
 
-      sensor.vida = vida;
+    sensor.vida = vida;
 
-      sensor.destinoF = destY;
-      sensor.destinoC = destX;
-      sensor.colision = colision;
-      sensor.reset = reset;
+    sensor.destinoF = destY;
+    sensor.destinoC = destX;
+    sensor.colision = colision;
+    sensor.reset = reset;
 
-      if ((sensor.destinoF == x) and (sensor.destinoC == y) and !done) {
-	misiones++;
-        done = true;
-        if (tipo == jugador)
-		cout << "Objetivo alcanzado!" << endl; 
-      }
-
-     if (mensaje) {
-        sensor.mensajeF = x;
-        sensor.mensajeC = y;
-      } else {
-        sensor.mensajeF = -1;
-        sensor.mensajeC = -1;
-      }
-
-      sensor.superficie = vision[1];
-      sensor.terreno = vision[0];
-
-      sensor.tiempo = getTiempo() / CLOCKS_PER_SEC;
-
-      visionAux = vision;
-
-      if (acc==-1)
-        accion = comportamiento->think(sensor);
-      else
-        accion = static_cast<Action>(acc);
-
-
-      colision = false;
-      reset = false;
-      mensaje = false;
-    }
-    else{
-      desactivado--;
+    if ((sensor.destinoF == x) and (sensor.destinoC == y) and !done) {
+      misiones++;
+      done = true;
+      if (tipo == jugador)
+      cout << "Objetivo alcanzado!" << endl;
     }
 
-    return accion;
+    if (mensaje) {
+      sensor.mensajeF = x;
+      sensor.mensajeC = y;
+    } else {
+      sensor.mensajeF = -1;
+      sensor.mensajeC = -1;
+    }
+
+    sensor.superficie = vision[1];
+    sensor.terreno = vision[0];
+
+    sensor.tiempo = getTiempo() / CLOCKS_PER_SEC;
+
+    visionAux = vision;
+
+    if (acc==-1)
+      accion = comportamiento->think(sensor);
+    else
+      accion = static_cast<Action>(acc);
+
+
+    colision = false;
+    reset = false;
+    mensaje = false;
+  }
+  else{
+    desactivado--;
+  }
+
+  return accion;
 }
 
 bool Entidad::interact(Action accion, int valor) {
@@ -118,7 +118,7 @@ string strAccion(int accion) {
     case 2: out = "actTURN_R"; break;
     case 3: out = "actIDLE"; break;
   }
-  
+
   return out;
 }
 

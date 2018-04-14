@@ -19,6 +19,7 @@ class Mapa {
 
 	  //Atributos necesarios y tal y cual...
 	  void colorCeldaMM(unsigned char celda);
+    void colorCeldaOpuestoMM(unsigned char celda);
 	  void complementosCelda(unsigned char celda);
 
 	  void formaEntidad(unsigned char tipoParam);
@@ -29,6 +30,9 @@ class Mapa {
 	  float x = 5.0;
 	  float z = 5.0;
 
+    float Y1 = 0, Y2 = 0, Y3 = 3.25;
+
+
 	  unsigned int nCols;
 	  unsigned int nFils;
 
@@ -38,6 +42,7 @@ class Mapa {
 	    for(unsigned int i = 0; i < mapa.size(); i++){
 	      mapaVisible.push_back(aux);
 	    }
+
 	    nCols = mapa.size();
 	    nFils = mapa[0].size();
 	  }
@@ -63,5 +68,13 @@ class Mapa {
 	  unsigned int getNFils(){return nFils;}
 
 	  std::vector <std::vector< unsigned char> > vision(unsigned int Entidad);
+
+    float getAngle() const{return Y1;}
+    float getParamX()const{return Y2;}
+    float getParamZ()const{return Y3;}
+
+    void putAngle(float x){Y1 = x;}
+    void PutParamX(float valor){Y2 = valor;}
+    void PutParamZ(float valor){Y3 = valor;}
 };
 #endif
