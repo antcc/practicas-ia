@@ -4,6 +4,7 @@
 #include "comportamientos/comportamiento.hpp"
 #include <stack>
 #include <list>
+#include <limits>
 
 // 0=Norte, 1=Este, 2=Sur, 3=Oeste
 enum Orientation {NORTH, EAST, SOUTH, WEST};
@@ -25,10 +26,15 @@ struct node {
   stack<Action> actions; // Actions performed to get from parent to this node
   node* parent;
 
-  node(node * parent, int g_parent, const estado& pos) {
+  node(node * parent, const estado& pos, int h, stack<Action> actions, int cost) {
+    if (parent)
+      g = parent->g + cost;
+    else
+      g = 0;
     this->parent = parent;
-    g = g_parent + 1;
     this->pos = pos;
+    this->h = h;
+    this->actions = actions;
   }
 };
 
@@ -42,7 +48,8 @@ class ComportamientoJugador : public Comportamiento {
       destino.fila = -1;
       destino.columna = -1;
       destino.orientacion = NORTH; // Indiferente
-      pasos = 0;
+      ultimaAccion = actIDLE;
+      hayPlan = false;
     }
 
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
@@ -61,12 +68,16 @@ class ComportamientoJugador : public Comportamiento {
   private:
     // Declarar Variables de Estado
     estado pos, destino;
-    int pasos;
+    bool hayPlan;
+    Action ultimaAccion;
     stack<Action> plan;
 
     void actualizaPos(estado& pos, Action next);
     bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan);
+
+    void VisualizaPlan(const estado &st, stack<Action> plan);
     void PintaPlan(stack<Action> plan);
+    bool esTransitable(int fil, int col);
 };
 
 #endif

@@ -1,10 +1,11 @@
 #include "../Comportamientos_Jugador/jugador.hpp"
-#include "motorlib/util.h"
+//#include "motorlib/util.h"
 
 #include <iostream>
 #include <cmath>
 #include <queue>
 #include <vector>
+#include <set>
 
 using namespace std;
 
@@ -34,35 +35,35 @@ Orientation operator+(const Action& act, const Orientation& ori) {
   return new_ori;
 }
 
-int f(node* n) {
-  return n->h + n->g;
-}
-
 int manhattan_distance(const estado& origen, const estado& destino) {
   return abs(origen.fila - destino.fila) + abs(origen.columna - destino.columna);
 }
 
-node * mknode(const estado& pos, const estado& destino, node * parent) {
-  int parent_g;
-  if (parent)
-    parent_g = parent->g;
-  else
-    parent_g = -1;
-
-  node* n = new node(parent, parent_g, pos);
-  n->h = manhattan_distance(pos, destino);
+node * mknode(const estado& pos, const estado& destino, node * parent, const stack<Action>& act, int cost) {
+  node* n = new node(parent, pos, manhattan_distance(pos, destino), act, cost);
   return n;
 }
 
-void delete_list(list<node*> l) {
-  for (auto it = l.begin(); it != l.end(); ++it)
+template<typename T>
+void delete_set(set<node*, T> l) {
+  for (auto it = l.begin(); it != l.end(); ++it) {
     delete *it;
+  }
+}
+
+int f(node * n) {
+  return n->g + n->h;
+}
+
+void printn(node * n) {
+  cout << "(" << n->pos.fila << "," << n->pos.columna << "): g=" << n->g << ", h=" << n->h << ", f=" << f(n) << endl;
 }
 
 void reconstruct_path(stack<Action>& plan, node * destination) {
   node* current = destination;
 
   while (current) {
+    printn(current);
     stack<Action> partial_path = current->actions;
     while (!partial_path.empty()) {
       plan.push(partial_path.top());
@@ -70,6 +71,19 @@ void reconstruct_path(stack<Action>& plan, node * destination) {
     }
     current = current->parent;
   }
+}
+
+void AnularMatriz(vector<vector<unsigned char> >& m){
+	for (int i=0; i<m[0].size(); i++){
+		for (int j=0; j<m.size(); j++){
+			m[i][j]=0;
+		}
+	}
+}
+
+void clear_stack(stack<Action>& st) {
+  while (!st.empty())
+    st.pop();
 }
 
 }
@@ -116,6 +130,11 @@ void ComportamientoJugador::actualizaPos(estado& pos, Action next) {
   pos.orientacion = next + pos.orientacion;
 }
 
+bool ComportamientoJugador::esTransitable(int fil, int col) {
+  return mapaResultado[fil][col] == 'S' || mapaResultado[fil][col] == 'T'
+        || mapaResultado[fil][col] == 'K';
+}
+
 /**
  * A* algorithm
  */
@@ -123,96 +142,195 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
                                         const estado& destino,
                                         stack<Action>& plan) {
   // Custom comparator for nodes
-  struct comp_nodes {
+  struct comp_pos {
     bool operator()(node * n1, node * n2) {
-      return f(n1) < f(n2);
+      if (n1->pos.fila < n2->pos.fila)
+        return true;
+      else if (n1->pos.fila > n2->pos.fila)
+        return false;
+
+      return n1->pos.columna < n2->pos.columna;
+    }
+  };
+
+  struct comp_f {
+    bool operator()(node * n1, node * n2) {
+      comp_pos p;
+      int diff = f(n1) - f(n2);
+
+      if (diff == 0)
+        return p(n1, n2);
+      else
+        return diff < 0;
     }
   };
 
   bool found = false;
-  priority_queue<node*, vector<node*>, comp_nodes> open_set;
-  list<node*> closed_set;
+  set<node*, comp_f> open_set_f;
+  set<node*, comp_pos> closed_set;
+  set<node*, comp_pos> open_set_pos;
+  node* neighbors[4];
+  stack<Action> act;
 
   // Start node
-  open_set.push(mknode(origen, destino, NULL));
+  cout << "Destino -> (" << destino.fila << "," << destino.columna << ")" << endl;
+  node* current = mknode(origen, destino, NULL, act, 0);
+  open_set_f.insert(current);
+  open_set_pos.insert(current);
 
+  // Main loop
+  while (!open_set_pos.empty() && !found) {
+    auto current_it = open_set_f.begin();
+    current = *current_it;
 
-  // if(llegado a destino) found=true
+    cout << "Open -> ";
+    printn(current);
 
+    if (current->h == 0) { // h es la distancia al destino
+      found = true;
+    }
+    else {
+      closed_set.insert(current);
+      open_set_pos.erase(current);
+      open_set_f.erase(current_it);
 
+      // Evaluate neighbors
+      int valid = 0;
+      estado pos = {current->pos.fila, current->pos.columna, current->pos.orientacion};
+      estado tmp = pos;
 
-  // Generate actual path
-  reconstruct_path(plan, closed_set.front());
+      // Move forward
+      actualizaPos(tmp, actFORWARD);
+      if (esTransitable(tmp.fila, tmp.columna)) {
+        act.push(actFORWARD);
+        neighbors[valid++] = mknode(tmp, destino, current, act, 1);
+        clear_stack(act);
+        tmp = pos;
+      }
+
+      // Move east
+      actualizaPos(tmp, actTURN_R);
+      actualizaPos(tmp, actFORWARD);
+      if (esTransitable(tmp.fila, tmp.columna)) {
+        act.push(actTURN_R);
+        act.push(actFORWARD);
+        neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+        clear_stack(act);
+        tmp = pos;
+      }
+
+      // Move backwards
+      actualizaPos(tmp, actTURN_R);
+      actualizaPos(tmp, actTURN_R);
+      actualizaPos(tmp, actFORWARD);
+      if (esTransitable(tmp.fila, tmp.columna)) {
+        act.push(actTURN_R);
+        act.push(actTURN_R);
+        act.push(actFORWARD);
+        neighbors[valid++] = mknode(tmp, destino, current, act, 3);
+        clear_stack(act);
+        tmp = pos;
+      }
+
+      // Move west
+      actualizaPos(tmp, actTURN_L);
+      actualizaPos(tmp, actFORWARD);
+      if (esTransitable(tmp.fila, tmp.columna)) {
+        act.push(actTURN_L);
+        act.push(actFORWARD);
+        neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+        clear_stack(act);
+        tmp = pos;
+      }
+
+      for (int i = 0; i < valid; i++) {
+        if (closed_set.find(neighbors[i]) == closed_set.end()) {
+
+          auto it = open_set_pos.find(neighbors[i]);
+
+          cout << "Neighbor -> ";
+          printn(neighbors[i]);
+
+          if (it == open_set_pos.end()) {
+            open_set_pos.insert(neighbors[i]);
+            open_set_f.insert(neighbors[i]);
+          }
+          else {
+            if (neighbors[i]->g < (*it)->g) {
+              open_set_pos.erase(it);
+              open_set_pos.insert(neighbors[i]);
+              auto it_f = open_set_f.find(neighbors[i]);
+              if (it_f != open_set_f.end())
+                open_set_f.erase(it_f);
+              open_set_f.insert(neighbors[i]);
+            }
+          }
+        }
+        else {
+          delete neighbors[i];
+        }
+      }
+    }
+  }
+
+  if (found) {
+    cout << "------- FOUND -------" << endl;
+    // Generate actual path and print it
+    reconstruct_path(plan, current);
+    VisualizaPlan(origen, plan);
+  }
 
   // Free memory
-  while (!open_set.empty()) {
-    delete open_set.top();
-    open_set.pop();
-  }
-  delete_list(closed_set);
+  delete_set(open_set_pos);
+  delete_set(closed_set);
 
   return found;
 }
 
 Action ComportamientoJugador::think(Sensores sensores) {
-  /**
-   * Asumo que el juego se detiene al llegar al destino.
-   *
-   */
   Action next_move;
 
-  if (pasos == 0) {
+  if (sensores.mensajeF != -1) {
     pos.fila = sensores.mensajeF;
     pos.columna = sensores.mensajeC;
-    destino.fila = sensores.destinoF;
-    destino.columna = sensores.destinoC;
+  }
+
+  actualizaPos(pos, ultimaAccion);
+
+  if (hayPlan && (sensores.destinoF != destino.fila || sensores.destinoC != destino.columna)) {
+    cout << "\nObjetivo cambiado." << endl;
+    hayPlan = false;
+    clear_stack(plan);
   }
 
   // Plan itinerary the first time
-  if (plan.empty()) {
-    if (!pathFinding(pos, destino, plan))
+  if (!hayPlan) {
+    destino.fila = sensores.destinoF;
+    destino.columna = sensores.destinoC;
+    if (!(hayPlan = pathFinding(pos, destino, plan)))
       cout << "Error: no hay camino posible al destino." << endl;
   }
 
-  //next_move = plan.top();
-  //plan.pop();
+  if (hayPlan && !plan.empty()) {
+    next_move = plan.top();
+    plan.pop();
+  }
+  else {
+    next_move = actIDLE;
+  }
 
-  actualizaPos(pos, next_move);
-  pasos++;
-
-  return actIDLE;
+  ultimaAccion = next_move;
+  return next_move;
 }
 
-void AnularMatriz(vector<vector<unsigned char> > &m){
-	for (int i=0; i<m[0].size(); i++){
-		for (int j=0; j<m.size(); j++){
-			m[i][j]=0;
-		}
-	}
-}
-
-void ComportamientoJugador::VisualizaPlan(const estado &st, const list<Action> &plan){
+void ComportamientoJugador::VisualizaPlan(const estado &st, stack<Action> plan){
   AnularMatriz(mapaConPlan);
 	estado cst = st;
-
-	auto it = plan.begin();
-	while (it!=plan.end()){
-		if (*it == actFORWARD){
-			switch (cst.orientacion) {
-				case 0: cst.fila--; break;
-				case 1: cst.columna++; break;
-				case 2: cst.fila++; break;
-				case 3: cst.columna--; break;
-			}
-			mapaConPlan[cst.fila][cst.columna]=1;
-		}
-		else if (*it == actTURN_R){
-			cst.orientacion = (cst.orientacion+1)%4;
-		}
-		else {
-			cst.orientacion = (cst.orientacion+3)%4;
-		}
-		it++;
+	while (!plan.empty()){
+    Action next = plan.top();
+		actualizaPos(cst, next);
+    mapaConPlan[cst.fila][cst.columna] = 1;
+		plan.pop();
 	}
 }
 
