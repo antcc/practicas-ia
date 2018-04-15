@@ -9,6 +9,7 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.o: include
 CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o: Comportamientos_Jugador/jugador.cpp
 CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o: Comportamientos_Jugador/jugador.hpp
 CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o: include/comportamientos/comportamiento.hpp
+CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o: include/motorlib/util.h
 
 CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.o: src/comportamientos/comportamiento.cpp
 CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.o: include/comportamientos/comportamiento.hpp

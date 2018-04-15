@@ -4,7 +4,6 @@
 #include "comportamientos/comportamiento.hpp"
 #include <stack>
 #include <list>
-#include <limits>
 
 // 0=Norte, 1=Este, 2=Sur, 3=Oeste
 enum Orientation {NORTH, EAST, SOUTH, WEST};
@@ -16,6 +15,10 @@ struct estado {
 
   bool operator==(const estado& otro) {
     return fila == otro.fila && columna == otro.columna;
+  }
+
+  bool operator !=(const estado& otro) {
+    return !(*this == otro);
   }
 };
 
@@ -45,11 +48,14 @@ class ComportamientoJugador : public Comportamiento {
       // Inicializar Variables de Estado
       pos.fila = pos.columna = 99;
       pos.orientacion = NORTH;
-      destino.fila = -1;
-      destino.columna = -1;
-      destino.orientacion = NORTH; // Indiferente
+      destino.fila = aldeano.fila = -1;
+      destino.columna = aldeano.columna = -1;
+      destino.orientacion = aldeano.orientacion = NORTH; // Indiferente
       ultimaAccion = actIDLE;
-      hayPlan = false;
+      hayPlan = tried_alternative = false;
+      ignore_villager = true;
+      total_cost = -1;
+      wait = 0;
     }
 
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
@@ -67,13 +73,15 @@ class ComportamientoJugador : public Comportamiento {
 
   private:
     // Declarar Variables de Estado
-    estado pos, destino;
-    bool hayPlan;
+    estado pos, destino, aldeano;
+    bool hayPlan, tried_alternative, ignore_villager;
+    int total_cost; // Coste total del camino actual si hay plan
+    int wait; // Número de turnos sin hacer nada
     Action ultimaAccion;
     stack<Action> plan;
 
     void actualizaPos(estado& pos, Action next);
-    bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan);
+    bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan, int& cost);
 
     void VisualizaPlan(const estado &st, stack<Action> plan);
     void PintaPlan(stack<Action> plan);

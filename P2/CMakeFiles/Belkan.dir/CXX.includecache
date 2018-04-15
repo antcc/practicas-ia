@@ -27,8 +27,6 @@ stack
 -
 list
 -
-limits
--
 
 include/comportamientolib.hpp
 comportamientos/comportamiento.hpp
