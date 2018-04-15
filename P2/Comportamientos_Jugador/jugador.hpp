@@ -48,14 +48,11 @@ class ComportamientoJugador : public Comportamiento {
       // Inicializar Variables de Estado
       pos.fila = pos.columna = 99;
       pos.orientacion = NORTH;
-      destino.fila = aldeano.fila = -1;
-      destino.columna = aldeano.columna = -1;
-      destino.orientacion = aldeano.orientacion = NORTH; // Indiferente
+      destino.fila = -1;
+      destino.columna = -1;
+      destino.orientacion = NORTH; // Indiferente
       ultimaAccion = actIDLE;
-      hayPlan = tried_alternative = false;
-      ignore_villager = true;
-      total_cost = -1;
-      wait = 0;
+      hayPlan = false;
     }
 
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
@@ -73,10 +70,9 @@ class ComportamientoJugador : public Comportamiento {
 
   private:
     // Declarar Variables de Estado
-    estado pos, destino, aldeano;
-    bool hayPlan, tried_alternative, ignore_villager;
+    estado pos, destino;
+    bool hayPlan;
     int total_cost; // Coste total del camino actual si hay plan
-    int wait; // Número de turnos sin hacer nada
     Action ultimaAccion;
     stack<Action> plan;
 

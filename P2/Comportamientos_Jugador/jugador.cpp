@@ -9,8 +9,6 @@
 using namespace std;
 
 #define DEBUG 1
-#define MAX_WAIT 10
-#define DELTA 0.25
 
 /***************** FUNCIONES AUXILIARES ******************/
 
@@ -144,11 +142,7 @@ bool ComportamientoJugador::esTransitable(int fil, int col) {
   bool terreno = mapaResultado[fil][col] == 'S'
                 || mapaResultado[fil][col] == 'T'
                 || mapaResultado[fil][col] == 'K';
-
-  if (aldeano != estado{-1, -1})
-    return terreno && aldeano != estado{fil, col};
-  else
-    return terreno;
+  return terreno;
 }
 
 /**
@@ -250,6 +244,21 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     }
     tmp = pos;
 
+    // Move backwards
+    if (cont == 0) {
+      actualizaPos(tmp, actTURN_R);
+      actualizaPos(tmp, actTURN_R);
+      actualizaPos(tmp, actFORWARD);
+      if (esTransitable(tmp.fila, tmp.columna)) {
+        act.push(actTURN_R);
+        act.push(actTURN_R);
+        act.push(actFORWARD);
+        neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+        clear_stack(act);
+      }
+      tmp = pos;
+    }
+
     for (int i = 0; i < valid; i++) {
       if (closed_set.find(neighbors[i]) == closed_set.end()) {
         auto it = open_set.find(neighbors[i]);
@@ -300,9 +309,6 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
 
 Action ComportamientoJugador::think(Sensores sensores) {
   Action next_move;
-  stack<Action> plan_alternativo;
-  int cost;
-  bool waiting = false;
 
   if (sensores.mensajeF != -1) {
     pos.fila = sensores.mensajeF;
@@ -325,44 +331,15 @@ Action ComportamientoJugador::think(Sensores sensores) {
       cout << "Error: no hay camino posible al destino." << endl;
   }
 
-  /**
-   * Comportamiento reactivo:
-   *
-   * - Si hay un aldeano delante, me quedo quieto.
-   * - Si tras un número fijo de movimientos (MAX_WAIT) sigue ahí, planifico
-   * nueva ruta.
-   *
-   * - Si la nueva ruta aumenta el coste anterior más de un factor fijado
-   * (DELTA), la descarto y sigo quieto hasta que se vaya el aldeano
-   */
-
-  // Hay un aldeano delante
-  if (hayPlan && !plan.empty() && sensores.superficie[2] == 'a') {
-    wait++;
-    next_move = actIDLE;
-
-    if (wait >= MAX_WAIT && !tried_alternative) {
-      tried_alternative = true;
-      aldeano.fila = pos.fila;
-      aldeano.columna = pos.columna;
-      if ((hayPlan = pathFinding(pos, destino, plan_alternativo, cost))
-          && cost < (1 + DELTA) * total_cost) {
-        plan.swap(plan_alternativo);
-        clear_stack(plan_alternativo);
-        ignore_villager = false;
-      }
-      aldeano.fila = -1;
-      aldeano.columna = -1;
-    }
-  }
-
-  if (hayPlan && !plan.empty()
-      && (!ignore_villager || sensores.superficie[2] != 'a')) {
-    tried_alternative = false;
-    ignore_villager = true;
-    wait = 0;
+  if (hayPlan && !plan.empty()) {
     next_move = plan.top();
-    plan.pop();
+    if (next_move == actFORWARD && sensores.superficie[2] == 'a')
+      next_move = actIDLE;
+    else
+      plan.pop();
+  }
+  else {
+    next_move = actIDLE;
   }
 
   ultimaAccion = next_move;
