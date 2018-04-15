@@ -166,21 +166,19 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   };
 
   bool found = false;
-  set<node*, comp_f> open_set_f;
+  set<node*, comp_f> open_set;
   set<node*, comp_pos> closed_set;
-  set<node*, comp_pos> open_set_pos;
   node* neighbors[4];
   stack<Action> act;
 
   // Start node
   cout << "Destino -> (" << destino.fila << "," << destino.columna << ")" << endl;
   node* current = mknode(origen, destino, NULL, act, 0);
-  open_set_f.insert(current);
-  open_set_pos.insert(current);
+  open_set.insert(current);
 
   // Main loop
-  while (!open_set_pos.empty() && !found) {
-    auto current_it = open_set_f.begin();
+  while (!open_set.empty() && !found) {
+    auto current_it = open_set.begin();
     current = *current_it;
 
     cout << "Open -> ";
@@ -191,8 +189,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     }
     else {
       closed_set.insert(current);
-      open_set_pos.erase(current);
-      open_set_f.erase(current_it);
+      open_set.erase(current_it);
 
       // Evaluate neighbors
       int valid = 0;
@@ -205,8 +202,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         act.push(actFORWARD);
         neighbors[valid++] = mknode(tmp, destino, current, act, 1);
         clear_stack(act);
-        tmp = pos;
       }
+      tmp = pos;
 
       // Move east
       actualizaPos(tmp, actTURN_R);
@@ -216,8 +213,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         act.push(actFORWARD);
         neighbors[valid++] = mknode(tmp, destino, current, act, 2);
         clear_stack(act);
-        tmp = pos;
       }
+      tmp = pos;
 
       // Move backwards
       actualizaPos(tmp, actTURN_R);
@@ -229,8 +226,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         act.push(actFORWARD);
         neighbors[valid++] = mknode(tmp, destino, current, act, 3);
         clear_stack(act);
-        tmp = pos;
       }
+      tmp = pos;
 
       // Move west
       actualizaPos(tmp, actTURN_L);
@@ -240,29 +237,24 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         act.push(actFORWARD);
         neighbors[valid++] = mknode(tmp, destino, current, act, 2);
         clear_stack(act);
-        tmp = pos;
       }
+      tmp = pos;
 
       for (int i = 0; i < valid; i++) {
         if (closed_set.find(neighbors[i]) == closed_set.end()) {
 
-          auto it = open_set_pos.find(neighbors[i]);
+          auto it = open_set.find(neighbors[i]);
 
           cout << "Neighbor -> ";
           printn(neighbors[i]);
 
-          if (it == open_set_pos.end()) {
-            open_set_pos.insert(neighbors[i]);
-            open_set_f.insert(neighbors[i]);
+          if (it == open_set.end()) {
+            open_set.insert(neighbors[i]);
           }
           else {
             if (neighbors[i]->g < (*it)->g) {
-              open_set_pos.erase(it);
-              open_set_pos.insert(neighbors[i]);
-              auto it_f = open_set_f.find(neighbors[i]);
-              if (it_f != open_set_f.end())
-                open_set_f.erase(it_f);
-              open_set_f.insert(neighbors[i]);
+              open_set.erase(it);
+              open_set.insert(neighbors[i]);
             }
           }
         }
@@ -281,7 +273,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   }
 
   // Free memory
-  delete_set(open_set_pos);
+  delete_set(open_set);
   delete_set(closed_set);
 
   return found;
