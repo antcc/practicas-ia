@@ -8,7 +8,7 @@
 #include <map>
 using namespace std;
 
-#define DEBUG 0
+#define DEBUG 1
 #define MAX_G 100000
 
 /***************** ESTRUCTURAS AUXILIARES ******************/
@@ -273,7 +273,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         auto it = open_set.find(neighbors[i]);
         bool found_in_open = it != open_set.end();
         int tentative_g = current->g + next_cost[i];
-        bool better = tentative_g < neighbors[i]->g;
+        bool better = !found_in_open || tentative_g < (*it)->g;
 
         if (better) {
           neighbors[i]->g = tentative_g;
@@ -281,15 +281,15 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         }
 
 #if DEBUG == 1
-      cout << "Neighbor -> ";
-      printn(neighbors[i]);
+      if (better) {
+        cout << "Neighbor -> ";
+        printn(neighbors[i]);
+      }
 #endif
 
-        if (!found_in_open) { // Insert node for the first time in open set
-          open_set.insert(neighbors[i]);
-        }
-        else if (better) { // Update node in open set
-          open_set.erase(it);
+        if (better) { // Update (or insert) node in open set
+          if (found_in_open)
+            open_set.erase(it);
           open_set.insert(neighbors[i]);
         }
         else {
