@@ -123,7 +123,6 @@ Open -> (61,78): g=19, h=133, f=152
 Neighbor -> (61,77): g=20, h=132, f=152
 Añadido a open -> (61,77): g=20, h=132, f=152
 Neighbor -> (62,78): g=21, h=134, f=155
-Añadido a open -> (62,78): g=21, h=134, f=155
 Open -> (61,77): g=20, h=132, f=152
 Neighbor -> (61,76): g=21, h=131, f=152
 Añadido a open -> (61,76): g=21, h=131, f=152
@@ -157,458 +156,297 @@ Añadido a open -> (62,72): g=27, h=128, f=155
 Open -> (61,71): g=26, h=126, f=152
 Neighbor -> (62,71): g=28, h=127, f=155
 Añadido a open -> (62,71): g=28, h=127, f=155
-Open -> (62,78): g=18, h=134, f=152
-Neighbor -> (62,77): g=19, h=133, f=152
-Neighbor -> (63,78): g=20, h=135, f=155
-Añadido a open -> (63,78): g=20, h=135, f=155
-Open -> (62,77): g=19, h=133, f=152
-Neighbor -> (62,76): g=20, h=132, f=152
-Añadido a open -> (62,76): g=20, h=132, f=152
-Neighbor -> (63,77): g=21, h=134, f=155
-Añadido a open -> (63,77): g=21, h=134, f=155
-Open -> (62,76): g=20, h=132, f=152
-Neighbor -> (62,75): g=21, h=131, f=152
-Neighbor -> (63,76): g=22, h=133, f=155
-Añadido a open -> (63,76): g=22, h=133, f=155
-Open -> (62,75): g=21, h=131, f=152
-Neighbor -> (62,74): g=22, h=130, f=152
-Añadido a open -> (62,74): g=22, h=130, f=152
-Neighbor -> (63,75): g=23, h=132, f=155
-Añadido a open -> (63,75): g=23, h=132, f=155
-Open -> (62,74): g=22, h=130, f=152
-Neighbor -> (62,73): g=23, h=129, f=152
-Neighbor -> (63,74): g=24, h=131, f=155
-Añadido a open -> (63,74): g=24, h=131, f=155
-Open -> (62,73): g=23, h=129, f=152
-Neighbor -> (62,72): g=24, h=128, f=152
-Añadido a open -> (62,72): g=24, h=128, f=152
-Neighbor -> (63,73): g=25, h=130, f=155
-Añadido a open -> (63,73): g=25, h=130, f=155
-Open -> (62,72): g=24, h=128, f=152
-Neighbor -> (62,71): g=25, h=127, f=152
-Añadido a open -> (62,71): g=25, h=127, f=152
-Neighbor -> (63,72): g=26, h=129, f=155
-Añadido a open -> (63,72): g=26, h=129, f=155
-Open -> (62,71): g=25, h=127, f=152
-Neighbor -> (63,71): g=27, h=128, f=155
-Añadido a open -> (63,71): g=27, h=128, f=155
 Open -> (63,78): g=17, h=135, f=152
 Neighbor -> (63,77): g=18, h=134, f=152
+Añadido a open -> (63,77): g=18, h=134, f=152
+Neighbor -> (62,78): g=19, h=134, f=153
 Neighbor -> (64,78): g=19, h=136, f=155
-Añadido a open -> (64,78): g=19, h=136, f=155
 Open -> (63,77): g=18, h=134, f=152
 Neighbor -> (63,76): g=19, h=133, f=152
 Añadido a open -> (63,76): g=19, h=133, f=152
+Neighbor -> (62,77): g=20, h=133, f=153
 Neighbor -> (64,77): g=20, h=135, f=155
 Añadido a open -> (64,77): g=20, h=135, f=155
 Open -> (63,76): g=19, h=133, f=152
 Neighbor -> (63,75): g=20, h=132, f=152
+Añadido a open -> (63,75): g=20, h=132, f=152
+Neighbor -> (62,76): g=21, h=132, f=153
 Neighbor -> (64,76): g=21, h=134, f=155
 Añadido a open -> (64,76): g=21, h=134, f=155
 Open -> (63,75): g=20, h=132, f=152
 Neighbor -> (63,74): g=21, h=131, f=152
 Añadido a open -> (63,74): g=21, h=131, f=152
+Neighbor -> (62,75): g=22, h=131, f=153
 Neighbor -> (64,75): g=22, h=133, f=155
 Añadido a open -> (64,75): g=22, h=133, f=155
 Open -> (63,74): g=21, h=131, f=152
 Neighbor -> (63,73): g=22, h=130, f=152
+Añadido a open -> (63,73): g=22, h=130, f=152
+Neighbor -> (62,74): g=23, h=130, f=153
 Neighbor -> (64,74): g=23, h=132, f=155
 Añadido a open -> (64,74): g=23, h=132, f=155
 Open -> (63,73): g=22, h=130, f=152
 Neighbor -> (63,72): g=23, h=129, f=152
 Añadido a open -> (63,72): g=23, h=129, f=152
+Neighbor -> (62,73): g=24, h=129, f=153
 Neighbor -> (64,73): g=24, h=131, f=155
 Añadido a open -> (64,73): g=24, h=131, f=155
 Open -> (63,72): g=23, h=129, f=152
 Neighbor -> (63,71): g=24, h=128, f=152
 Añadido a open -> (63,71): g=24, h=128, f=152
+Neighbor -> (62,72): g=25, h=128, f=153
 Neighbor -> (64,72): g=25, h=130, f=155
 Añadido a open -> (64,72): g=25, h=130, f=155
 Open -> (63,71): g=24, h=128, f=152
+Neighbor -> (62,71): g=26, h=127, f=153
 Neighbor -> (64,71): g=26, h=129, f=155
 Añadido a open -> (64,71): g=26, h=129, f=155
-Open -> (64,78): g=16, h=136, f=152
-Neighbor -> (64,77): g=17, h=135, f=152
-Neighbor -> (65,78): g=18, h=137, f=155
-Añadido a open -> (65,78): g=18, h=137, f=155
-Open -> (64,77): g=17, h=135, f=152
-Neighbor -> (64,76): g=18, h=134, f=152
-Añadido a open -> (64,76): g=18, h=134, f=152
-Neighbor -> (65,77): g=19, h=136, f=155
-Añadido a open -> (65,77): g=19, h=136, f=155
-Open -> (64,76): g=18, h=134, f=152
-Neighbor -> (64,75): g=19, h=133, f=152
-Neighbor -> (65,76): g=20, h=135, f=155
-Añadido a open -> (65,76): g=20, h=135, f=155
-Open -> (64,75): g=19, h=133, f=152
-Neighbor -> (64,74): g=20, h=132, f=152
-Añadido a open -> (64,74): g=20, h=132, f=152
-Neighbor -> (65,75): g=21, h=134, f=155
-Añadido a open -> (65,75): g=21, h=134, f=155
-Open -> (64,74): g=20, h=132, f=152
-Neighbor -> (64,73): g=21, h=131, f=152
-Neighbor -> (65,74): g=22, h=133, f=155
-Añadido a open -> (65,74): g=22, h=133, f=155
-Open -> (64,73): g=21, h=131, f=152
-Neighbor -> (64,72): g=22, h=130, f=152
-Añadido a open -> (64,72): g=22, h=130, f=152
-Neighbor -> (65,73): g=23, h=132, f=155
-Añadido a open -> (65,73): g=23, h=132, f=155
-Open -> (64,72): g=22, h=130, f=152
-Neighbor -> (64,71): g=23, h=129, f=152
-Añadido a open -> (64,71): g=23, h=129, f=152
-Neighbor -> (65,72): g=24, h=131, f=155
-Añadido a open -> (65,72): g=24, h=131, f=155
-Open -> (64,71): g=23, h=129, f=152
-Neighbor -> (65,71): g=25, h=130, f=155
-Añadido a open -> (65,71): g=25, h=130, f=155
 Open -> (65,78): g=15, h=137, f=152
 Neighbor -> (65,77): g=16, h=136, f=152
+Añadido a open -> (65,77): g=16, h=136, f=152
+Neighbor -> (64,78): g=17, h=136, f=153
 Neighbor -> (66,78): g=17, h=138, f=155
-Añadido a open -> (66,78): g=17, h=138, f=155
 Open -> (65,77): g=16, h=136, f=152
 Neighbor -> (65,76): g=17, h=135, f=152
 Añadido a open -> (65,76): g=17, h=135, f=152
+Neighbor -> (64,77): g=18, h=135, f=153
 Neighbor -> (66,77): g=18, h=137, f=155
 Añadido a open -> (66,77): g=18, h=137, f=155
 Open -> (65,76): g=17, h=135, f=152
 Neighbor -> (65,75): g=18, h=134, f=152
+Añadido a open -> (65,75): g=18, h=134, f=152
+Neighbor -> (64,76): g=19, h=134, f=153
 Neighbor -> (66,76): g=19, h=136, f=155
 Añadido a open -> (66,76): g=19, h=136, f=155
 Open -> (65,75): g=18, h=134, f=152
 Neighbor -> (65,74): g=19, h=133, f=152
 Añadido a open -> (65,74): g=19, h=133, f=152
+Neighbor -> (64,75): g=20, h=133, f=153
 Neighbor -> (66,75): g=20, h=135, f=155
 Añadido a open -> (66,75): g=20, h=135, f=155
 Open -> (65,74): g=19, h=133, f=152
 Neighbor -> (65,73): g=20, h=132, f=152
+Añadido a open -> (65,73): g=20, h=132, f=152
+Neighbor -> (64,74): g=21, h=132, f=153
 Neighbor -> (66,74): g=21, h=134, f=155
 Añadido a open -> (66,74): g=21, h=134, f=155
 Open -> (65,73): g=20, h=132, f=152
 Neighbor -> (65,72): g=21, h=131, f=152
 Añadido a open -> (65,72): g=21, h=131, f=152
+Neighbor -> (64,73): g=22, h=131, f=153
 Neighbor -> (66,73): g=22, h=133, f=155
 Añadido a open -> (66,73): g=22, h=133, f=155
 Open -> (65,72): g=21, h=131, f=152
 Neighbor -> (65,71): g=22, h=130, f=152
 Añadido a open -> (65,71): g=22, h=130, f=152
+Neighbor -> (64,72): g=23, h=130, f=153
 Neighbor -> (66,72): g=23, h=132, f=155
 Añadido a open -> (66,72): g=23, h=132, f=155
 Open -> (65,71): g=22, h=130, f=152
+Neighbor -> (64,71): g=24, h=129, f=153
 Neighbor -> (66,71): g=24, h=131, f=155
 Añadido a open -> (66,71): g=24, h=131, f=155
-Open -> (66,78): g=14, h=138, f=152
-Neighbor -> (66,77): g=15, h=137, f=152
-Neighbor -> (67,78): g=16, h=139, f=155
-Añadido a open -> (67,78): g=16, h=139, f=155
-Open -> (66,77): g=15, h=137, f=152
-Neighbor -> (66,76): g=16, h=136, f=152
-Añadido a open -> (66,76): g=16, h=136, f=152
-Neighbor -> (67,77): g=17, h=138, f=155
-Añadido a open -> (67,77): g=17, h=138, f=155
-Open -> (66,76): g=16, h=136, f=152
-Neighbor -> (66,75): g=17, h=135, f=152
-Neighbor -> (67,76): g=18, h=137, f=155
-Añadido a open -> (67,76): g=18, h=137, f=155
-Open -> (66,75): g=17, h=135, f=152
-Neighbor -> (66,74): g=18, h=134, f=152
-Añadido a open -> (66,74): g=18, h=134, f=152
-Neighbor -> (67,75): g=19, h=136, f=155
-Añadido a open -> (67,75): g=19, h=136, f=155
-Open -> (66,74): g=18, h=134, f=152
-Neighbor -> (66,73): g=19, h=133, f=152
-Neighbor -> (67,74): g=20, h=135, f=155
-Añadido a open -> (67,74): g=20, h=135, f=155
-Open -> (66,73): g=19, h=133, f=152
-Neighbor -> (66,72): g=20, h=132, f=152
-Añadido a open -> (66,72): g=20, h=132, f=152
-Neighbor -> (67,73): g=21, h=134, f=155
-Añadido a open -> (67,73): g=21, h=134, f=155
-Open -> (66,72): g=20, h=132, f=152
-Neighbor -> (66,71): g=21, h=131, f=152
-Añadido a open -> (66,71): g=21, h=131, f=152
-Neighbor -> (67,72): g=22, h=133, f=155
-Añadido a open -> (67,72): g=22, h=133, f=155
-Open -> (66,71): g=21, h=131, f=152
-Neighbor -> (67,71): g=23, h=132, f=155
-Añadido a open -> (67,71): g=23, h=132, f=155
 Open -> (67,78): g=13, h=139, f=152
 Neighbor -> (67,77): g=14, h=138, f=152
+Añadido a open -> (67,77): g=14, h=138, f=152
+Neighbor -> (66,78): g=15, h=138, f=153
 Neighbor -> (68,78): g=15, h=140, f=155
-Añadido a open -> (68,78): g=15, h=140, f=155
 Open -> (67,77): g=14, h=138, f=152
 Neighbor -> (67,76): g=15, h=137, f=152
 Añadido a open -> (67,76): g=15, h=137, f=152
+Neighbor -> (66,77): g=16, h=137, f=153
 Neighbor -> (68,77): g=16, h=139, f=155
 Añadido a open -> (68,77): g=16, h=139, f=155
 Open -> (67,76): g=15, h=137, f=152
 Neighbor -> (67,75): g=16, h=136, f=152
+Añadido a open -> (67,75): g=16, h=136, f=152
+Neighbor -> (66,76): g=17, h=136, f=153
 Neighbor -> (68,76): g=17, h=138, f=155
 Añadido a open -> (68,76): g=17, h=138, f=155
 Open -> (67,75): g=16, h=136, f=152
 Neighbor -> (67,74): g=17, h=135, f=152
 Añadido a open -> (67,74): g=17, h=135, f=152
+Neighbor -> (66,75): g=18, h=135, f=153
 Neighbor -> (68,75): g=18, h=137, f=155
 Añadido a open -> (68,75): g=18, h=137, f=155
 Open -> (67,74): g=17, h=135, f=152
 Neighbor -> (67,73): g=18, h=134, f=152
+Añadido a open -> (67,73): g=18, h=134, f=152
+Neighbor -> (66,74): g=19, h=134, f=153
 Neighbor -> (68,74): g=19, h=136, f=155
 Añadido a open -> (68,74): g=19, h=136, f=155
 Open -> (67,73): g=18, h=134, f=152
 Neighbor -> (67,72): g=19, h=133, f=152
 Añadido a open -> (67,72): g=19, h=133, f=152
+Neighbor -> (66,73): g=20, h=133, f=153
 Neighbor -> (68,73): g=20, h=135, f=155
 Añadido a open -> (68,73): g=20, h=135, f=155
 Open -> (67,72): g=19, h=133, f=152
 Neighbor -> (67,71): g=20, h=132, f=152
 Añadido a open -> (67,71): g=20, h=132, f=152
+Neighbor -> (66,72): g=21, h=132, f=153
 Neighbor -> (68,72): g=21, h=134, f=155
 Añadido a open -> (68,72): g=21, h=134, f=155
 Open -> (67,71): g=20, h=132, f=152
+Neighbor -> (66,71): g=22, h=131, f=153
 Neighbor -> (68,71): g=22, h=133, f=155
 Añadido a open -> (68,71): g=22, h=133, f=155
-Open -> (68,78): g=12, h=140, f=152
-Neighbor -> (68,77): g=13, h=139, f=152
-Neighbor -> (69,78): g=14, h=141, f=155
-Añadido a open -> (69,78): g=14, h=141, f=155
-Open -> (68,77): g=13, h=139, f=152
-Neighbor -> (68,76): g=14, h=138, f=152
-Añadido a open -> (68,76): g=14, h=138, f=152
-Neighbor -> (69,77): g=15, h=140, f=155
-Añadido a open -> (69,77): g=15, h=140, f=155
-Open -> (68,76): g=14, h=138, f=152
-Neighbor -> (68,75): g=15, h=137, f=152
-Neighbor -> (69,76): g=16, h=139, f=155
-Añadido a open -> (69,76): g=16, h=139, f=155
-Open -> (68,75): g=15, h=137, f=152
-Neighbor -> (68,74): g=16, h=136, f=152
-Añadido a open -> (68,74): g=16, h=136, f=152
-Neighbor -> (69,75): g=17, h=138, f=155
-Añadido a open -> (69,75): g=17, h=138, f=155
-Open -> (68,74): g=16, h=136, f=152
-Neighbor -> (68,73): g=17, h=135, f=152
-Neighbor -> (69,74): g=18, h=137, f=155
-Añadido a open -> (69,74): g=18, h=137, f=155
-Open -> (68,73): g=17, h=135, f=152
-Neighbor -> (68,72): g=18, h=134, f=152
-Añadido a open -> (68,72): g=18, h=134, f=152
-Neighbor -> (69,73): g=19, h=136, f=155
-Añadido a open -> (69,73): g=19, h=136, f=155
-Open -> (68,72): g=18, h=134, f=152
-Neighbor -> (68,71): g=19, h=133, f=152
-Añadido a open -> (68,71): g=19, h=133, f=152
-Neighbor -> (69,72): g=20, h=135, f=155
-Añadido a open -> (69,72): g=20, h=135, f=155
-Open -> (68,71): g=19, h=133, f=152
-Neighbor -> (69,71): g=21, h=134, f=155
-Añadido a open -> (69,71): g=21, h=134, f=155
 Open -> (69,78): g=11, h=141, f=152
 Neighbor -> (69,77): g=12, h=140, f=152
+Añadido a open -> (69,77): g=12, h=140, f=152
+Neighbor -> (68,78): g=13, h=140, f=153
 Neighbor -> (70,78): g=13, h=142, f=155
-Añadido a open -> (70,78): g=13, h=142, f=155
 Open -> (69,77): g=12, h=140, f=152
 Neighbor -> (69,76): g=13, h=139, f=152
 Añadido a open -> (69,76): g=13, h=139, f=152
+Neighbor -> (68,77): g=14, h=139, f=153
 Neighbor -> (70,77): g=14, h=141, f=155
 Añadido a open -> (70,77): g=14, h=141, f=155
 Open -> (69,76): g=13, h=139, f=152
 Neighbor -> (69,75): g=14, h=138, f=152
+Añadido a open -> (69,75): g=14, h=138, f=152
+Neighbor -> (68,76): g=15, h=138, f=153
 Neighbor -> (70,76): g=15, h=140, f=155
 Añadido a open -> (70,76): g=15, h=140, f=155
 Open -> (69,75): g=14, h=138, f=152
 Neighbor -> (69,74): g=15, h=137, f=152
 Añadido a open -> (69,74): g=15, h=137, f=152
+Neighbor -> (68,75): g=16, h=137, f=153
 Neighbor -> (70,75): g=16, h=139, f=155
 Añadido a open -> (70,75): g=16, h=139, f=155
 Open -> (69,74): g=15, h=137, f=152
 Neighbor -> (69,73): g=16, h=136, f=152
+Añadido a open -> (69,73): g=16, h=136, f=152
+Neighbor -> (68,74): g=17, h=136, f=153
 Neighbor -> (70,74): g=17, h=138, f=155
 Añadido a open -> (70,74): g=17, h=138, f=155
 Open -> (69,73): g=16, h=136, f=152
 Neighbor -> (69,72): g=17, h=135, f=152
 Añadido a open -> (69,72): g=17, h=135, f=152
+Neighbor -> (68,73): g=18, h=135, f=153
 Neighbor -> (70,73): g=18, h=137, f=155
 Añadido a open -> (70,73): g=18, h=137, f=155
 Open -> (69,72): g=17, h=135, f=152
 Neighbor -> (69,71): g=18, h=134, f=152
 Añadido a open -> (69,71): g=18, h=134, f=152
+Neighbor -> (68,72): g=19, h=134, f=153
 Neighbor -> (70,72): g=19, h=136, f=155
 Añadido a open -> (70,72): g=19, h=136, f=155
 Open -> (69,71): g=18, h=134, f=152
+Neighbor -> (68,71): g=20, h=133, f=153
 Neighbor -> (70,71): g=20, h=135, f=155
 Añadido a open -> (70,71): g=20, h=135, f=155
-Open -> (70,78): g=10, h=142, f=152
-Neighbor -> (70,77): g=11, h=141, f=152
-Neighbor -> (71,78): g=12, h=143, f=155
-Añadido a open -> (71,78): g=12, h=143, f=155
-Open -> (70,77): g=11, h=141, f=152
-Neighbor -> (70,76): g=12, h=140, f=152
-Añadido a open -> (70,76): g=12, h=140, f=152
-Neighbor -> (71,77): g=13, h=142, f=155
-Añadido a open -> (71,77): g=13, h=142, f=155
-Open -> (70,76): g=12, h=140, f=152
-Neighbor -> (70,75): g=13, h=139, f=152
-Neighbor -> (71,76): g=14, h=141, f=155
-Añadido a open -> (71,76): g=14, h=141, f=155
-Open -> (70,75): g=13, h=139, f=152
-Neighbor -> (70,74): g=14, h=138, f=152
-Añadido a open -> (70,74): g=14, h=138, f=152
-Neighbor -> (71,75): g=15, h=140, f=155
-Añadido a open -> (71,75): g=15, h=140, f=155
-Open -> (70,74): g=14, h=138, f=152
-Neighbor -> (70,73): g=15, h=137, f=152
-Neighbor -> (71,74): g=16, h=139, f=155
-Añadido a open -> (71,74): g=16, h=139, f=155
-Open -> (70,73): g=15, h=137, f=152
-Neighbor -> (70,72): g=16, h=136, f=152
-Añadido a open -> (70,72): g=16, h=136, f=152
-Neighbor -> (71,73): g=17, h=138, f=155
-Añadido a open -> (71,73): g=17, h=138, f=155
-Open -> (70,72): g=16, h=136, f=152
-Neighbor -> (70,71): g=17, h=135, f=152
-Añadido a open -> (70,71): g=17, h=135, f=152
-Neighbor -> (71,72): g=18, h=137, f=155
-Añadido a open -> (71,72): g=18, h=137, f=155
-Open -> (70,71): g=17, h=135, f=152
-Neighbor -> (71,71): g=19, h=136, f=155
-Añadido a open -> (71,71): g=19, h=136, f=155
 Open -> (71,78): g=9, h=143, f=152
 Neighbor -> (71,77): g=10, h=142, f=152
+Añadido a open -> (71,77): g=10, h=142, f=152
+Neighbor -> (70,78): g=11, h=142, f=153
 Neighbor -> (72,78): g=11, h=144, f=155
-Añadido a open -> (72,78): g=11, h=144, f=155
 Open -> (71,77): g=10, h=142, f=152
 Neighbor -> (71,76): g=11, h=141, f=152
 Añadido a open -> (71,76): g=11, h=141, f=152
+Neighbor -> (70,77): g=12, h=141, f=153
 Neighbor -> (72,77): g=12, h=143, f=155
 Añadido a open -> (72,77): g=12, h=143, f=155
 Open -> (71,76): g=11, h=141, f=152
 Neighbor -> (71,75): g=12, h=140, f=152
+Añadido a open -> (71,75): g=12, h=140, f=152
+Neighbor -> (70,76): g=13, h=140, f=153
 Neighbor -> (72,76): g=13, h=142, f=155
 Añadido a open -> (72,76): g=13, h=142, f=155
 Open -> (71,75): g=12, h=140, f=152
 Neighbor -> (71,74): g=13, h=139, f=152
 Añadido a open -> (71,74): g=13, h=139, f=152
+Neighbor -> (70,75): g=14, h=139, f=153
 Neighbor -> (72,75): g=14, h=141, f=155
 Añadido a open -> (72,75): g=14, h=141, f=155
 Open -> (71,74): g=13, h=139, f=152
 Neighbor -> (71,73): g=14, h=138, f=152
+Añadido a open -> (71,73): g=14, h=138, f=152
+Neighbor -> (70,74): g=15, h=138, f=153
 Neighbor -> (72,74): g=15, h=140, f=155
 Añadido a open -> (72,74): g=15, h=140, f=155
 Open -> (71,73): g=14, h=138, f=152
 Neighbor -> (71,72): g=15, h=137, f=152
 Añadido a open -> (71,72): g=15, h=137, f=152
+Neighbor -> (70,73): g=16, h=137, f=153
 Neighbor -> (72,73): g=16, h=139, f=155
 Añadido a open -> (72,73): g=16, h=139, f=155
 Open -> (71,72): g=15, h=137, f=152
 Neighbor -> (71,71): g=16, h=136, f=152
 Añadido a open -> (71,71): g=16, h=136, f=152
+Neighbor -> (70,72): g=17, h=136, f=153
 Neighbor -> (72,72): g=17, h=138, f=155
 Añadido a open -> (72,72): g=17, h=138, f=155
 Open -> (71,71): g=16, h=136, f=152
+Neighbor -> (70,71): g=18, h=135, f=153
 Neighbor -> (72,71): g=18, h=137, f=155
 Añadido a open -> (72,71): g=18, h=137, f=155
-Open -> (72,78): g=8, h=144, f=152
-Neighbor -> (72,77): g=9, h=143, f=152
-Neighbor -> (73,78): g=10, h=145, f=155
-Añadido a open -> (73,78): g=10, h=145, f=155
-Open -> (72,77): g=9, h=143, f=152
-Neighbor -> (72,76): g=10, h=142, f=152
-Añadido a open -> (72,76): g=10, h=142, f=152
-Neighbor -> (73,77): g=11, h=144, f=155
-Añadido a open -> (73,77): g=11, h=144, f=155
-Open -> (72,76): g=10, h=142, f=152
-Neighbor -> (72,75): g=11, h=141, f=152
-Neighbor -> (73,76): g=12, h=143, f=155
-Añadido a open -> (73,76): g=12, h=143, f=155
-Open -> (72,75): g=11, h=141, f=152
-Neighbor -> (72,74): g=12, h=140, f=152
-Añadido a open -> (72,74): g=12, h=140, f=152
-Neighbor -> (73,75): g=13, h=142, f=155
-Añadido a open -> (73,75): g=13, h=142, f=155
-Open -> (72,74): g=12, h=140, f=152
-Neighbor -> (72,73): g=13, h=139, f=152
-Neighbor -> (73,74): g=14, h=141, f=155
-Añadido a open -> (73,74): g=14, h=141, f=155
-Open -> (72,73): g=13, h=139, f=152
-Neighbor -> (72,72): g=14, h=138, f=152
-Añadido a open -> (72,72): g=14, h=138, f=152
-Neighbor -> (73,73): g=15, h=140, f=155
-Añadido a open -> (73,73): g=15, h=140, f=155
-Open -> (72,72): g=14, h=138, f=152
-Neighbor -> (72,71): g=15, h=137, f=152
-Añadido a open -> (72,71): g=15, h=137, f=152
-Neighbor -> (73,72): g=16, h=139, f=155
-Añadido a open -> (73,72): g=16, h=139, f=155
-Open -> (72,71): g=15, h=137, f=152
-Neighbor -> (72,70): g=16, h=136, f=152
-Añadido a open -> (72,70): g=16, h=136, f=152
-Neighbor -> (73,71): g=17, h=138, f=155
-Añadido a open -> (73,71): g=17, h=138, f=155
-Open -> (72,70): g=16, h=136, f=152
-Neighbor -> (72,69): g=17, h=135, f=152
-Añadido a open -> (72,69): g=17, h=135, f=152
-Neighbor -> (73,70): g=18, h=137, f=155
-Añadido a open -> (73,70): g=18, h=137, f=155
-Open -> (72,69): g=17, h=135, f=152
-Neighbor -> (72,68): g=18, h=134, f=152
-Añadido a open -> (72,68): g=18, h=134, f=152
-Neighbor -> (73,69): g=19, h=136, f=155
-Añadido a open -> (73,69): g=19, h=136, f=155
-Open -> (72,68): g=18, h=134, f=152
-Neighbor -> (71,68): g=20, h=133, f=153
-Añadido a open -> (71,68): g=20, h=133, f=153
-Neighbor -> (73,68): g=20, h=135, f=155
-Añadido a open -> (73,68): g=20, h=135, f=155
 Open -> (73,78): g=7, h=145, f=152
 Neighbor -> (73,77): g=8, h=144, f=152
+Añadido a open -> (73,77): g=8, h=144, f=152
+Neighbor -> (72,78): g=9, h=144, f=153
 Neighbor -> (74,78): g=9, h=146, f=155
-Añadido a open -> (74,78): g=9, h=146, f=155
 Open -> (73,77): g=8, h=144, f=152
 Neighbor -> (73,76): g=9, h=143, f=152
 Añadido a open -> (73,76): g=9, h=143, f=152
+Neighbor -> (72,77): g=10, h=143, f=153
 Neighbor -> (74,77): g=10, h=145, f=155
 Añadido a open -> (74,77): g=10, h=145, f=155
 Open -> (73,76): g=9, h=143, f=152
 Neighbor -> (73,75): g=10, h=142, f=152
+Añadido a open -> (73,75): g=10, h=142, f=152
+Neighbor -> (72,76): g=11, h=142, f=153
 Neighbor -> (74,76): g=11, h=144, f=155
 Añadido a open -> (74,76): g=11, h=144, f=155
 Open -> (73,75): g=10, h=142, f=152
 Neighbor -> (73,74): g=11, h=141, f=152
 Añadido a open -> (73,74): g=11, h=141, f=152
+Neighbor -> (72,75): g=12, h=141, f=153
 Neighbor -> (74,75): g=12, h=143, f=155
 Añadido a open -> (74,75): g=12, h=143, f=155
 Open -> (73,74): g=11, h=141, f=152
 Neighbor -> (73,73): g=12, h=140, f=152
 Añadido a open -> (73,73): g=12, h=140, f=152
+Neighbor -> (72,74): g=13, h=140, f=153
 Neighbor -> (74,74): g=13, h=142, f=155
 Añadido a open -> (74,74): g=13, h=142, f=155
 Open -> (73,73): g=12, h=140, f=152
 Neighbor -> (73,72): g=13, h=139, f=152
 Añadido a open -> (73,72): g=13, h=139, f=152
+Neighbor -> (72,73): g=14, h=139, f=153
 Neighbor -> (74,73): g=14, h=141, f=155
 Añadido a open -> (74,73): g=14, h=141, f=155
 Open -> (73,72): g=13, h=139, f=152
 Neighbor -> (73,71): g=14, h=138, f=152
+Añadido a open -> (73,71): g=14, h=138, f=152
+Neighbor -> (72,72): g=15, h=138, f=153
 Neighbor -> (74,72): g=15, h=140, f=155
 Añadido a open -> (74,72): g=15, h=140, f=155
 Open -> (73,71): g=14, h=138, f=152
 Neighbor -> (73,70): g=15, h=137, f=152
 Añadido a open -> (73,70): g=15, h=137, f=152
+Neighbor -> (72,71): g=16, h=137, f=153
 Neighbor -> (74,71): g=16, h=139, f=155
 Añadido a open -> (74,71): g=16, h=139, f=155
 Open -> (73,70): g=15, h=137, f=152
 Neighbor -> (73,69): g=16, h=136, f=152
 Añadido a open -> (73,69): g=16, h=136, f=152
+Neighbor -> (72,70): g=17, h=136, f=153
+Añadido a open -> (72,70): g=17, h=136, f=153
 Neighbor -> (74,70): g=17, h=138, f=155
 Añadido a open -> (74,70): g=17, h=138, f=155
 Open -> (73,69): g=16, h=136, f=152
 Neighbor -> (73,68): g=17, h=135, f=152
 Añadido a open -> (73,68): g=17, h=135, f=152
+Neighbor -> (72,69): g=18, h=135, f=153
+Añadido a open -> (72,69): g=18, h=135, f=153
 Neighbor -> (74,69): g=18, h=137, f=155
 Añadido a open -> (74,69): g=18, h=137, f=155
 Open -> (73,68): g=17, h=135, f=152
 Neighbor -> (73,67): g=18, h=134, f=152
 Añadido a open -> (73,67): g=18, h=134, f=152
+Neighbor -> (72,68): g=19, h=134, f=153
+Añadido a open -> (72,68): g=19, h=134, f=153
 Neighbor -> (74,68): g=19, h=136, f=155
 Añadido a open -> (74,68): g=19, h=136, f=155
 Open -> (73,67): g=18, h=134, f=152
@@ -682,321 +520,200 @@ Neighbor -> (72,57): g=30, h=123, f=153
 Añadido a open -> (72,57): g=30, h=123, f=153
 Neighbor -> (74,57): g=30, h=125, f=155
 Añadido a open -> (74,57): g=30, h=125, f=155
-Open -> (74,78): g=6, h=146, f=152
-Neighbor -> (74,77): g=7, h=145, f=152
-Neighbor -> (75,78): g=8, h=147, f=155
-Añadido a open -> (75,78): g=8, h=147, f=155
-Open -> (74,77): g=7, h=145, f=152
-Neighbor -> (74,76): g=8, h=144, f=152
-Añadido a open -> (74,76): g=8, h=144, f=152
-Neighbor -> (75,77): g=9, h=146, f=155
-Añadido a open -> (75,77): g=9, h=146, f=155
-Open -> (74,76): g=8, h=144, f=152
-Neighbor -> (74,75): g=9, h=143, f=152
-Neighbor -> (75,76): g=10, h=145, f=155
-Añadido a open -> (75,76): g=10, h=145, f=155
-Open -> (74,75): g=9, h=143, f=152
-Neighbor -> (74,74): g=10, h=142, f=152
-Añadido a open -> (74,74): g=10, h=142, f=152
-Neighbor -> (75,75): g=11, h=144, f=155
-Añadido a open -> (75,75): g=11, h=144, f=155
-Open -> (74,74): g=10, h=142, f=152
-Neighbor -> (74,73): g=11, h=141, f=152
-Añadido a open -> (74,73): g=11, h=141, f=152
-Neighbor -> (75,74): g=12, h=143, f=155
-Añadido a open -> (75,74): g=12, h=143, f=155
-Open -> (74,73): g=11, h=141, f=152
-Neighbor -> (74,72): g=12, h=140, f=152
-Añadido a open -> (74,72): g=12, h=140, f=152
-Neighbor -> (75,73): g=13, h=142, f=155
-Añadido a open -> (75,73): g=13, h=142, f=155
-Open -> (74,72): g=12, h=140, f=152
-Neighbor -> (74,71): g=13, h=139, f=152
-Neighbor -> (75,72): g=14, h=141, f=155
-Añadido a open -> (75,72): g=14, h=141, f=155
-Open -> (74,71): g=13, h=139, f=152
-Neighbor -> (74,70): g=14, h=138, f=152
-Añadido a open -> (74,70): g=14, h=138, f=152
-Neighbor -> (75,71): g=15, h=140, f=155
-Añadido a open -> (75,71): g=15, h=140, f=155
-Open -> (74,70): g=14, h=138, f=152
-Neighbor -> (74,69): g=15, h=137, f=152
-Añadido a open -> (74,69): g=15, h=137, f=152
-Neighbor -> (75,70): g=16, h=139, f=155
-Añadido a open -> (75,70): g=16, h=139, f=155
-Open -> (74,69): g=15, h=137, f=152
-Neighbor -> (74,68): g=16, h=136, f=152
-Añadido a open -> (74,68): g=16, h=136, f=152
-Neighbor -> (75,69): g=17, h=138, f=155
-Añadido a open -> (75,69): g=17, h=138, f=155
-Open -> (74,68): g=16, h=136, f=152
-Neighbor -> (74,67): g=17, h=135, f=152
-Neighbor -> (75,68): g=18, h=137, f=155
-Añadido a open -> (75,68): g=18, h=137, f=155
-Open -> (74,67): g=17, h=135, f=152
-Neighbor -> (74,66): g=18, h=134, f=152
-Añadido a open -> (74,66): g=18, h=134, f=152
-Neighbor -> (75,67): g=19, h=136, f=155
-Añadido a open -> (75,67): g=19, h=136, f=155
-Open -> (74,66): g=18, h=134, f=152
-Neighbor -> (74,65): g=19, h=133, f=152
-Añadido a open -> (74,65): g=19, h=133, f=152
-Neighbor -> (75,66): g=20, h=135, f=155
-Añadido a open -> (75,66): g=20, h=135, f=155
-Open -> (74,65): g=19, h=133, f=152
-Neighbor -> (74,64): g=20, h=132, f=152
-Añadido a open -> (74,64): g=20, h=132, f=152
-Neighbor -> (75,65): g=21, h=134, f=155
-Añadido a open -> (75,65): g=21, h=134, f=155
-Open -> (74,64): g=20, h=132, f=152
-Neighbor -> (74,63): g=21, h=131, f=152
-Añadido a open -> (74,63): g=21, h=131, f=152
-Neighbor -> (75,64): g=22, h=133, f=155
-Añadido a open -> (75,64): g=22, h=133, f=155
-Open -> (74,63): g=21, h=131, f=152
-Neighbor -> (74,62): g=22, h=130, f=152
-Añadido a open -> (74,62): g=22, h=130, f=152
-Neighbor -> (75,63): g=23, h=132, f=155
-Añadido a open -> (75,63): g=23, h=132, f=155
-Open -> (74,62): g=22, h=130, f=152
-Neighbor -> (74,61): g=23, h=129, f=152
-Añadido a open -> (74,61): g=23, h=129, f=152
-Neighbor -> (75,62): g=24, h=131, f=155
-Añadido a open -> (75,62): g=24, h=131, f=155
-Open -> (74,61): g=23, h=129, f=152
-Neighbor -> (74,60): g=24, h=128, f=152
-Añadido a open -> (74,60): g=24, h=128, f=152
-Neighbor -> (75,61): g=25, h=130, f=155
-Añadido a open -> (75,61): g=25, h=130, f=155
-Open -> (74,60): g=24, h=128, f=152
-Neighbor -> (74,59): g=25, h=127, f=152
-Añadido a open -> (74,59): g=25, h=127, f=152
-Neighbor -> (75,60): g=26, h=129, f=155
-Añadido a open -> (75,60): g=26, h=129, f=155
-Open -> (74,59): g=25, h=127, f=152
-Neighbor -> (74,58): g=26, h=126, f=152
-Añadido a open -> (74,58): g=26, h=126, f=152
-Neighbor -> (75,59): g=27, h=128, f=155
-Añadido a open -> (75,59): g=27, h=128, f=155
-Open -> (74,58): g=26, h=126, f=152
-Neighbor -> (74,57): g=27, h=125, f=152
-Añadido a open -> (74,57): g=27, h=125, f=152
-Neighbor -> (75,58): g=28, h=127, f=155
-Añadido a open -> (75,58): g=28, h=127, f=155
-Open -> (74,57): g=27, h=125, f=152
-Neighbor -> (75,57): g=29, h=126, f=155
-Añadido a open -> (75,57): g=29, h=126, f=155
 Open -> (75,78): g=5, h=147, f=152
 Neighbor -> (75,77): g=6, h=146, f=152
+Añadido a open -> (75,77): g=6, h=146, f=152
+Neighbor -> (74,78): g=7, h=146, f=153
 Neighbor -> (76,78): g=7, h=148, f=155
-Añadido a open -> (76,78): g=7, h=148, f=155
 Open -> (75,77): g=6, h=146, f=152
 Neighbor -> (75,76): g=7, h=145, f=152
 Añadido a open -> (75,76): g=7, h=145, f=152
+Neighbor -> (74,77): g=8, h=145, f=153
 Neighbor -> (76,77): g=8, h=147, f=155
 Añadido a open -> (76,77): g=8, h=147, f=155
 Open -> (75,76): g=7, h=145, f=152
 Neighbor -> (75,75): g=8, h=144, f=152
+Añadido a open -> (75,75): g=8, h=144, f=152
+Neighbor -> (74,76): g=9, h=144, f=153
 Neighbor -> (76,76): g=9, h=146, f=155
 Añadido a open -> (76,76): g=9, h=146, f=155
 Open -> (75,75): g=8, h=144, f=152
 Neighbor -> (75,74): g=9, h=143, f=152
 Añadido a open -> (75,74): g=9, h=143, f=152
+Neighbor -> (74,75): g=10, h=143, f=153
 Neighbor -> (76,75): g=10, h=145, f=155
 Añadido a open -> (76,75): g=10, h=145, f=155
 Open -> (75,74): g=9, h=143, f=152
 Neighbor -> (75,73): g=10, h=142, f=152
 Añadido a open -> (75,73): g=10, h=142, f=152
+Neighbor -> (74,74): g=11, h=142, f=153
 Neighbor -> (76,74): g=11, h=144, f=155
 Añadido a open -> (76,74): g=11, h=144, f=155
 Open -> (75,73): g=10, h=142, f=152
 Neighbor -> (75,72): g=11, h=141, f=152
 Añadido a open -> (75,72): g=11, h=141, f=152
+Neighbor -> (74,73): g=12, h=141, f=153
 Neighbor -> (76,73): g=12, h=143, f=155
 Añadido a open -> (76,73): g=12, h=143, f=155
 Open -> (75,72): g=11, h=141, f=152
 Neighbor -> (75,71): g=12, h=140, f=152
+Añadido a open -> (75,71): g=12, h=140, f=152
+Neighbor -> (74,72): g=13, h=140, f=153
 Neighbor -> (76,72): g=13, h=142, f=155
 Añadido a open -> (76,72): g=13, h=142, f=155
 Open -> (75,71): g=12, h=140, f=152
 Neighbor -> (75,70): g=13, h=139, f=152
 Añadido a open -> (75,70): g=13, h=139, f=152
+Neighbor -> (74,71): g=14, h=139, f=153
 Neighbor -> (76,71): g=14, h=141, f=155
 Añadido a open -> (76,71): g=14, h=141, f=155
 Open -> (75,70): g=13, h=139, f=152
 Neighbor -> (75,69): g=14, h=138, f=152
 Añadido a open -> (75,69): g=14, h=138, f=152
+Neighbor -> (74,70): g=15, h=138, f=153
 Neighbor -> (76,70): g=15, h=140, f=155
 Añadido a open -> (76,70): g=15, h=140, f=155
 Open -> (75,69): g=14, h=138, f=152
 Neighbor -> (75,68): g=15, h=137, f=152
 Añadido a open -> (75,68): g=15, h=137, f=152
+Neighbor -> (74,69): g=16, h=137, f=153
 Neighbor -> (76,69): g=16, h=139, f=155
 Añadido a open -> (76,69): g=16, h=139, f=155
 Open -> (75,68): g=15, h=137, f=152
 Neighbor -> (75,67): g=16, h=136, f=152
 Añadido a open -> (75,67): g=16, h=136, f=152
+Neighbor -> (74,68): g=17, h=136, f=153
 Neighbor -> (76,68): g=17, h=138, f=155
 Añadido a open -> (76,68): g=17, h=138, f=155
 Open -> (75,67): g=16, h=136, f=152
 Neighbor -> (75,66): g=17, h=135, f=152
 Añadido a open -> (75,66): g=17, h=135, f=152
+Neighbor -> (74,67): g=18, h=135, f=153
 Neighbor -> (76,67): g=18, h=137, f=155
 Añadido a open -> (76,67): g=18, h=137, f=155
 Open -> (75,66): g=17, h=135, f=152
 Neighbor -> (75,65): g=18, h=134, f=152
 Añadido a open -> (75,65): g=18, h=134, f=152
+Neighbor -> (74,66): g=19, h=134, f=153
 Neighbor -> (76,66): g=19, h=136, f=155
 Añadido a open -> (76,66): g=19, h=136, f=155
 Open -> (75,65): g=18, h=134, f=152
 Neighbor -> (75,64): g=19, h=133, f=152
 Añadido a open -> (75,64): g=19, h=133, f=152
+Neighbor -> (74,65): g=20, h=133, f=153
 Neighbor -> (76,65): g=20, h=135, f=155
 Añadido a open -> (76,65): g=20, h=135, f=155
 Open -> (75,64): g=19, h=133, f=152
 Neighbor -> (75,63): g=20, h=132, f=152
+Añadido a open -> (75,63): g=20, h=132, f=152
+Neighbor -> (74,64): g=21, h=132, f=153
 Neighbor -> (76,64): g=21, h=134, f=155
 Añadido a open -> (76,64): g=21, h=134, f=155
 Open -> (75,63): g=20, h=132, f=152
 Neighbor -> (75,62): g=21, h=131, f=152
 Añadido a open -> (75,62): g=21, h=131, f=152
+Neighbor -> (74,63): g=22, h=131, f=153
 Neighbor -> (76,63): g=22, h=133, f=155
 Añadido a open -> (76,63): g=22, h=133, f=155
 Open -> (75,62): g=21, h=131, f=152
 Neighbor -> (75,61): g=22, h=130, f=152
 Añadido a open -> (75,61): g=22, h=130, f=152
+Neighbor -> (74,62): g=23, h=130, f=153
 Neighbor -> (76,62): g=23, h=132, f=155
 Añadido a open -> (76,62): g=23, h=132, f=155
 Open -> (75,61): g=22, h=130, f=152
 Neighbor -> (75,60): g=23, h=129, f=152
 Añadido a open -> (75,60): g=23, h=129, f=152
+Neighbor -> (74,61): g=24, h=129, f=153
 Neighbor -> (76,61): g=24, h=131, f=155
 Añadido a open -> (76,61): g=24, h=131, f=155
 Open -> (75,60): g=23, h=129, f=152
 Neighbor -> (75,59): g=24, h=128, f=152
 Añadido a open -> (75,59): g=24, h=128, f=152
+Neighbor -> (74,60): g=25, h=128, f=153
 Neighbor -> (76,60): g=25, h=130, f=155
 Añadido a open -> (76,60): g=25, h=130, f=155
 Open -> (75,59): g=24, h=128, f=152
 Neighbor -> (75,58): g=25, h=127, f=152
 Añadido a open -> (75,58): g=25, h=127, f=152
+Neighbor -> (74,59): g=26, h=127, f=153
 Neighbor -> (76,59): g=26, h=129, f=155
 Añadido a open -> (76,59): g=26, h=129, f=155
 Open -> (75,58): g=25, h=127, f=152
 Neighbor -> (75,57): g=26, h=126, f=152
 Añadido a open -> (75,57): g=26, h=126, f=152
+Neighbor -> (74,58): g=27, h=126, f=153
 Neighbor -> (76,58): g=27, h=128, f=155
 Añadido a open -> (76,58): g=27, h=128, f=155
 Open -> (75,57): g=26, h=126, f=152
+Neighbor -> (74,57): g=28, h=125, f=153
 Neighbor -> (76,57): g=28, h=127, f=155
 Añadido a open -> (76,57): g=28, h=127, f=155
-Open -> (76,78): g=4, h=148, f=152
-Neighbor -> (76,77): g=5, h=147, f=152
-Neighbor -> (77,78): g=6, h=149, f=155
-Añadido a open -> (77,78): g=6, h=149, f=155
-Open -> (76,77): g=5, h=147, f=152
-Neighbor -> (76,76): g=6, h=146, f=152
-Añadido a open -> (76,76): g=6, h=146, f=152
-Neighbor -> (77,77): g=7, h=148, f=155
-Añadido a open -> (77,77): g=7, h=148, f=155
-Open -> (76,76): g=6, h=146, f=152
-Neighbor -> (76,75): g=7, h=145, f=152
-Open -> (76,75): g=7, h=145, f=152
-Neighbor -> (76,74): g=8, h=144, f=152
-Añadido a open -> (76,74): g=8, h=144, f=152
-Neighbor -> (77,75): g=9, h=146, f=155
-Añadido a open -> (77,75): g=9, h=146, f=155
-Open -> (76,74): g=8, h=144, f=152
-Neighbor -> (76,73): g=9, h=143, f=152
-Añadido a open -> (76,73): g=9, h=143, f=152
-Open -> (76,73): g=9, h=143, f=152
-Neighbor -> (76,72): g=10, h=142, f=152
-Añadido a open -> (76,72): g=10, h=142, f=152
-Neighbor -> (77,73): g=11, h=144, f=155
-Añadido a open -> (77,73): g=11, h=144, f=155
-Open -> (76,72): g=10, h=142, f=152
-Neighbor -> (76,71): g=11, h=141, f=152
-Neighbor -> (77,72): g=12, h=143, f=155
-Añadido a open -> (77,72): g=12, h=143, f=155
-Open -> (76,71): g=11, h=141, f=152
-Neighbor -> (76,70): g=12, h=140, f=152
-Añadido a open -> (76,70): g=12, h=140, f=152
-Neighbor -> (77,71): g=13, h=142, f=155
-Añadido a open -> (77,71): g=13, h=142, f=155
-Open -> (76,70): g=12, h=140, f=152
-Neighbor -> (76,69): g=13, h=139, f=152
-Añadido a open -> (76,69): g=13, h=139, f=152
-Neighbor -> (77,70): g=14, h=141, f=155
-Añadido a open -> (77,70): g=14, h=141, f=155
-Open -> (76,69): g=13, h=139, f=152
-Neighbor -> (76,68): g=14, h=138, f=152
-Añadido a open -> (76,68): g=14, h=138, f=152
-Neighbor -> (77,69): g=15, h=140, f=155
-Añadido a open -> (77,69): g=15, h=140, f=155
-Open -> (76,68): g=14, h=138, f=152
-Neighbor -> (76,67): g=15, h=137, f=152
-Añadido a open -> (76,67): g=15, h=137, f=152
-Neighbor -> (77,68): g=16, h=139, f=155
-Añadido a open -> (77,68): g=16, h=139, f=155
-Open -> (76,67): g=15, h=137, f=152
-Neighbor -> (76,66): g=16, h=136, f=152
-Añadido a open -> (76,66): g=16, h=136, f=152
-Open -> (76,66): g=16, h=136, f=152
-Neighbor -> (76,65): g=17, h=135, f=152
-Añadido a open -> (76,65): g=17, h=135, f=152
-Open -> (76,65): g=17, h=135, f=152
-Neighbor -> (76,64): g=18, h=134, f=152
-Añadido a open -> (76,64): g=18, h=134, f=152
-Neighbor -> (77,65): g=19, h=136, f=155
-Añadido a open -> (77,65): g=19, h=136, f=155
-Open -> (76,64): g=18, h=134, f=152
-Neighbor -> (76,63): g=19, h=133, f=152
-Neighbor -> (77,64): g=20, h=135, f=155
-Añadido a open -> (77,64): g=20, h=135, f=155
-Open -> (76,63): g=19, h=133, f=152
-Neighbor -> (76,62): g=20, h=132, f=152
-Añadido a open -> (76,62): g=20, h=132, f=152
-Neighbor -> (77,63): g=21, h=134, f=155
-Añadido a open -> (77,63): g=21, h=134, f=155
-Open -> (76,62): g=20, h=132, f=152
-Neighbor -> (76,61): g=21, h=131, f=152
-Añadido a open -> (76,61): g=21, h=131, f=152
-Neighbor -> (77,62): g=22, h=133, f=155
-Añadido a open -> (77,62): g=22, h=133, f=155
-Open -> (76,61): g=21, h=131, f=152
-Neighbor -> (76,60): g=22, h=130, f=152
-Añadido a open -> (76,60): g=22, h=130, f=152
-Neighbor -> (77,61): g=23, h=132, f=155
-Añadido a open -> (77,61): g=23, h=132, f=155
-Open -> (76,60): g=22, h=130, f=152
-Neighbor -> (76,59): g=23, h=129, f=152
-Añadido a open -> (76,59): g=23, h=129, f=152
-Neighbor -> (77,60): g=24, h=131, f=155
-Añadido a open -> (77,60): g=24, h=131, f=155
-Open -> (76,59): g=23, h=129, f=152
-Neighbor -> (76,58): g=24, h=128, f=152
-Añadido a open -> (76,58): g=24, h=128, f=152
-Neighbor -> (77,59): g=25, h=130, f=155
-Añadido a open -> (77,59): g=25, h=130, f=155
-Open -> (76,58): g=24, h=128, f=152
-Neighbor -> (76,57): g=25, h=127, f=152
-Añadido a open -> (76,57): g=25, h=127, f=152
-Neighbor -> (77,58): g=26, h=129, f=155
-Añadido a open -> (77,58): g=26, h=129, f=155
-Open -> (76,57): g=25, h=127, f=152
-Neighbor -> (77,57): g=27, h=128, f=155
-Añadido a open -> (77,57): g=27, h=128, f=155
 Open -> (77,78): g=3, h=149, f=152
 Neighbor -> (77,77): g=4, h=148, f=152
+Añadido a open -> (77,77): g=4, h=148, f=152
+Neighbor -> (76,78): g=5, h=148, f=153
 Open -> (77,77): g=4, h=148, f=152
-Open -> (71,68): g=20, h=133, f=153
-Neighbor -> (71,67): g=22, h=132, f=154
-Añadido a open -> (71,67): g=22, h=132, f=154
+Neighbor -> (76,77): g=6, h=147, f=153
+Open -> (62,71): g=26, h=127, f=153
+Neighbor -> (62,72): g=28, h=128, f=156
+Open -> (62,73): g=24, h=129, f=153
+Neighbor -> (62,74): g=26, h=130, f=156
+Neighbor -> (62,72): g=26, h=128, f=154
+Open -> (62,75): g=22, h=131, f=153
+Neighbor -> (62,76): g=24, h=132, f=156
+Neighbor -> (62,74): g=24, h=130, f=154
+Open -> (62,77): g=20, h=133, f=153
+Neighbor -> (62,78): g=22, h=134, f=156
+Neighbor -> (62,76): g=22, h=132, f=154
+Open -> (64,71): g=24, h=129, f=153
+Neighbor -> (64,72): g=26, h=130, f=156
+Open -> (64,73): g=22, h=131, f=153
+Neighbor -> (64,74): g=24, h=132, f=156
+Neighbor -> (64,72): g=24, h=130, f=154
+Open -> (64,75): g=20, h=133, f=153
+Neighbor -> (64,76): g=22, h=134, f=156
+Neighbor -> (64,74): g=22, h=132, f=154
+Open -> (64,77): g=18, h=135, f=153
+Neighbor -> (64,78): g=20, h=136, f=156
+Neighbor -> (64,76): g=20, h=134, f=154
+Open -> (66,71): g=22, h=131, f=153
+Neighbor -> (66,72): g=24, h=132, f=156
+Open -> (66,73): g=20, h=133, f=153
+Neighbor -> (66,74): g=22, h=134, f=156
+Neighbor -> (66,72): g=22, h=132, f=154
+Open -> (66,75): g=18, h=135, f=153
+Neighbor -> (66,76): g=20, h=136, f=156
+Neighbor -> (66,74): g=20, h=134, f=154
+Open -> (66,77): g=16, h=137, f=153
+Neighbor -> (66,78): g=18, h=138, f=156
+Neighbor -> (66,76): g=18, h=136, f=154
+Open -> (68,71): g=20, h=133, f=153
+Neighbor -> (68,72): g=22, h=134, f=156
+Open -> (68,73): g=18, h=135, f=153
+Neighbor -> (68,74): g=20, h=136, f=156
+Neighbor -> (68,72): g=20, h=134, f=154
+Open -> (68,75): g=16, h=137, f=153
+Neighbor -> (68,76): g=18, h=138, f=156
+Neighbor -> (68,74): g=18, h=136, f=154
+Open -> (68,77): g=14, h=139, f=153
+Neighbor -> (68,78): g=16, h=140, f=156
+Neighbor -> (68,76): g=16, h=138, f=154
+Open -> (70,71): g=18, h=135, f=153
+Neighbor -> (70,72): g=20, h=136, f=156
+Open -> (70,73): g=16, h=137, f=153
+Neighbor -> (70,74): g=18, h=138, f=156
+Neighbor -> (70,72): g=18, h=136, f=154
+Open -> (70,75): g=14, h=139, f=153
+Neighbor -> (70,76): g=16, h=140, f=156
+Neighbor -> (70,74): g=16, h=138, f=154
+Open -> (70,77): g=12, h=141, f=153
+Neighbor -> (70,78): g=14, h=142, f=156
+Neighbor -> (70,76): g=14, h=140, f=154
 Open -> (72,57): g=30, h=123, f=153
 Neighbor -> (71,57): g=31, h=122, f=153
 Añadido a open -> (71,57): g=31, h=122, f=153
 Neighbor -> (72,58): g=32, h=124, f=156
-Añadido a open -> (72,58): g=32, h=124, f=156
 Open -> (71,57): g=31, h=122, f=153
 Neighbor -> (70,57): g=32, h=121, f=153
 Añadido a open -> (70,57): g=32, h=121, f=153
@@ -1007,140 +724,145 @@ Neighbor -> (70,58): g=34, h=122, f=156
 Añadido a open -> (70,58): g=34, h=122, f=156
 Neighbor -> (70,56): g=34, h=120, f=154
 Añadido a open -> (70,56): g=34, h=120, f=154
-Open -> (72,58): g=29, h=124, f=153
-Neighbor -> (71,58): g=30, h=123, f=153
-Neighbor -> (72,59): g=31, h=125, f=156
-Añadido a open -> (72,59): g=31, h=125, f=156
-Open -> (71,58): g=30, h=123, f=153
-Neighbor -> (70,58): g=31, h=122, f=153
-Añadido a open -> (70,58): g=31, h=122, f=153
-Neighbor -> (71,59): g=32, h=124, f=156
-Añadido a open -> (71,59): g=32, h=124, f=156
-Open -> (70,58): g=31, h=122, f=153
-Neighbor -> (70,59): g=33, h=123, f=156
-Añadido a open -> (70,59): g=33, h=123, f=156
 Open -> (72,59): g=28, h=125, f=153
 Neighbor -> (71,59): g=29, h=124, f=153
 Añadido a open -> (71,59): g=29, h=124, f=153
 Neighbor -> (72,60): g=30, h=126, f=156
-Añadido a open -> (72,60): g=30, h=126, f=156
+Neighbor -> (72,58): g=30, h=124, f=154
 Open -> (71,59): g=29, h=124, f=153
 Neighbor -> (70,59): g=30, h=123, f=153
 Añadido a open -> (70,59): g=30, h=123, f=153
 Neighbor -> (71,60): g=31, h=125, f=156
 Añadido a open -> (71,60): g=31, h=125, f=156
+Neighbor -> (71,58): g=31, h=123, f=154
 Open -> (70,59): g=30, h=123, f=153
 Neighbor -> (70,60): g=32, h=124, f=156
 Añadido a open -> (70,60): g=32, h=124, f=156
-Open -> (72,60): g=27, h=126, f=153
-Neighbor -> (71,60): g=28, h=125, f=153
-Añadido a open -> (71,60): g=28, h=125, f=153
-Neighbor -> (72,61): g=29, h=127, f=156
-Añadido a open -> (72,61): g=29, h=127, f=156
-Open -> (71,60): g=28, h=125, f=153
-Neighbor -> (70,60): g=29, h=124, f=153
-Añadido a open -> (70,60): g=29, h=124, f=153
-Neighbor -> (71,61): g=30, h=126, f=156
-Añadido a open -> (71,61): g=30, h=126, f=156
-Open -> (70,60): g=29, h=124, f=153
-Neighbor -> (70,61): g=31, h=125, f=156
-Añadido a open -> (70,61): g=31, h=125, f=156
+Neighbor -> (70,58): g=32, h=122, f=154
 Open -> (72,61): g=26, h=127, f=153
 Neighbor -> (71,61): g=27, h=126, f=153
 Añadido a open -> (71,61): g=27, h=126, f=153
 Neighbor -> (72,62): g=28, h=128, f=156
-Añadido a open -> (72,62): g=28, h=128, f=156
+Neighbor -> (72,60): g=28, h=126, f=154
 Open -> (71,61): g=27, h=126, f=153
 Neighbor -> (70,61): g=28, h=125, f=153
 Añadido a open -> (70,61): g=28, h=125, f=153
 Neighbor -> (71,62): g=29, h=127, f=156
 Añadido a open -> (71,62): g=29, h=127, f=156
+Neighbor -> (71,60): g=29, h=125, f=154
 Open -> (70,61): g=28, h=125, f=153
 Neighbor -> (70,62): g=30, h=126, f=156
 Añadido a open -> (70,62): g=30, h=126, f=156
-Open -> (72,62): g=25, h=128, f=153
-Neighbor -> (71,62): g=26, h=127, f=153
-Añadido a open -> (71,62): g=26, h=127, f=153
-Neighbor -> (72,63): g=27, h=129, f=156
-Añadido a open -> (72,63): g=27, h=129, f=156
-Open -> (71,62): g=26, h=127, f=153
-Neighbor -> (70,62): g=27, h=126, f=153
-Añadido a open -> (70,62): g=27, h=126, f=153
-Neighbor -> (71,63): g=28, h=128, f=156
-Añadido a open -> (71,63): g=28, h=128, f=156
-Open -> (70,62): g=27, h=126, f=153
-Neighbor -> (70,63): g=29, h=127, f=156
-Añadido a open -> (70,63): g=29, h=127, f=156
+Neighbor -> (70,60): g=30, h=124, f=154
 Open -> (72,63): g=24, h=129, f=153
 Neighbor -> (71,63): g=25, h=128, f=153
 Añadido a open -> (71,63): g=25, h=128, f=153
 Neighbor -> (72,64): g=26, h=130, f=156
-Añadido a open -> (72,64): g=26, h=130, f=156
+Neighbor -> (72,62): g=26, h=128, f=154
 Open -> (71,63): g=25, h=128, f=153
 Neighbor -> (70,63): g=26, h=127, f=153
 Añadido a open -> (70,63): g=26, h=127, f=153
 Neighbor -> (71,64): g=27, h=129, f=156
 Añadido a open -> (71,64): g=27, h=129, f=156
+Neighbor -> (71,62): g=27, h=127, f=154
 Open -> (70,63): g=26, h=127, f=153
 Neighbor -> (70,64): g=28, h=128, f=156
 Añadido a open -> (70,64): g=28, h=128, f=156
-Open -> (72,64): g=23, h=130, f=153
-Neighbor -> (71,64): g=24, h=129, f=153
-Añadido a open -> (71,64): g=24, h=129, f=153
-Neighbor -> (72,65): g=25, h=131, f=156
-Añadido a open -> (72,65): g=25, h=131, f=156
-Open -> (71,64): g=24, h=129, f=153
-Neighbor -> (70,64): g=25, h=128, f=153
-Añadido a open -> (70,64): g=25, h=128, f=153
-Open -> (70,64): g=25, h=128, f=153
-Neighbor -> (70,65): g=27, h=129, f=156
-Añadido a open -> (70,65): g=27, h=129, f=156
+Neighbor -> (70,62): g=28, h=126, f=154
 Open -> (72,65): g=22, h=131, f=153
+Neighbor -> (72,64): g=24, h=130, f=154
+Open -> (72,68): g=19, h=134, f=153
+Neighbor -> (71,68): g=20, h=133, f=153
+Añadido a open -> (71,68): g=20, h=133, f=153
+Neighbor -> (72,69): g=21, h=135, f=156
+Open -> (71,68): g=20, h=133, f=153
+Neighbor -> (71,67): g=22, h=132, f=154
+Añadido a open -> (71,67): g=22, h=132, f=154
+Open -> (72,70): g=17, h=136, f=153
+Neighbor -> (72,71): g=19, h=137, f=156
+Neighbor -> (72,69): g=19, h=135, f=154
+Open -> (72,72): g=15, h=138, f=153
+Neighbor -> (72,73): g=17, h=139, f=156
+Neighbor -> (72,71): g=17, h=137, f=154
+Open -> (72,74): g=13, h=140, f=153
+Neighbor -> (72,75): g=15, h=141, f=156
+Neighbor -> (72,73): g=15, h=139, f=154
+Open -> (72,76): g=11, h=142, f=153
+Neighbor -> (72,77): g=13, h=143, f=156
+Neighbor -> (72,75): g=13, h=141, f=154
+Open -> (72,78): g=9, h=144, f=153
+Neighbor -> (72,77): g=11, h=143, f=154
+Open -> (74,57): g=28, h=125, f=153
+Neighbor -> (74,58): g=30, h=126, f=156
+Open -> (74,59): g=26, h=127, f=153
+Neighbor -> (74,60): g=28, h=128, f=156
+Neighbor -> (74,58): g=28, h=126, f=154
+Open -> (74,61): g=24, h=129, f=153
+Neighbor -> (74,62): g=26, h=130, f=156
+Neighbor -> (74,60): g=26, h=128, f=154
+Open -> (74,63): g=22, h=131, f=153
+Neighbor -> (74,64): g=24, h=132, f=156
+Neighbor -> (74,62): g=24, h=130, f=154
+Open -> (74,65): g=20, h=133, f=153
+Neighbor -> (74,66): g=22, h=134, f=156
+Neighbor -> (74,64): g=22, h=132, f=154
+Open -> (74,67): g=18, h=135, f=153
+Neighbor -> (74,68): g=20, h=136, f=156
+Neighbor -> (74,66): g=20, h=134, f=154
+Open -> (74,69): g=16, h=137, f=153
+Neighbor -> (74,70): g=18, h=138, f=156
+Neighbor -> (74,68): g=18, h=136, f=154
+Open -> (74,71): g=14, h=139, f=153
+Neighbor -> (74,72): g=16, h=140, f=156
+Neighbor -> (74,70): g=16, h=138, f=154
+Open -> (74,73): g=12, h=141, f=153
+Neighbor -> (74,74): g=14, h=142, f=156
+Neighbor -> (74,72): g=14, h=140, f=154
+Open -> (74,75): g=10, h=143, f=153
+Neighbor -> (74,76): g=12, h=144, f=156
+Neighbor -> (74,74): g=12, h=142, f=154
+Open -> (74,77): g=8, h=145, f=153
+Neighbor -> (74,78): g=10, h=146, f=156
+Neighbor -> (74,76): g=10, h=144, f=154
+Open -> (76,77): g=6, h=147, f=153
+Neighbor -> (76,78): g=8, h=148, f=156
+Neighbor -> (76,76): g=8, h=146, f=154
 Open -> (61,80): g=19, h=135, f=154
 Neighbor -> (61,81): g=20, h=136, f=156
 Añadido a open -> (61,81): g=20, h=136, f=156
 Neighbor -> (62,80): g=21, h=136, f=157
-Añadido a open -> (62,80): g=21, h=136, f=157
-Open -> (62,80): g=18, h=136, f=154
-Neighbor -> (62,81): g=19, h=137, f=156
-Añadido a open -> (62,81): g=19, h=137, f=156
-Neighbor -> (63,80): g=20, h=137, f=157
-Añadido a open -> (63,80): g=20, h=137, f=157
+Open -> (62,72): g=26, h=128, f=154
+Open -> (62,74): g=24, h=130, f=154
+Open -> (62,76): g=22, h=132, f=154
 Open -> (63,80): g=17, h=137, f=154
 Neighbor -> (63,81): g=18, h=138, f=156
 Añadido a open -> (63,81): g=18, h=138, f=156
 Neighbor -> (64,80): g=19, h=138, f=157
-Añadido a open -> (64,80): g=19, h=138, f=157
-Open -> (64,80): g=16, h=138, f=154
-Neighbor -> (64,81): g=17, h=139, f=156
-Añadido a open -> (64,81): g=17, h=139, f=156
-Neighbor -> (65,80): g=18, h=139, f=157
-Añadido a open -> (65,80): g=18, h=139, f=157
+Neighbor -> (62,80): g=19, h=136, f=155
+Open -> (64,72): g=24, h=130, f=154
+Open -> (64,74): g=22, h=132, f=154
+Open -> (64,76): g=20, h=134, f=154
 Open -> (65,80): g=15, h=139, f=154
 Neighbor -> (65,81): g=16, h=140, f=156
 Añadido a open -> (65,81): g=16, h=140, f=156
 Neighbor -> (66,80): g=17, h=140, f=157
-Añadido a open -> (66,80): g=17, h=140, f=157
-Open -> (66,80): g=14, h=140, f=154
-Neighbor -> (66,81): g=15, h=141, f=156
-Añadido a open -> (66,81): g=15, h=141, f=156
-Neighbor -> (67,80): g=16, h=141, f=157
-Añadido a open -> (67,80): g=16, h=141, f=157
+Neighbor -> (64,80): g=17, h=138, f=155
+Open -> (66,72): g=22, h=132, f=154
+Open -> (66,74): g=20, h=134, f=154
+Open -> (66,76): g=18, h=136, f=154
 Open -> (67,80): g=13, h=141, f=154
 Neighbor -> (67,81): g=14, h=142, f=156
 Añadido a open -> (67,81): g=14, h=142, f=156
 Neighbor -> (68,80): g=15, h=142, f=157
-Añadido a open -> (68,80): g=15, h=142, f=157
-Open -> (68,80): g=12, h=142, f=154
-Neighbor -> (68,81): g=13, h=143, f=156
-Añadido a open -> (68,81): g=13, h=143, f=156
-Neighbor -> (69,80): g=14, h=143, f=157
-Añadido a open -> (69,80): g=14, h=143, f=157
+Neighbor -> (66,80): g=15, h=140, f=155
+Open -> (68,72): g=20, h=134, f=154
+Open -> (68,74): g=18, h=136, f=154
+Open -> (68,76): g=16, h=138, f=154
 Open -> (69,80): g=11, h=143, f=154
 Neighbor -> (69,81): g=12, h=144, f=156
 Añadido a open -> (69,81): g=12, h=144, f=156
 Neighbor -> (70,80): g=13, h=144, f=157
-Añadido a open -> (70,80): g=13, h=144, f=157
+Neighbor -> (68,80): g=13, h=142, f=155
 Open -> (70,56): g=34, h=120, f=154
 Neighbor -> (70,55): g=35, h=119, f=154
 Añadido a open -> (70,55): g=35, h=119, f=154
@@ -1198,11 +920,15 @@ Neighbor -> (69,40): g=52, h=103, f=155
 Añadido a open -> (69,40): g=52, h=103, f=155
 Neighbor -> (71,40): g=52, h=105, f=157
 Añadido a open -> (71,40): g=52, h=105, f=157
-Open -> (70,80): g=10, h=144, f=154
-Neighbor -> (70,81): g=11, h=145, f=156
-Añadido a open -> (70,81): g=11, h=145, f=156
-Neighbor -> (71,80): g=12, h=145, f=157
-Añadido a open -> (71,80): g=12, h=145, f=157
+Open -> (70,58): g=32, h=122, f=154
+Neighbor -> (71,58): g=34, h=123, f=157
+Open -> (70,60): g=30, h=124, f=154
+Neighbor -> (71,60): g=32, h=125, f=157
+Open -> (70,62): g=28, h=126, f=154
+Neighbor -> (71,62): g=30, h=127, f=157
+Open -> (70,72): g=18, h=136, f=154
+Open -> (70,74): g=16, h=138, f=154
+Open -> (70,76): g=14, h=140, f=154
 Open -> (71,67): g=22, h=132, f=154
 Neighbor -> (70,67): g=24, h=131, f=155
 Añadido a open -> (70,67): g=24, h=131, f=155
@@ -1210,70 +936,127 @@ Open -> (71,80): g=9, h=145, f=154
 Neighbor -> (71,81): g=10, h=146, f=156
 Añadido a open -> (71,81): g=10, h=146, f=156
 Neighbor -> (72,80): g=11, h=146, f=157
-Añadido a open -> (72,80): g=11, h=146, f=157
-Open -> (72,80): g=8, h=146, f=154
-Neighbor -> (72,81): g=9, h=147, f=156
-Añadido a open -> (72,81): g=9, h=147, f=156
-Neighbor -> (73,80): g=10, h=147, f=157
-Añadido a open -> (73,80): g=10, h=147, f=157
+Neighbor -> (70,80): g=11, h=144, f=155
+Open -> (72,58): g=30, h=124, f=154
+Neighbor -> (71,58): g=32, h=123, f=155
+Open -> (72,60): g=28, h=126, f=154
+Neighbor -> (71,60): g=30, h=125, f=155
+Open -> (72,62): g=26, h=128, f=154
+Neighbor -> (71,62): g=28, h=127, f=155
+Open -> (72,64): g=24, h=130, f=154
+Neighbor -> (71,64): g=26, h=129, f=155
+Open -> (72,69): g=19, h=135, f=154
+Open -> (72,71): g=17, h=137, f=154
+Open -> (72,73): g=15, h=139, f=154
+Open -> (72,75): g=13, h=141, f=154
+Open -> (72,77): g=11, h=143, f=154
 Open -> (73,80): g=7, h=147, f=154
 Neighbor -> (73,81): g=8, h=148, f=156
 Añadido a open -> (73,81): g=8, h=148, f=156
 Neighbor -> (74,80): g=9, h=148, f=157
-Añadido a open -> (74,80): g=9, h=148, f=157
-Open -> (74,80): g=6, h=148, f=154
-Neighbor -> (74,81): g=7, h=149, f=156
-Añadido a open -> (74,81): g=7, h=149, f=156
-Neighbor -> (75,80): g=8, h=149, f=157
-Añadido a open -> (75,80): g=8, h=149, f=157
+Neighbor -> (72,80): g=9, h=146, f=155
+Open -> (74,58): g=28, h=126, f=154
+Open -> (74,60): g=26, h=128, f=154
+Open -> (74,62): g=24, h=130, f=154
+Open -> (74,64): g=22, h=132, f=154
+Open -> (74,66): g=20, h=134, f=154
+Open -> (74,68): g=18, h=136, f=154
+Open -> (74,70): g=16, h=138, f=154
+Open -> (74,72): g=14, h=140, f=154
+Open -> (74,74): g=12, h=142, f=154
+Open -> (74,76): g=10, h=144, f=154
 Open -> (75,80): g=5, h=149, f=154
 Neighbor -> (75,81): g=6, h=150, f=156
 Añadido a open -> (75,81): g=6, h=150, f=156
 Neighbor -> (76,80): g=7, h=150, f=157
-Añadido a open -> (76,80): g=7, h=150, f=157
-Open -> (76,80): g=4, h=150, f=154
-Neighbor -> (76,81): g=5, h=151, f=156
-Añadido a open -> (76,81): g=5, h=151, f=156
-Neighbor -> (77,80): g=6, h=151, f=157
-Añadido a open -> (77,80): g=6, h=151, f=157
+Neighbor -> (74,80): g=7, h=148, f=155
+Open -> (76,76): g=8, h=146, f=154
+Neighbor -> (76,75): g=9, h=145, f=154
+Open -> (76,75): g=9, h=145, f=154
+Neighbor -> (76,74): g=10, h=144, f=154
+Neighbor -> (77,75): g=11, h=146, f=157
+Añadido a open -> (77,75): g=11, h=146, f=157
+Open -> (76,74): g=10, h=144, f=154
+Neighbor -> (76,73): g=11, h=143, f=154
+Open -> (76,73): g=11, h=143, f=154
+Neighbor -> (76,72): g=12, h=142, f=154
+Neighbor -> (77,73): g=13, h=144, f=157
+Añadido a open -> (77,73): g=13, h=144, f=157
+Open -> (76,72): g=12, h=142, f=154
+Neighbor -> (76,71): g=13, h=141, f=154
+Neighbor -> (77,72): g=14, h=143, f=157
+Añadido a open -> (77,72): g=14, h=143, f=157
+Open -> (76,71): g=13, h=141, f=154
+Neighbor -> (76,70): g=14, h=140, f=154
+Neighbor -> (77,71): g=15, h=142, f=157
+Añadido a open -> (77,71): g=15, h=142, f=157
+Open -> (76,70): g=14, h=140, f=154
+Neighbor -> (76,69): g=15, h=139, f=154
+Neighbor -> (77,70): g=16, h=141, f=157
+Añadido a open -> (77,70): g=16, h=141, f=157
+Open -> (76,69): g=15, h=139, f=154
+Neighbor -> (76,68): g=16, h=138, f=154
+Neighbor -> (77,69): g=17, h=140, f=157
+Añadido a open -> (77,69): g=17, h=140, f=157
+Open -> (76,68): g=16, h=138, f=154
+Neighbor -> (76,67): g=17, h=137, f=154
+Neighbor -> (77,68): g=18, h=139, f=157
+Añadido a open -> (77,68): g=18, h=139, f=157
+Open -> (76,67): g=17, h=137, f=154
+Neighbor -> (76,66): g=18, h=136, f=154
+Open -> (76,66): g=18, h=136, f=154
+Neighbor -> (76,65): g=19, h=135, f=154
+Open -> (76,65): g=19, h=135, f=154
+Neighbor -> (76,64): g=20, h=134, f=154
+Neighbor -> (77,65): g=21, h=136, f=157
+Añadido a open -> (77,65): g=21, h=136, f=157
+Open -> (76,64): g=20, h=134, f=154
+Neighbor -> (76,63): g=21, h=133, f=154
+Neighbor -> (77,64): g=22, h=135, f=157
+Añadido a open -> (77,64): g=22, h=135, f=157
+Open -> (76,63): g=21, h=133, f=154
+Neighbor -> (76,62): g=22, h=132, f=154
+Neighbor -> (77,63): g=23, h=134, f=157
+Añadido a open -> (77,63): g=23, h=134, f=157
+Open -> (76,62): g=22, h=132, f=154
+Neighbor -> (76,61): g=23, h=131, f=154
+Neighbor -> (77,62): g=24, h=133, f=157
+Añadido a open -> (77,62): g=24, h=133, f=157
+Open -> (76,61): g=23, h=131, f=154
+Neighbor -> (76,60): g=24, h=130, f=154
+Neighbor -> (77,61): g=25, h=132, f=157
+Añadido a open -> (77,61): g=25, h=132, f=157
+Open -> (76,60): g=24, h=130, f=154
+Neighbor -> (76,59): g=25, h=129, f=154
+Neighbor -> (77,60): g=26, h=131, f=157
+Añadido a open -> (77,60): g=26, h=131, f=157
+Open -> (76,59): g=25, h=129, f=154
+Neighbor -> (76,58): g=26, h=128, f=154
+Neighbor -> (77,59): g=27, h=130, f=157
+Añadido a open -> (77,59): g=27, h=130, f=157
+Open -> (76,58): g=26, h=128, f=154
+Neighbor -> (76,57): g=27, h=127, f=154
+Neighbor -> (77,58): g=28, h=129, f=157
+Añadido a open -> (77,58): g=28, h=129, f=157
+Open -> (76,57): g=27, h=127, f=154
+Neighbor -> (77,57): g=29, h=128, f=157
+Añadido a open -> (77,57): g=29, h=128, f=157
 Open -> (77,80): g=3, h=151, f=154
 Neighbor -> (77,81): g=4, h=152, f=156
 Añadido a open -> (77,81): g=4, h=152, f=156
-Open -> (62,71): g=28, h=127, f=155
-Open -> (62,72): g=27, h=128, f=155
-Open -> (62,74): g=25, h=130, f=155
-Open -> (62,76): g=23, h=132, f=155
-Open -> (62,78): g=21, h=134, f=155
-Open -> (63,71): g=27, h=128, f=155
-Open -> (63,72): g=26, h=129, f=155
-Open -> (63,74): g=24, h=131, f=155
-Open -> (63,76): g=22, h=133, f=155
-Open -> (63,78): g=20, h=135, f=155
-Open -> (64,71): g=26, h=129, f=155
-Open -> (64,72): g=25, h=130, f=155
-Open -> (64,74): g=23, h=132, f=155
-Open -> (64,76): g=21, h=134, f=155
-Open -> (64,78): g=19, h=136, f=155
-Open -> (65,71): g=25, h=130, f=155
-Open -> (65,72): g=24, h=131, f=155
-Open -> (65,74): g=22, h=133, f=155
-Open -> (65,76): g=20, h=135, f=155
-Open -> (65,78): g=18, h=137, f=155
-Open -> (66,71): g=24, h=131, f=155
-Open -> (66,72): g=23, h=132, f=155
-Open -> (66,74): g=21, h=134, f=155
-Open -> (66,76): g=19, h=136, f=155
-Open -> (66,78): g=17, h=138, f=155
-Open -> (67,71): g=23, h=132, f=155
-Open -> (67,72): g=22, h=133, f=155
-Open -> (67,74): g=20, h=135, f=155
-Open -> (67,76): g=18, h=137, f=155
-Open -> (67,78): g=16, h=139, f=155
-Open -> (68,71): g=22, h=133, f=155
-Open -> (68,72): g=21, h=134, f=155
-Open -> (68,74): g=19, h=136, f=155
-Open -> (68,76): g=17, h=138, f=155
-Open -> (68,78): g=15, h=140, f=155
+Neighbor -> (76,80): g=5, h=150, f=155
+Open -> (62,80): g=19, h=136, f=155
+Neighbor -> (62,81): g=21, h=137, f=158
+Añadido a open -> (62,81): g=21, h=137, f=158
+Open -> (64,80): g=17, h=138, f=155
+Neighbor -> (64,81): g=19, h=139, f=158
+Añadido a open -> (64,81): g=19, h=139, f=158
+Open -> (66,80): g=15, h=140, f=155
+Neighbor -> (66,81): g=17, h=141, f=158
+Añadido a open -> (66,81): g=17, h=141, f=158
+Open -> (68,80): g=13, h=142, f=155
+Neighbor -> (68,81): g=15, h=143, f=158
+Añadido a open -> (68,81): g=15, h=143, f=158
 Open -> (69,40): g=52, h=103, f=155
 Neighbor -> (68,40): g=53, h=102, f=155
 Añadido a open -> (68,40): g=53, h=102, f=155
@@ -1331,178 +1114,29 @@ Neighbor -> (55,41): g=68, h=90, f=158
 Añadido a open -> (55,41): g=68, h=90, f=158
 Neighbor -> (55,39): g=68, h=88, f=156
 Añadido a open -> (55,39): g=68, h=88, f=156
-Open -> (69,71): g=21, h=134, f=155
-Open -> (69,72): g=20, h=135, f=155
-Open -> (69,74): g=18, h=137, f=155
-Open -> (69,76): g=16, h=139, f=155
-Open -> (69,78): g=14, h=141, f=155
 Open -> (70,67): g=24, h=131, f=155
 Neighbor -> (70,66): g=26, h=130, f=156
 Añadido a open -> (70,66): g=26, h=130, f=156
-Open -> (70,71): g=20, h=135, f=155
-Open -> (70,72): g=19, h=136, f=155
-Open -> (70,74): g=17, h=138, f=155
-Open -> (70,76): g=15, h=140, f=155
-Open -> (70,78): g=13, h=142, f=155
-Open -> (71,71): g=19, h=136, f=155
-Open -> (71,72): g=18, h=137, f=155
-Open -> (71,74): g=16, h=139, f=155
-Open -> (71,76): g=14, h=141, f=155
-Open -> (71,78): g=12, h=143, f=155
-Open -> (72,71): g=18, h=137, f=155
-Open -> (72,72): g=17, h=138, f=155
-Open -> (72,74): g=15, h=140, f=155
-Open -> (72,76): g=13, h=142, f=155
-Open -> (72,78): g=11, h=144, f=155
-Open -> (73,68): g=20, h=135, f=155
-Open -> (73,69): g=19, h=136, f=155
-Open -> (73,70): g=18, h=137, f=155
-Open -> (73,72): g=16, h=139, f=155
-Open -> (73,73): g=15, h=140, f=155
-Open -> (73,74): g=14, h=141, f=155
-Open -> (73,76): g=12, h=143, f=155
-Open -> (73,78): g=10, h=145, f=155
-Open -> (74,57): g=30, h=125, f=155
-Open -> (74,58): g=29, h=126, f=155
-Open -> (74,59): g=28, h=127, f=155
-Open -> (74,60): g=27, h=128, f=155
-Open -> (74,61): g=26, h=129, f=155
-Open -> (74,62): g=25, h=130, f=155
-Open -> (74,63): g=24, h=131, f=155
-Open -> (74,64): g=23, h=132, f=155
-Open -> (74,65): g=22, h=133, f=155
-Open -> (74,66): g=21, h=134, f=155
-Open -> (74,68): g=19, h=136, f=155
-Open -> (74,69): g=18, h=137, f=155
-Open -> (74,70): g=17, h=138, f=155
-Open -> (74,72): g=15, h=140, f=155
-Open -> (74,73): g=14, h=141, f=155
-Open -> (74,74): g=13, h=142, f=155
-Open -> (74,76): g=11, h=144, f=155
-Open -> (74,78): g=9, h=146, f=155
-Open -> (75,57): g=29, h=126, f=155
-Open -> (75,58): g=28, h=127, f=155
-Open -> (75,59): g=27, h=128, f=155
-Open -> (75,60): g=26, h=129, f=155
-Open -> (75,61): g=25, h=130, f=155
-Open -> (75,62): g=24, h=131, f=155
-Open -> (75,64): g=22, h=133, f=155
-Open -> (75,65): g=21, h=134, f=155
-Open -> (75,66): g=20, h=135, f=155
-Open -> (75,67): g=19, h=136, f=155
-Open -> (75,68): g=18, h=137, f=155
-Open -> (75,69): g=17, h=138, f=155
-Open -> (75,70): g=16, h=139, f=155
-Open -> (75,72): g=14, h=141, f=155
-Open -> (75,73): g=13, h=142, f=155
-Open -> (75,74): g=12, h=143, f=155
-Open -> (75,76): g=10, h=145, f=155
-Open -> (75,78): g=8, h=147, f=155
-Open -> (76,57): g=28, h=127, f=155
-Neighbor -> (77,57): g=29, h=128, f=157
-Añadido a open -> (77,57): g=29, h=128, f=157
-Open -> (76,58): g=27, h=128, f=155
-Neighbor -> (77,58): g=28, h=129, f=157
-Añadido a open -> (77,58): g=28, h=129, f=157
-Open -> (76,59): g=26, h=129, f=155
-Neighbor -> (77,59): g=27, h=130, f=157
-Añadido a open -> (77,59): g=27, h=130, f=157
-Open -> (76,60): g=25, h=130, f=155
-Neighbor -> (77,60): g=26, h=131, f=157
-Añadido a open -> (77,60): g=26, h=131, f=157
-Open -> (76,61): g=24, h=131, f=155
-Neighbor -> (77,61): g=25, h=132, f=157
-Añadido a open -> (77,61): g=25, h=132, f=157
-Open -> (76,62): g=23, h=132, f=155
-Neighbor -> (77,62): g=24, h=133, f=157
-Añadido a open -> (77,62): g=24, h=133, f=157
-Open -> (76,64): g=21, h=134, f=155
-Neighbor -> (77,64): g=22, h=135, f=157
-Añadido a open -> (77,64): g=22, h=135, f=157
-Open -> (76,65): g=20, h=135, f=155
-Neighbor -> (77,65): g=21, h=136, f=157
-Añadido a open -> (77,65): g=21, h=136, f=157
-Open -> (76,66): g=19, h=136, f=155
-Open -> (76,67): g=18, h=137, f=155
-Open -> (76,68): g=17, h=138, f=155
-Neighbor -> (77,68): g=18, h=139, f=157
-Añadido a open -> (77,68): g=18, h=139, f=157
-Open -> (76,69): g=16, h=139, f=155
-Neighbor -> (77,69): g=17, h=140, f=157
-Añadido a open -> (77,69): g=17, h=140, f=157
-Open -> (76,70): g=15, h=140, f=155
-Neighbor -> (77,70): g=16, h=141, f=157
-Añadido a open -> (77,70): g=16, h=141, f=157
-Open -> (76,72): g=13, h=142, f=155
-Neighbor -> (77,72): g=14, h=143, f=157
-Añadido a open -> (77,72): g=14, h=143, f=157
-Open -> (76,73): g=12, h=143, f=155
-Neighbor -> (77,73): g=13, h=144, f=157
-Añadido a open -> (77,73): g=13, h=144, f=157
-Open -> (76,74): g=11, h=144, f=155
-Open -> (76,76): g=9, h=146, f=155
-Open -> (76,78): g=7, h=148, f=155
-Open -> (77,57): g=27, h=128, f=155
-Neighbor -> (78,57): g=28, h=129, f=157
-Añadido a open -> (78,57): g=28, h=129, f=157
-Neighbor -> (77,58): g=29, h=129, f=158
-Añadido a open -> (77,58): g=29, h=129, f=158
-Open -> (77,58): g=26, h=129, f=155
-Neighbor -> (78,58): g=27, h=130, f=157
-Añadido a open -> (78,58): g=27, h=130, f=157
-Neighbor -> (77,59): g=28, h=130, f=158
-Open -> (77,59): g=25, h=130, f=155
-Neighbor -> (78,59): g=26, h=131, f=157
-Añadido a open -> (78,59): g=26, h=131, f=157
-Neighbor -> (77,60): g=27, h=131, f=158
-Open -> (77,60): g=24, h=131, f=155
-Neighbor -> (78,60): g=25, h=132, f=157
-Añadido a open -> (78,60): g=25, h=132, f=157
-Neighbor -> (77,61): g=26, h=132, f=158
-Open -> (77,61): g=23, h=132, f=155
-Neighbor -> (78,61): g=24, h=133, f=157
-Añadido a open -> (78,61): g=24, h=133, f=157
-Neighbor -> (77,62): g=25, h=133, f=158
-Open -> (77,62): g=22, h=133, f=155
-Neighbor -> (78,62): g=23, h=134, f=157
-Añadido a open -> (78,62): g=23, h=134, f=157
-Neighbor -> (77,63): g=24, h=134, f=158
-Añadido a open -> (77,63): g=24, h=134, f=158
-Open -> (77,63): g=21, h=134, f=155
-Neighbor -> (78,63): g=22, h=135, f=157
-Añadido a open -> (78,63): g=22, h=135, f=157
-Neighbor -> (77,64): g=23, h=135, f=158
-Open -> (77,64): g=20, h=135, f=155
-Neighbor -> (78,64): g=21, h=136, f=157
-Añadido a open -> (78,64): g=21, h=136, f=157
-Neighbor -> (77,65): g=22, h=136, f=158
-Open -> (77,65): g=19, h=136, f=155
-Open -> (77,68): g=16, h=139, f=155
-Neighbor -> (78,68): g=17, h=140, f=157
-Añadido a open -> (78,68): g=17, h=140, f=157
-Neighbor -> (77,69): g=18, h=140, f=158
-Añadido a open -> (77,69): g=18, h=140, f=158
-Open -> (77,69): g=15, h=140, f=155
-Neighbor -> (78,69): g=16, h=141, f=157
-Añadido a open -> (78,69): g=16, h=141, f=157
-Neighbor -> (77,70): g=17, h=141, f=158
-Añadido a open -> (77,70): g=17, h=141, f=158
-Open -> (77,70): g=14, h=141, f=155
-Neighbor -> (78,70): g=15, h=142, f=157
-Añadido a open -> (78,70): g=15, h=142, f=157
-Neighbor -> (77,71): g=16, h=142, f=158
-Añadido a open -> (77,71): g=16, h=142, f=158
-Open -> (77,71): g=13, h=142, f=155
-Neighbor -> (78,71): g=14, h=143, f=157
-Añadido a open -> (78,71): g=14, h=143, f=157
-Neighbor -> (77,72): g=15, h=143, f=158
-Añadido a open -> (77,72): g=15, h=143, f=158
-Open -> (77,72): g=12, h=143, f=155
-Neighbor -> (77,73): g=14, h=144, f=158
-Añadido a open -> (77,73): g=14, h=144, f=158
-Open -> (77,73): g=11, h=144, f=155
-Open -> (77,75): g=9, h=146, f=155
-Open -> (77,78): g=6, h=149, f=155
+Open -> (70,80): g=11, h=144, f=155
+Neighbor -> (70,81): g=13, h=145, f=158
+Añadido a open -> (70,81): g=13, h=145, f=158
+Open -> (71,58): g=32, h=123, f=155
+Open -> (71,60): g=30, h=125, f=155
+Open -> (71,62): g=28, h=127, f=155
+Open -> (71,64): g=26, h=129, f=155
+Neighbor -> (70,64): g=27, h=128, f=155
+Open -> (70,64): g=27, h=128, f=155
+Neighbor -> (70,65): g=29, h=129, f=158
+Añadido a open -> (70,65): g=29, h=129, f=158
+Open -> (72,80): g=9, h=146, f=155
+Neighbor -> (72,81): g=11, h=147, f=158
+Añadido a open -> (72,81): g=11, h=147, f=158
+Open -> (74,80): g=7, h=148, f=155
+Neighbor -> (74,81): g=9, h=149, f=158
+Añadido a open -> (74,81): g=9, h=149, f=158
+Open -> (76,80): g=5, h=150, f=155
+Neighbor -> (76,81): g=7, h=151, f=158
+Añadido a open -> (76,81): g=7, h=151, f=158
 Open -> (55,39): g=68, h=88, f=156
 Neighbor -> (55,38): g=69, h=87, f=156
 Añadido a open -> (55,38): g=69, h=87, f=156
@@ -1566,37 +1200,24 @@ Open -> (61,81): g=20, h=136, f=156
 Neighbor -> (61,82): g=21, h=137, f=158
 Añadido a open -> (61,82): g=21, h=137, f=158
 Neighbor -> (62,81): g=22, h=137, f=159
-Añadido a open -> (62,81): g=22, h=137, f=159
-Open -> (62,81): g=19, h=137, f=156
-Neighbor -> (62,82): g=20, h=138, f=158
-Añadido a open -> (62,82): g=20, h=138, f=158
-Neighbor -> (63,81): g=21, h=138, f=159
-Añadido a open -> (63,81): g=21, h=138, f=159
+Open -> (62,78): g=22, h=134, f=156
 Open -> (63,81): g=18, h=138, f=156
 Neighbor -> (63,82): g=19, h=139, f=158
 Añadido a open -> (63,82): g=19, h=139, f=158
 Neighbor -> (64,81): g=20, h=139, f=159
-Añadido a open -> (64,81): g=20, h=139, f=159
-Open -> (64,81): g=17, h=139, f=156
-Neighbor -> (64,82): g=18, h=140, f=158
-Añadido a open -> (64,82): g=18, h=140, f=158
-Neighbor -> (65,81): g=19, h=140, f=159
-Añadido a open -> (65,81): g=19, h=140, f=159
+Neighbor -> (62,81): g=20, h=137, f=157
+Open -> (64,78): g=20, h=136, f=156
 Open -> (65,81): g=16, h=140, f=156
 Neighbor -> (65,82): g=17, h=141, f=158
 Añadido a open -> (65,82): g=17, h=141, f=158
 Neighbor -> (66,81): g=18, h=141, f=159
-Añadido a open -> (66,81): g=18, h=141, f=159
-Open -> (66,81): g=15, h=141, f=156
-Neighbor -> (66,82): g=16, h=142, f=158
-Añadido a open -> (66,82): g=16, h=142, f=158
-Neighbor -> (67,81): g=17, h=142, f=159
-Añadido a open -> (67,81): g=17, h=142, f=159
+Neighbor -> (64,81): g=18, h=139, f=157
+Open -> (66,78): g=18, h=138, f=156
 Open -> (67,81): g=14, h=142, f=156
 Neighbor -> (67,82): g=15, h=143, f=158
 Añadido a open -> (67,82): g=15, h=143, f=158
 Neighbor -> (68,81): g=16, h=143, f=159
-Añadido a open -> (68,81): g=16, h=143, f=159
+Neighbor -> (66,81): g=16, h=141, f=157
 Open -> (68,39): g=55, h=101, f=156
 Neighbor -> (68,38): g=56, h=100, f=156
 Añadido a open -> (68,38): g=56, h=100, f=156
@@ -1696,87 +1317,43 @@ Neighbor -> (67,25): g=71, h=86, f=157
 Añadido a open -> (67,25): g=71, h=86, f=157
 Neighbor -> (69,25): g=71, h=88, f=159
 Añadido a open -> (69,25): g=71, h=88, f=159
-Open -> (68,81): g=13, h=143, f=156
-Neighbor -> (68,82): g=14, h=144, f=158
-Añadido a open -> (68,82): g=14, h=144, f=158
-Neighbor -> (69,81): g=15, h=144, f=159
-Añadido a open -> (69,81): g=15, h=144, f=159
+Open -> (68,78): g=16, h=140, f=156
 Open -> (69,81): g=12, h=144, f=156
 Neighbor -> (69,82): g=13, h=145, f=158
 Añadido a open -> (69,82): g=13, h=145, f=158
 Neighbor -> (70,81): g=14, h=145, f=159
-Añadido a open -> (70,81): g=14, h=145, f=159
-Open -> (70,58): g=34, h=122, f=156
-Open -> (70,59): g=33, h=123, f=156
-Open -> (70,60): g=32, h=124, f=156
-Open -> (70,61): g=31, h=125, f=156
-Open -> (70,62): g=30, h=126, f=156
-Open -> (70,63): g=29, h=127, f=156
-Open -> (70,64): g=28, h=128, f=156
-Neighbor -> (70,65): g=29, h=129, f=158
-Añadido a open -> (70,65): g=29, h=129, f=158
-Open -> (70,65): g=27, h=129, f=156
-Neighbor -> (70,66): g=28, h=130, f=158
-Añadido a open -> (70,66): g=28, h=130, f=158
-Neighbor -> (69,65): g=29, h=128, f=157
-Añadido a open -> (69,65): g=29, h=128, f=157
+Neighbor -> (68,81): g=14, h=143, f=157
 Open -> (70,66): g=26, h=130, f=156
+Neighbor -> (70,65): g=27, h=129, f=156
 Neighbor -> (69,66): g=28, h=129, f=157
 Añadido a open -> (69,66): g=28, h=129, f=157
-Open -> (70,81): g=11, h=145, f=156
-Neighbor -> (70,82): g=12, h=146, f=158
-Añadido a open -> (70,82): g=12, h=146, f=158
-Neighbor -> (71,81): g=13, h=146, f=159
-Añadido a open -> (71,81): g=13, h=146, f=159
-Open -> (71,59): g=32, h=124, f=156
-Open -> (71,60): g=31, h=125, f=156
-Open -> (71,61): g=30, h=126, f=156
-Open -> (71,62): g=29, h=127, f=156
-Open -> (71,63): g=28, h=128, f=156
-Open -> (71,64): g=27, h=129, f=156
+Open -> (70,65): g=27, h=129, f=156
+Neighbor -> (69,65): g=29, h=128, f=157
+Añadido a open -> (69,65): g=29, h=128, f=157
+Open -> (70,78): g=14, h=142, f=156
 Open -> (71,81): g=10, h=146, f=156
 Neighbor -> (71,82): g=11, h=147, f=158
 Añadido a open -> (71,82): g=11, h=147, f=158
 Neighbor -> (72,81): g=12, h=147, f=159
-Añadido a open -> (72,81): g=12, h=147, f=159
-Open -> (72,58): g=32, h=124, f=156
-Open -> (72,59): g=31, h=125, f=156
-Open -> (72,60): g=30, h=126, f=156
-Open -> (72,61): g=29, h=127, f=156
-Open -> (72,62): g=28, h=128, f=156
-Open -> (72,63): g=27, h=129, f=156
-Open -> (72,64): g=26, h=130, f=156
-Open -> (72,65): g=25, h=131, f=156
-Open -> (72,81): g=9, h=147, f=156
-Neighbor -> (72,82): g=10, h=148, f=158
-Añadido a open -> (72,82): g=10, h=148, f=158
-Neighbor -> (73,81): g=11, h=148, f=159
-Añadido a open -> (73,81): g=11, h=148, f=159
+Neighbor -> (70,81): g=12, h=145, f=157
 Open -> (73,81): g=8, h=148, f=156
 Neighbor -> (73,82): g=9, h=149, f=158
 Añadido a open -> (73,82): g=9, h=149, f=158
 Neighbor -> (74,81): g=10, h=149, f=159
-Añadido a open -> (74,81): g=10, h=149, f=159
-Open -> (74,81): g=7, h=149, f=156
-Neighbor -> (74,82): g=8, h=150, f=158
-Añadido a open -> (74,82): g=8, h=150, f=158
-Neighbor -> (75,81): g=9, h=150, f=159
-Añadido a open -> (75,81): g=9, h=150, f=159
+Neighbor -> (72,81): g=10, h=147, f=157
+Open -> (74,78): g=10, h=146, f=156
 Open -> (75,81): g=6, h=150, f=156
 Neighbor -> (75,82): g=7, h=151, f=158
 Añadido a open -> (75,82): g=7, h=151, f=158
 Neighbor -> (76,81): g=8, h=151, f=159
-Añadido a open -> (76,81): g=8, h=151, f=159
-Open -> (76,81): g=5, h=151, f=156
-Neighbor -> (76,82): g=6, h=152, f=158
-Añadido a open -> (76,82): g=6, h=152, f=158
-Neighbor -> (77,81): g=7, h=152, f=159
-Añadido a open -> (77,81): g=7, h=152, f=159
+Neighbor -> (74,81): g=8, h=149, f=157
+Open -> (76,78): g=8, h=148, f=156
 Open -> (77,81): g=4, h=152, f=156
 Neighbor -> (77,82): g=5, h=153, f=158
 Añadido a open -> (77,82): g=5, h=153, f=158
 Neighbor -> (78,81): g=6, h=153, f=159
 Añadido a open -> (78,81): g=6, h=153, f=159
+Neighbor -> (76,81): g=6, h=151, f=157
 Open -> (54,23): g=86, h=71, f=157
 Neighbor -> (53,23): g=87, h=70, f=157
 Añadido a open -> (53,23): g=87, h=70, f=157
@@ -1789,7 +1366,6 @@ Open -> (54,35): g=74, h=83, f=157
 Neighbor -> (53,35): g=75, h=82, f=157
 Añadido a open -> (53,35): g=75, h=82, f=157
 Neighbor -> (54,36): g=76, h=84, f=160
-Añadido a open -> (54,36): g=76, h=84, f=160
 Open -> (53,35): g=75, h=82, f=157
 Neighbor -> (52,35): g=76, h=81, f=157
 Añadido a open -> (52,35): g=76, h=81, f=157
@@ -1805,22 +1381,6 @@ Neighbor -> (51,36): g=79, h=81, f=160
 Añadido a open -> (51,36): g=79, h=81, f=160
 Neighbor -> (51,34): g=79, h=79, f=158
 Añadido a open -> (51,34): g=79, h=79, f=158
-Open -> (54,36): g=73, h=84, f=157
-Neighbor -> (53,36): g=74, h=83, f=157
-Añadido a open -> (53,36): g=74, h=83, f=157
-Open -> (53,36): g=74, h=83, f=157
-Neighbor -> (52,36): g=75, h=82, f=157
-Añadido a open -> (52,36): g=75, h=82, f=157
-Neighbor -> (53,37): g=76, h=84, f=160
-Añadido a open -> (53,37): g=76, h=84, f=160
-Open -> (52,36): g=75, h=82, f=157
-Neighbor -> (51,36): g=76, h=81, f=157
-Añadido a open -> (51,36): g=76, h=81, f=157
-Neighbor -> (52,37): g=77, h=83, f=160
-Añadido a open -> (52,37): g=77, h=83, f=160
-Open -> (51,36): g=76, h=81, f=157
-Neighbor -> (51,37): g=78, h=82, f=160
-Añadido a open -> (51,37): g=78, h=82, f=160
 Open -> (54,39): g=70, h=87, f=157
 Neighbor -> (53,39): g=71, h=86, f=157
 Añadido a open -> (53,39): g=71, h=86, f=157
@@ -1879,16 +1439,19 @@ Neighbor -> (43,40): g=83, h=77, f=160
 Añadido a open -> (43,40): g=83, h=77, f=160
 Neighbor -> (43,38): g=83, h=75, f=158
 Añadido a open -> (43,38): g=83, h=75, f=158
-Open -> (62,80): g=21, h=136, f=157
-Open -> (63,80): g=20, h=137, f=157
-Open -> (64,80): g=19, h=138, f=157
-Open -> (65,80): g=18, h=139, f=157
-Open -> (66,80): g=17, h=140, f=157
+Open -> (62,81): g=20, h=137, f=157
+Neighbor -> (62,82): g=22, h=138, f=160
+Añadido a open -> (62,82): g=22, h=138, f=160
+Open -> (64,81): g=18, h=139, f=157
+Neighbor -> (64,82): g=20, h=140, f=160
+Añadido a open -> (64,82): g=20, h=140, f=160
+Open -> (66,81): g=16, h=141, f=157
+Neighbor -> (66,82): g=18, h=142, f=160
+Añadido a open -> (66,82): g=18, h=142, f=160
 Open -> (67,25): g=71, h=86, f=157
 Neighbor -> (66,25): g=72, h=85, f=157
 Añadido a open -> (66,25): g=72, h=85, f=157
 Neighbor -> (67,26): g=73, h=87, f=160
-Añadido a open -> (67,26): g=73, h=87, f=160
 Open -> (66,25): g=72, h=85, f=157
 Neighbor -> (65,25): g=73, h=84, f=157
 Añadido a open -> (65,25): g=73, h=84, f=157
@@ -1939,677 +1502,391 @@ Neighbor -> (57,26): g=83, h=77, f=160
 Añadido a open -> (57,26): g=83, h=77, f=160
 Neighbor -> (57,24): g=83, h=75, f=158
 Añadido a open -> (57,24): g=83, h=75, f=158
-Open -> (67,26): g=70, h=87, f=157
-Neighbor -> (66,26): g=71, h=86, f=157
-Neighbor -> (67,27): g=72, h=88, f=160
-Añadido a open -> (67,27): g=72, h=88, f=160
-Open -> (66,26): g=71, h=86, f=157
-Neighbor -> (65,26): g=72, h=85, f=157
-Añadido a open -> (65,26): g=72, h=85, f=157
-Neighbor -> (66,27): g=73, h=87, f=160
-Añadido a open -> (66,27): g=73, h=87, f=160
-Open -> (65,26): g=72, h=85, f=157
-Neighbor -> (64,26): g=73, h=84, f=157
-Neighbor -> (65,27): g=74, h=86, f=160
-Añadido a open -> (65,27): g=74, h=86, f=160
-Open -> (64,26): g=73, h=84, f=157
-Neighbor -> (63,26): g=74, h=83, f=157
-Añadido a open -> (63,26): g=74, h=83, f=157
-Neighbor -> (64,27): g=75, h=85, f=160
-Añadido a open -> (64,27): g=75, h=85, f=160
-Open -> (63,26): g=74, h=83, f=157
-Neighbor -> (62,26): g=75, h=82, f=157
-Añadido a open -> (62,26): g=75, h=82, f=157
-Neighbor -> (63,27): g=76, h=84, f=160
-Añadido a open -> (63,27): g=76, h=84, f=160
-Open -> (62,26): g=75, h=82, f=157
-Neighbor -> (61,26): g=76, h=81, f=157
-Añadido a open -> (61,26): g=76, h=81, f=157
-Neighbor -> (62,27): g=77, h=83, f=160
-Añadido a open -> (62,27): g=77, h=83, f=160
-Open -> (61,26): g=76, h=81, f=157
-Neighbor -> (60,26): g=77, h=80, f=157
-Neighbor -> (61,27): g=78, h=82, f=160
-Añadido a open -> (61,27): g=78, h=82, f=160
-Open -> (60,26): g=77, h=80, f=157
-Neighbor -> (59,26): g=78, h=79, f=157
-Añadido a open -> (59,26): g=78, h=79, f=157
-Neighbor -> (60,27): g=79, h=81, f=160
-Añadido a open -> (60,27): g=79, h=81, f=160
-Open -> (59,26): g=78, h=79, f=157
-Neighbor -> (58,26): g=79, h=78, f=157
-Añadido a open -> (58,26): g=79, h=78, f=157
-Neighbor -> (59,27): g=80, h=80, f=160
-Añadido a open -> (59,27): g=80, h=80, f=160
-Open -> (58,26): g=79, h=78, f=157
-Neighbor -> (57,26): g=80, h=77, f=157
-Añadido a open -> (57,26): g=80, h=77, f=157
-Neighbor -> (58,27): g=81, h=79, f=160
-Añadido a open -> (58,27): g=81, h=79, f=160
-Open -> (57,26): g=80, h=77, f=157
-Neighbor -> (57,27): g=82, h=78, f=160
-Añadido a open -> (57,27): g=82, h=78, f=160
 Open -> (67,27): g=69, h=88, f=157
 Neighbor -> (66,27): g=70, h=87, f=157
 Añadido a open -> (66,27): g=70, h=87, f=157
 Neighbor -> (67,28): g=71, h=89, f=160
-Añadido a open -> (67,28): g=71, h=89, f=160
+Neighbor -> (67,26): g=71, h=87, f=158
 Open -> (66,27): g=70, h=87, f=157
 Neighbor -> (65,27): g=71, h=86, f=157
 Añadido a open -> (65,27): g=71, h=86, f=157
 Neighbor -> (66,28): g=72, h=88, f=160
 Añadido a open -> (66,28): g=72, h=88, f=160
+Neighbor -> (66,26): g=72, h=86, f=158
 Open -> (65,27): g=71, h=86, f=157
 Neighbor -> (64,27): g=72, h=85, f=157
 Añadido a open -> (64,27): g=72, h=85, f=157
 Neighbor -> (65,28): g=73, h=87, f=160
 Añadido a open -> (65,28): g=73, h=87, f=160
+Neighbor -> (65,26): g=73, h=85, f=158
 Open -> (64,27): g=72, h=85, f=157
 Neighbor -> (63,27): g=73, h=84, f=157
 Añadido a open -> (63,27): g=73, h=84, f=157
 Neighbor -> (64,28): g=74, h=86, f=160
 Añadido a open -> (64,28): g=74, h=86, f=160
+Neighbor -> (64,26): g=74, h=84, f=158
 Open -> (63,27): g=73, h=84, f=157
 Neighbor -> (62,27): g=74, h=83, f=157
 Añadido a open -> (62,27): g=74, h=83, f=157
 Neighbor -> (63,28): g=75, h=85, f=160
 Añadido a open -> (63,28): g=75, h=85, f=160
+Neighbor -> (63,26): g=75, h=83, f=158
 Open -> (62,27): g=74, h=83, f=157
 Neighbor -> (61,27): g=75, h=82, f=157
 Añadido a open -> (61,27): g=75, h=82, f=157
 Neighbor -> (62,28): g=76, h=84, f=160
 Añadido a open -> (62,28): g=76, h=84, f=160
+Neighbor -> (62,26): g=76, h=82, f=158
 Open -> (61,27): g=75, h=82, f=157
 Neighbor -> (60,27): g=76, h=81, f=157
 Añadido a open -> (60,27): g=76, h=81, f=157
 Neighbor -> (61,28): g=77, h=83, f=160
 Añadido a open -> (61,28): g=77, h=83, f=160
+Neighbor -> (61,26): g=77, h=81, f=158
 Open -> (60,27): g=76, h=81, f=157
 Neighbor -> (59,27): g=77, h=80, f=157
 Añadido a open -> (59,27): g=77, h=80, f=157
 Neighbor -> (60,28): g=78, h=82, f=160
 Añadido a open -> (60,28): g=78, h=82, f=160
+Neighbor -> (60,26): g=78, h=80, f=158
 Open -> (59,27): g=77, h=80, f=157
 Neighbor -> (58,27): g=78, h=79, f=157
 Añadido a open -> (58,27): g=78, h=79, f=157
 Neighbor -> (59,28): g=79, h=81, f=160
 Añadido a open -> (59,28): g=79, h=81, f=160
+Neighbor -> (59,26): g=79, h=79, f=158
 Open -> (58,27): g=78, h=79, f=157
 Neighbor -> (57,27): g=79, h=78, f=157
 Añadido a open -> (57,27): g=79, h=78, f=157
 Neighbor -> (58,28): g=80, h=80, f=160
 Añadido a open -> (58,28): g=80, h=80, f=160
+Neighbor -> (58,26): g=80, h=78, f=158
 Open -> (57,27): g=79, h=78, f=157
 Neighbor -> (57,28): g=81, h=79, f=160
 Añadido a open -> (57,28): g=81, h=79, f=160
-Open -> (67,28): g=68, h=89, f=157
-Neighbor -> (66,28): g=69, h=88, f=157
-Añadido a open -> (66,28): g=69, h=88, f=157
-Neighbor -> (67,29): g=70, h=90, f=160
-Añadido a open -> (67,29): g=70, h=90, f=160
-Open -> (66,28): g=69, h=88, f=157
-Neighbor -> (65,28): g=70, h=87, f=157
-Añadido a open -> (65,28): g=70, h=87, f=157
-Neighbor -> (66,29): g=71, h=89, f=160
-Añadido a open -> (66,29): g=71, h=89, f=160
-Open -> (65,28): g=70, h=87, f=157
-Neighbor -> (64,28): g=71, h=86, f=157
-Añadido a open -> (64,28): g=71, h=86, f=157
-Neighbor -> (65,29): g=72, h=88, f=160
-Añadido a open -> (65,29): g=72, h=88, f=160
-Open -> (64,28): g=71, h=86, f=157
-Neighbor -> (63,28): g=72, h=85, f=157
-Añadido a open -> (63,28): g=72, h=85, f=157
-Neighbor -> (64,29): g=73, h=87, f=160
-Añadido a open -> (64,29): g=73, h=87, f=160
-Open -> (63,28): g=72, h=85, f=157
-Neighbor -> (62,28): g=73, h=84, f=157
-Añadido a open -> (62,28): g=73, h=84, f=157
-Neighbor -> (63,29): g=74, h=86, f=160
-Añadido a open -> (63,29): g=74, h=86, f=160
-Open -> (62,28): g=73, h=84, f=157
-Neighbor -> (61,28): g=74, h=83, f=157
-Añadido a open -> (61,28): g=74, h=83, f=157
-Neighbor -> (62,29): g=75, h=85, f=160
-Añadido a open -> (62,29): g=75, h=85, f=160
-Open -> (61,28): g=74, h=83, f=157
-Neighbor -> (60,28): g=75, h=82, f=157
-Añadido a open -> (60,28): g=75, h=82, f=157
-Neighbor -> (61,29): g=76, h=84, f=160
-Añadido a open -> (61,29): g=76, h=84, f=160
-Open -> (60,28): g=75, h=82, f=157
-Neighbor -> (59,28): g=76, h=81, f=157
-Añadido a open -> (59,28): g=76, h=81, f=157
-Neighbor -> (60,29): g=77, h=83, f=160
-Añadido a open -> (60,29): g=77, h=83, f=160
-Open -> (59,28): g=76, h=81, f=157
-Neighbor -> (58,28): g=77, h=80, f=157
-Añadido a open -> (58,28): g=77, h=80, f=157
-Neighbor -> (59,29): g=78, h=82, f=160
-Añadido a open -> (59,29): g=78, h=82, f=160
-Open -> (58,28): g=77, h=80, f=157
-Neighbor -> (57,28): g=78, h=79, f=157
-Añadido a open -> (57,28): g=78, h=79, f=157
-Neighbor -> (58,29): g=79, h=81, f=160
-Añadido a open -> (58,29): g=79, h=81, f=160
-Open -> (57,28): g=78, h=79, f=157
-Neighbor -> (57,29): g=80, h=80, f=160
-Añadido a open -> (57,29): g=80, h=80, f=160
+Neighbor -> (57,26): g=81, h=77, f=158
 Open -> (67,29): g=67, h=90, f=157
 Neighbor -> (66,29): g=68, h=89, f=157
 Añadido a open -> (66,29): g=68, h=89, f=157
 Neighbor -> (67,30): g=69, h=91, f=160
-Añadido a open -> (67,30): g=69, h=91, f=160
+Neighbor -> (67,28): g=69, h=89, f=158
 Open -> (66,29): g=68, h=89, f=157
 Neighbor -> (65,29): g=69, h=88, f=157
 Añadido a open -> (65,29): g=69, h=88, f=157
 Neighbor -> (66,30): g=70, h=90, f=160
 Añadido a open -> (66,30): g=70, h=90, f=160
+Neighbor -> (66,28): g=70, h=88, f=158
 Open -> (65,29): g=69, h=88, f=157
 Neighbor -> (64,29): g=70, h=87, f=157
 Añadido a open -> (64,29): g=70, h=87, f=157
 Neighbor -> (65,30): g=71, h=89, f=160
 Añadido a open -> (65,30): g=71, h=89, f=160
+Neighbor -> (65,28): g=71, h=87, f=158
 Open -> (64,29): g=70, h=87, f=157
 Neighbor -> (63,29): g=71, h=86, f=157
 Añadido a open -> (63,29): g=71, h=86, f=157
 Neighbor -> (64,30): g=72, h=88, f=160
 Añadido a open -> (64,30): g=72, h=88, f=160
+Neighbor -> (64,28): g=72, h=86, f=158
 Open -> (63,29): g=71, h=86, f=157
 Neighbor -> (62,29): g=72, h=85, f=157
 Añadido a open -> (62,29): g=72, h=85, f=157
 Neighbor -> (63,30): g=73, h=87, f=160
 Añadido a open -> (63,30): g=73, h=87, f=160
+Neighbor -> (63,28): g=73, h=85, f=158
 Open -> (62,29): g=72, h=85, f=157
 Neighbor -> (61,29): g=73, h=84, f=157
 Añadido a open -> (61,29): g=73, h=84, f=157
 Neighbor -> (62,30): g=74, h=86, f=160
 Añadido a open -> (62,30): g=74, h=86, f=160
+Neighbor -> (62,28): g=74, h=84, f=158
 Open -> (61,29): g=73, h=84, f=157
 Neighbor -> (60,29): g=74, h=83, f=157
 Añadido a open -> (60,29): g=74, h=83, f=157
 Neighbor -> (61,30): g=75, h=85, f=160
 Añadido a open -> (61,30): g=75, h=85, f=160
+Neighbor -> (61,28): g=75, h=83, f=158
 Open -> (60,29): g=74, h=83, f=157
 Neighbor -> (59,29): g=75, h=82, f=157
 Añadido a open -> (59,29): g=75, h=82, f=157
 Neighbor -> (60,30): g=76, h=84, f=160
 Añadido a open -> (60,30): g=76, h=84, f=160
+Neighbor -> (60,28): g=76, h=82, f=158
 Open -> (59,29): g=75, h=82, f=157
 Neighbor -> (58,29): g=76, h=81, f=157
 Añadido a open -> (58,29): g=76, h=81, f=157
 Neighbor -> (59,30): g=77, h=83, f=160
 Añadido a open -> (59,30): g=77, h=83, f=160
+Neighbor -> (59,28): g=77, h=81, f=158
 Open -> (58,29): g=76, h=81, f=157
 Neighbor -> (57,29): g=77, h=80, f=157
 Añadido a open -> (57,29): g=77, h=80, f=157
 Neighbor -> (58,30): g=78, h=82, f=160
 Añadido a open -> (58,30): g=78, h=82, f=160
+Neighbor -> (58,28): g=78, h=80, f=158
 Open -> (57,29): g=77, h=80, f=157
 Neighbor -> (57,30): g=79, h=81, f=160
 Añadido a open -> (57,30): g=79, h=81, f=160
-Open -> (67,30): g=66, h=91, f=157
-Neighbor -> (66,30): g=67, h=90, f=157
-Añadido a open -> (66,30): g=67, h=90, f=157
-Neighbor -> (67,31): g=68, h=92, f=160
-Añadido a open -> (67,31): g=68, h=92, f=160
-Open -> (66,30): g=67, h=90, f=157
-Neighbor -> (65,30): g=68, h=89, f=157
-Añadido a open -> (65,30): g=68, h=89, f=157
-Neighbor -> (66,31): g=69, h=91, f=160
-Añadido a open -> (66,31): g=69, h=91, f=160
-Open -> (65,30): g=68, h=89, f=157
-Neighbor -> (64,30): g=69, h=88, f=157
-Añadido a open -> (64,30): g=69, h=88, f=157
-Neighbor -> (65,31): g=70, h=90, f=160
-Añadido a open -> (65,31): g=70, h=90, f=160
-Open -> (64,30): g=69, h=88, f=157
-Neighbor -> (63,30): g=70, h=87, f=157
-Añadido a open -> (63,30): g=70, h=87, f=157
-Neighbor -> (64,31): g=71, h=89, f=160
-Añadido a open -> (64,31): g=71, h=89, f=160
-Open -> (63,30): g=70, h=87, f=157
-Neighbor -> (62,30): g=71, h=86, f=157
-Añadido a open -> (62,30): g=71, h=86, f=157
-Neighbor -> (63,31): g=72, h=88, f=160
-Añadido a open -> (63,31): g=72, h=88, f=160
-Open -> (62,30): g=71, h=86, f=157
-Neighbor -> (61,30): g=72, h=85, f=157
-Añadido a open -> (61,30): g=72, h=85, f=157
-Neighbor -> (62,31): g=73, h=87, f=160
-Añadido a open -> (62,31): g=73, h=87, f=160
-Open -> (61,30): g=72, h=85, f=157
-Neighbor -> (60,30): g=73, h=84, f=157
-Añadido a open -> (60,30): g=73, h=84, f=157
-Neighbor -> (61,31): g=74, h=86, f=160
-Añadido a open -> (61,31): g=74, h=86, f=160
-Open -> (60,30): g=73, h=84, f=157
-Neighbor -> (59,30): g=74, h=83, f=157
-Añadido a open -> (59,30): g=74, h=83, f=157
-Neighbor -> (60,31): g=75, h=85, f=160
-Añadido a open -> (60,31): g=75, h=85, f=160
-Open -> (59,30): g=74, h=83, f=157
-Neighbor -> (58,30): g=75, h=82, f=157
-Añadido a open -> (58,30): g=75, h=82, f=157
-Neighbor -> (59,31): g=76, h=84, f=160
-Añadido a open -> (59,31): g=76, h=84, f=160
-Open -> (58,30): g=75, h=82, f=157
-Neighbor -> (57,30): g=76, h=81, f=157
-Añadido a open -> (57,30): g=76, h=81, f=157
-Neighbor -> (58,31): g=77, h=83, f=160
-Añadido a open -> (58,31): g=77, h=83, f=160
-Open -> (57,30): g=76, h=81, f=157
-Neighbor -> (57,31): g=78, h=82, f=160
-Añadido a open -> (57,31): g=78, h=82, f=160
+Neighbor -> (57,28): g=79, h=79, f=158
 Open -> (67,31): g=65, h=92, f=157
 Neighbor -> (66,31): g=66, h=91, f=157
 Añadido a open -> (66,31): g=66, h=91, f=157
 Neighbor -> (67,32): g=67, h=93, f=160
-Añadido a open -> (67,32): g=67, h=93, f=160
+Neighbor -> (67,30): g=67, h=91, f=158
 Open -> (66,31): g=66, h=91, f=157
 Neighbor -> (65,31): g=67, h=90, f=157
 Añadido a open -> (65,31): g=67, h=90, f=157
 Neighbor -> (66,32): g=68, h=92, f=160
 Añadido a open -> (66,32): g=68, h=92, f=160
+Neighbor -> (66,30): g=68, h=90, f=158
 Open -> (65,31): g=67, h=90, f=157
 Neighbor -> (64,31): g=68, h=89, f=157
 Añadido a open -> (64,31): g=68, h=89, f=157
 Neighbor -> (65,32): g=69, h=91, f=160
 Añadido a open -> (65,32): g=69, h=91, f=160
+Neighbor -> (65,30): g=69, h=89, f=158
 Open -> (64,31): g=68, h=89, f=157
 Neighbor -> (63,31): g=69, h=88, f=157
 Añadido a open -> (63,31): g=69, h=88, f=157
 Neighbor -> (64,32): g=70, h=90, f=160
 Añadido a open -> (64,32): g=70, h=90, f=160
+Neighbor -> (64,30): g=70, h=88, f=158
 Open -> (63,31): g=69, h=88, f=157
 Neighbor -> (62,31): g=70, h=87, f=157
 Añadido a open -> (62,31): g=70, h=87, f=157
 Neighbor -> (63,32): g=71, h=89, f=160
 Añadido a open -> (63,32): g=71, h=89, f=160
+Neighbor -> (63,30): g=71, h=87, f=158
 Open -> (62,31): g=70, h=87, f=157
 Neighbor -> (61,31): g=71, h=86, f=157
 Añadido a open -> (61,31): g=71, h=86, f=157
 Neighbor -> (62,32): g=72, h=88, f=160
 Añadido a open -> (62,32): g=72, h=88, f=160
+Neighbor -> (62,30): g=72, h=86, f=158
 Open -> (61,31): g=71, h=86, f=157
 Neighbor -> (60,31): g=72, h=85, f=157
 Añadido a open -> (60,31): g=72, h=85, f=157
 Neighbor -> (61,32): g=73, h=87, f=160
 Añadido a open -> (61,32): g=73, h=87, f=160
+Neighbor -> (61,30): g=73, h=85, f=158
 Open -> (60,31): g=72, h=85, f=157
 Neighbor -> (59,31): g=73, h=84, f=157
 Añadido a open -> (59,31): g=73, h=84, f=157
 Neighbor -> (60,32): g=74, h=86, f=160
 Añadido a open -> (60,32): g=74, h=86, f=160
+Neighbor -> (60,30): g=74, h=84, f=158
 Open -> (59,31): g=73, h=84, f=157
 Neighbor -> (58,31): g=74, h=83, f=157
 Añadido a open -> (58,31): g=74, h=83, f=157
 Neighbor -> (59,32): g=75, h=85, f=160
 Añadido a open -> (59,32): g=75, h=85, f=160
+Neighbor -> (59,30): g=75, h=83, f=158
 Open -> (58,31): g=74, h=83, f=157
 Neighbor -> (57,31): g=75, h=82, f=157
 Añadido a open -> (57,31): g=75, h=82, f=157
 Neighbor -> (58,32): g=76, h=84, f=160
 Añadido a open -> (58,32): g=76, h=84, f=160
+Neighbor -> (58,30): g=76, h=82, f=158
 Open -> (57,31): g=75, h=82, f=157
 Neighbor -> (57,32): g=77, h=83, f=160
 Añadido a open -> (57,32): g=77, h=83, f=160
-Open -> (67,32): g=64, h=93, f=157
-Neighbor -> (66,32): g=65, h=92, f=157
-Añadido a open -> (66,32): g=65, h=92, f=157
-Neighbor -> (67,33): g=66, h=94, f=160
-Añadido a open -> (67,33): g=66, h=94, f=160
-Open -> (66,32): g=65, h=92, f=157
-Neighbor -> (65,32): g=66, h=91, f=157
-Añadido a open -> (65,32): g=66, h=91, f=157
-Neighbor -> (66,33): g=67, h=93, f=160
-Añadido a open -> (66,33): g=67, h=93, f=160
-Open -> (65,32): g=66, h=91, f=157
-Neighbor -> (64,32): g=67, h=90, f=157
-Añadido a open -> (64,32): g=67, h=90, f=157
-Neighbor -> (65,33): g=68, h=92, f=160
-Añadido a open -> (65,33): g=68, h=92, f=160
-Open -> (64,32): g=67, h=90, f=157
-Neighbor -> (63,32): g=68, h=89, f=157
-Añadido a open -> (63,32): g=68, h=89, f=157
-Neighbor -> (64,33): g=69, h=91, f=160
-Añadido a open -> (64,33): g=69, h=91, f=160
-Open -> (63,32): g=68, h=89, f=157
-Neighbor -> (62,32): g=69, h=88, f=157
-Añadido a open -> (62,32): g=69, h=88, f=157
-Neighbor -> (63,33): g=70, h=90, f=160
-Añadido a open -> (63,33): g=70, h=90, f=160
-Open -> (62,32): g=69, h=88, f=157
-Neighbor -> (61,32): g=70, h=87, f=157
-Añadido a open -> (61,32): g=70, h=87, f=157
-Neighbor -> (62,33): g=71, h=89, f=160
-Añadido a open -> (62,33): g=71, h=89, f=160
-Open -> (61,32): g=70, h=87, f=157
-Neighbor -> (60,32): g=71, h=86, f=157
-Añadido a open -> (60,32): g=71, h=86, f=157
-Neighbor -> (61,33): g=72, h=88, f=160
-Añadido a open -> (61,33): g=72, h=88, f=160
-Open -> (60,32): g=71, h=86, f=157
-Neighbor -> (59,32): g=72, h=85, f=157
-Añadido a open -> (59,32): g=72, h=85, f=157
-Neighbor -> (60,33): g=73, h=87, f=160
-Añadido a open -> (60,33): g=73, h=87, f=160
-Open -> (59,32): g=72, h=85, f=157
-Neighbor -> (58,32): g=73, h=84, f=157
-Añadido a open -> (58,32): g=73, h=84, f=157
-Neighbor -> (59,33): g=74, h=86, f=160
-Añadido a open -> (59,33): g=74, h=86, f=160
-Open -> (58,32): g=73, h=84, f=157
-Neighbor -> (57,32): g=74, h=83, f=157
-Añadido a open -> (57,32): g=74, h=83, f=157
-Neighbor -> (58,33): g=75, h=85, f=160
-Añadido a open -> (58,33): g=75, h=85, f=160
-Open -> (57,32): g=74, h=83, f=157
-Neighbor -> (57,33): g=76, h=84, f=160
-Añadido a open -> (57,33): g=76, h=84, f=160
+Neighbor -> (57,30): g=77, h=81, f=158
 Open -> (67,33): g=63, h=94, f=157
 Neighbor -> (66,33): g=64, h=93, f=157
 Añadido a open -> (66,33): g=64, h=93, f=157
 Neighbor -> (67,34): g=65, h=95, f=160
-Añadido a open -> (67,34): g=65, h=95, f=160
+Neighbor -> (67,32): g=65, h=93, f=158
 Open -> (66,33): g=64, h=93, f=157
 Neighbor -> (65,33): g=65, h=92, f=157
 Añadido a open -> (65,33): g=65, h=92, f=157
 Neighbor -> (66,34): g=66, h=94, f=160
 Añadido a open -> (66,34): g=66, h=94, f=160
+Neighbor -> (66,32): g=66, h=92, f=158
 Open -> (65,33): g=65, h=92, f=157
 Neighbor -> (64,33): g=66, h=91, f=157
 Añadido a open -> (64,33): g=66, h=91, f=157
 Neighbor -> (65,34): g=67, h=93, f=160
 Añadido a open -> (65,34): g=67, h=93, f=160
+Neighbor -> (65,32): g=67, h=91, f=158
 Open -> (64,33): g=66, h=91, f=157
 Neighbor -> (63,33): g=67, h=90, f=157
 Añadido a open -> (63,33): g=67, h=90, f=157
 Neighbor -> (64,34): g=68, h=92, f=160
 Añadido a open -> (64,34): g=68, h=92, f=160
+Neighbor -> (64,32): g=68, h=90, f=158
 Open -> (63,33): g=67, h=90, f=157
 Neighbor -> (62,33): g=68, h=89, f=157
 Añadido a open -> (62,33): g=68, h=89, f=157
 Neighbor -> (63,34): g=69, h=91, f=160
 Añadido a open -> (63,34): g=69, h=91, f=160
+Neighbor -> (63,32): g=69, h=89, f=158
 Open -> (62,33): g=68, h=89, f=157
 Neighbor -> (61,33): g=69, h=88, f=157
 Añadido a open -> (61,33): g=69, h=88, f=157
 Neighbor -> (62,34): g=70, h=90, f=160
 Añadido a open -> (62,34): g=70, h=90, f=160
+Neighbor -> (62,32): g=70, h=88, f=158
 Open -> (61,33): g=69, h=88, f=157
 Neighbor -> (60,33): g=70, h=87, f=157
 Añadido a open -> (60,33): g=70, h=87, f=157
 Neighbor -> (61,34): g=71, h=89, f=160
 Añadido a open -> (61,34): g=71, h=89, f=160
+Neighbor -> (61,32): g=71, h=87, f=158
 Open -> (60,33): g=70, h=87, f=157
 Neighbor -> (59,33): g=71, h=86, f=157
 Añadido a open -> (59,33): g=71, h=86, f=157
 Neighbor -> (60,34): g=72, h=88, f=160
 Añadido a open -> (60,34): g=72, h=88, f=160
+Neighbor -> (60,32): g=72, h=86, f=158
 Open -> (59,33): g=71, h=86, f=157
 Neighbor -> (58,33): g=72, h=85, f=157
 Añadido a open -> (58,33): g=72, h=85, f=157
 Neighbor -> (59,34): g=73, h=87, f=160
 Añadido a open -> (59,34): g=73, h=87, f=160
+Neighbor -> (59,32): g=73, h=85, f=158
 Open -> (58,33): g=72, h=85, f=157
 Neighbor -> (57,33): g=73, h=84, f=157
 Añadido a open -> (57,33): g=73, h=84, f=157
 Neighbor -> (58,34): g=74, h=86, f=160
 Añadido a open -> (58,34): g=74, h=86, f=160
+Neighbor -> (58,32): g=74, h=84, f=158
 Open -> (57,33): g=73, h=84, f=157
 Neighbor -> (57,34): g=75, h=85, f=160
 Añadido a open -> (57,34): g=75, h=85, f=160
-Open -> (67,34): g=62, h=95, f=157
-Neighbor -> (66,34): g=63, h=94, f=157
-Añadido a open -> (66,34): g=63, h=94, f=157
-Neighbor -> (67,35): g=64, h=96, f=160
-Añadido a open -> (67,35): g=64, h=96, f=160
-Open -> (66,34): g=63, h=94, f=157
-Neighbor -> (65,34): g=64, h=93, f=157
-Añadido a open -> (65,34): g=64, h=93, f=157
-Neighbor -> (66,35): g=65, h=95, f=160
-Añadido a open -> (66,35): g=65, h=95, f=160
-Open -> (65,34): g=64, h=93, f=157
-Neighbor -> (64,34): g=65, h=92, f=157
-Añadido a open -> (64,34): g=65, h=92, f=157
-Neighbor -> (65,35): g=66, h=94, f=160
-Añadido a open -> (65,35): g=66, h=94, f=160
-Open -> (64,34): g=65, h=92, f=157
-Neighbor -> (63,34): g=66, h=91, f=157
-Añadido a open -> (63,34): g=66, h=91, f=157
-Neighbor -> (64,35): g=67, h=93, f=160
-Añadido a open -> (64,35): g=67, h=93, f=160
-Open -> (63,34): g=66, h=91, f=157
-Neighbor -> (62,34): g=67, h=90, f=157
-Añadido a open -> (62,34): g=67, h=90, f=157
-Neighbor -> (63,35): g=68, h=92, f=160
-Añadido a open -> (63,35): g=68, h=92, f=160
-Open -> (62,34): g=67, h=90, f=157
-Neighbor -> (61,34): g=68, h=89, f=157
-Añadido a open -> (61,34): g=68, h=89, f=157
-Neighbor -> (62,35): g=69, h=91, f=160
-Añadido a open -> (62,35): g=69, h=91, f=160
-Open -> (61,34): g=68, h=89, f=157
-Neighbor -> (60,34): g=69, h=88, f=157
-Añadido a open -> (60,34): g=69, h=88, f=157
-Neighbor -> (61,35): g=70, h=90, f=160
-Añadido a open -> (61,35): g=70, h=90, f=160
-Open -> (60,34): g=69, h=88, f=157
-Neighbor -> (59,34): g=70, h=87, f=157
-Añadido a open -> (59,34): g=70, h=87, f=157
-Neighbor -> (60,35): g=71, h=89, f=160
-Añadido a open -> (60,35): g=71, h=89, f=160
-Open -> (59,34): g=70, h=87, f=157
-Neighbor -> (58,34): g=71, h=86, f=157
-Añadido a open -> (58,34): g=71, h=86, f=157
-Neighbor -> (59,35): g=72, h=88, f=160
-Añadido a open -> (59,35): g=72, h=88, f=160
-Open -> (58,34): g=71, h=86, f=157
-Neighbor -> (57,34): g=72, h=85, f=157
-Añadido a open -> (57,34): g=72, h=85, f=157
-Neighbor -> (58,35): g=73, h=87, f=160
-Añadido a open -> (58,35): g=73, h=87, f=160
-Open -> (57,34): g=72, h=85, f=157
-Neighbor -> (57,35): g=74, h=86, f=160
-Añadido a open -> (57,35): g=74, h=86, f=160
+Neighbor -> (57,32): g=75, h=83, f=158
 Open -> (67,35): g=61, h=96, f=157
 Neighbor -> (66,35): g=62, h=95, f=157
 Añadido a open -> (66,35): g=62, h=95, f=157
 Neighbor -> (67,36): g=63, h=97, f=160
-Añadido a open -> (67,36): g=63, h=97, f=160
+Neighbor -> (67,34): g=63, h=95, f=158
 Open -> (66,35): g=62, h=95, f=157
 Neighbor -> (65,35): g=63, h=94, f=157
 Añadido a open -> (65,35): g=63, h=94, f=157
 Neighbor -> (66,36): g=64, h=96, f=160
 Añadido a open -> (66,36): g=64, h=96, f=160
+Neighbor -> (66,34): g=64, h=94, f=158
 Open -> (65,35): g=63, h=94, f=157
 Neighbor -> (64,35): g=64, h=93, f=157
 Añadido a open -> (64,35): g=64, h=93, f=157
 Neighbor -> (65,36): g=65, h=95, f=160
 Añadido a open -> (65,36): g=65, h=95, f=160
+Neighbor -> (65,34): g=65, h=93, f=158
 Open -> (64,35): g=64, h=93, f=157
 Neighbor -> (63,35): g=65, h=92, f=157
 Añadido a open -> (63,35): g=65, h=92, f=157
 Neighbor -> (64,36): g=66, h=94, f=160
 Añadido a open -> (64,36): g=66, h=94, f=160
+Neighbor -> (64,34): g=66, h=92, f=158
 Open -> (63,35): g=65, h=92, f=157
 Neighbor -> (62,35): g=66, h=91, f=157
 Añadido a open -> (62,35): g=66, h=91, f=157
 Neighbor -> (63,36): g=67, h=93, f=160
 Añadido a open -> (63,36): g=67, h=93, f=160
+Neighbor -> (63,34): g=67, h=91, f=158
 Open -> (62,35): g=66, h=91, f=157
 Neighbor -> (61,35): g=67, h=90, f=157
 Añadido a open -> (61,35): g=67, h=90, f=157
 Neighbor -> (62,36): g=68, h=92, f=160
 Añadido a open -> (62,36): g=68, h=92, f=160
+Neighbor -> (62,34): g=68, h=90, f=158
 Open -> (61,35): g=67, h=90, f=157
 Neighbor -> (60,35): g=68, h=89, f=157
 Añadido a open -> (60,35): g=68, h=89, f=157
 Neighbor -> (61,36): g=69, h=91, f=160
 Añadido a open -> (61,36): g=69, h=91, f=160
+Neighbor -> (61,34): g=69, h=89, f=158
 Open -> (60,35): g=68, h=89, f=157
 Neighbor -> (59,35): g=69, h=88, f=157
 Añadido a open -> (59,35): g=69, h=88, f=157
 Neighbor -> (60,36): g=70, h=90, f=160
 Añadido a open -> (60,36): g=70, h=90, f=160
+Neighbor -> (60,34): g=70, h=88, f=158
 Open -> (59,35): g=69, h=88, f=157
 Neighbor -> (58,35): g=70, h=87, f=157
 Añadido a open -> (58,35): g=70, h=87, f=157
 Neighbor -> (59,36): g=71, h=89, f=160
 Añadido a open -> (59,36): g=71, h=89, f=160
+Neighbor -> (59,34): g=71, h=87, f=158
 Open -> (58,35): g=70, h=87, f=157
 Neighbor -> (57,35): g=71, h=86, f=157
 Añadido a open -> (57,35): g=71, h=86, f=157
 Neighbor -> (58,36): g=72, h=88, f=160
 Añadido a open -> (58,36): g=72, h=88, f=160
+Neighbor -> (58,34): g=72, h=86, f=158
 Open -> (57,35): g=71, h=86, f=157
 Neighbor -> (57,36): g=73, h=87, f=160
 Añadido a open -> (57,36): g=73, h=87, f=160
-Open -> (67,36): g=60, h=97, f=157
-Neighbor -> (66,36): g=61, h=96, f=157
-Añadido a open -> (66,36): g=61, h=96, f=157
-Neighbor -> (67,37): g=62, h=98, f=160
-Añadido a open -> (67,37): g=62, h=98, f=160
-Open -> (66,36): g=61, h=96, f=157
-Neighbor -> (65,36): g=62, h=95, f=157
-Añadido a open -> (65,36): g=62, h=95, f=157
-Neighbor -> (66,37): g=63, h=97, f=160
-Añadido a open -> (66,37): g=63, h=97, f=160
-Open -> (65,36): g=62, h=95, f=157
-Neighbor -> (64,36): g=63, h=94, f=157
-Añadido a open -> (64,36): g=63, h=94, f=157
-Neighbor -> (65,37): g=64, h=96, f=160
-Añadido a open -> (65,37): g=64, h=96, f=160
-Open -> (64,36): g=63, h=94, f=157
-Neighbor -> (63,36): g=64, h=93, f=157
-Añadido a open -> (63,36): g=64, h=93, f=157
-Neighbor -> (64,37): g=65, h=95, f=160
-Añadido a open -> (64,37): g=65, h=95, f=160
-Open -> (63,36): g=64, h=93, f=157
-Neighbor -> (62,36): g=65, h=92, f=157
-Añadido a open -> (62,36): g=65, h=92, f=157
-Neighbor -> (63,37): g=66, h=94, f=160
-Añadido a open -> (63,37): g=66, h=94, f=160
-Open -> (62,36): g=65, h=92, f=157
-Neighbor -> (61,36): g=66, h=91, f=157
-Añadido a open -> (61,36): g=66, h=91, f=157
-Neighbor -> (62,37): g=67, h=93, f=160
-Añadido a open -> (62,37): g=67, h=93, f=160
-Open -> (61,36): g=66, h=91, f=157
-Neighbor -> (60,36): g=67, h=90, f=157
-Añadido a open -> (60,36): g=67, h=90, f=157
-Neighbor -> (61,37): g=68, h=92, f=160
-Añadido a open -> (61,37): g=68, h=92, f=160
-Open -> (60,36): g=67, h=90, f=157
-Neighbor -> (59,36): g=68, h=89, f=157
-Añadido a open -> (59,36): g=68, h=89, f=157
-Neighbor -> (60,37): g=69, h=91, f=160
-Añadido a open -> (60,37): g=69, h=91, f=160
-Open -> (59,36): g=68, h=89, f=157
-Neighbor -> (58,36): g=69, h=88, f=157
-Añadido a open -> (58,36): g=69, h=88, f=157
-Neighbor -> (59,37): g=70, h=90, f=160
-Añadido a open -> (59,37): g=70, h=90, f=160
-Open -> (58,36): g=69, h=88, f=157
-Neighbor -> (57,36): g=70, h=87, f=157
-Añadido a open -> (57,36): g=70, h=87, f=157
-Neighbor -> (58,37): g=71, h=89, f=160
-Añadido a open -> (58,37): g=71, h=89, f=160
-Open -> (57,36): g=70, h=87, f=157
-Neighbor -> (57,37): g=72, h=88, f=160
-Añadido a open -> (57,37): g=72, h=88, f=160
+Neighbor -> (57,34): g=73, h=85, f=158
 Open -> (67,37): g=59, h=98, f=157
 Neighbor -> (66,37): g=60, h=97, f=157
 Añadido a open -> (66,37): g=60, h=97, f=157
 Neighbor -> (67,38): g=61, h=99, f=160
-Añadido a open -> (67,38): g=61, h=99, f=160
+Neighbor -> (67,36): g=61, h=97, f=158
 Open -> (66,37): g=60, h=97, f=157
 Neighbor -> (65,37): g=61, h=96, f=157
 Añadido a open -> (65,37): g=61, h=96, f=157
 Neighbor -> (66,38): g=62, h=98, f=160
 Añadido a open -> (66,38): g=62, h=98, f=160
+Neighbor -> (66,36): g=62, h=96, f=158
 Open -> (65,37): g=61, h=96, f=157
 Neighbor -> (64,37): g=62, h=95, f=157
 Añadido a open -> (64,37): g=62, h=95, f=157
 Neighbor -> (65,38): g=63, h=97, f=160
 Añadido a open -> (65,38): g=63, h=97, f=160
+Neighbor -> (65,36): g=63, h=95, f=158
 Open -> (64,37): g=62, h=95, f=157
 Neighbor -> (63,37): g=63, h=94, f=157
 Añadido a open -> (63,37): g=63, h=94, f=157
 Neighbor -> (64,38): g=64, h=96, f=160
 Añadido a open -> (64,38): g=64, h=96, f=160
+Neighbor -> (64,36): g=64, h=94, f=158
 Open -> (63,37): g=63, h=94, f=157
 Neighbor -> (62,37): g=64, h=93, f=157
 Añadido a open -> (62,37): g=64, h=93, f=157
 Neighbor -> (63,38): g=65, h=95, f=160
 Añadido a open -> (63,38): g=65, h=95, f=160
+Neighbor -> (63,36): g=65, h=93, f=158
 Open -> (62,37): g=64, h=93, f=157
 Neighbor -> (61,37): g=65, h=92, f=157
 Añadido a open -> (61,37): g=65, h=92, f=157
 Neighbor -> (62,38): g=66, h=94, f=160
 Añadido a open -> (62,38): g=66, h=94, f=160
+Neighbor -> (62,36): g=66, h=92, f=158
 Open -> (61,37): g=65, h=92, f=157
 Neighbor -> (60,37): g=66, h=91, f=157
 Añadido a open -> (60,37): g=66, h=91, f=157
 Neighbor -> (61,38): g=67, h=93, f=160
 Añadido a open -> (61,38): g=67, h=93, f=160
+Neighbor -> (61,36): g=67, h=91, f=158
 Open -> (60,37): g=66, h=91, f=157
 Neighbor -> (59,37): g=67, h=90, f=157
 Añadido a open -> (59,37): g=67, h=90, f=157
 Neighbor -> (60,38): g=68, h=92, f=160
 Añadido a open -> (60,38): g=68, h=92, f=160
+Neighbor -> (60,36): g=68, h=90, f=158
 Open -> (59,37): g=67, h=90, f=157
 Neighbor -> (58,37): g=68, h=89, f=157
 Añadido a open -> (58,37): g=68, h=89, f=157
 Neighbor -> (59,38): g=69, h=91, f=160
 Añadido a open -> (59,38): g=69, h=91, f=160
+Neighbor -> (59,36): g=69, h=89, f=158
 Open -> (58,37): g=68, h=89, f=157
 Neighbor -> (57,37): g=69, h=88, f=157
 Añadido a open -> (57,37): g=69, h=88, f=157
 Neighbor -> (58,38): g=70, h=90, f=160
 Añadido a open -> (58,38): g=70, h=90, f=160
+Neighbor -> (58,36): g=70, h=88, f=158
 Open -> (57,37): g=69, h=88, f=157
 Neighbor -> (57,38): g=71, h=89, f=160
 Añadido a open -> (57,38): g=71, h=89, f=160
-Open -> (67,38): g=58, h=99, f=157
-Neighbor -> (66,38): g=59, h=98, f=157
-Añadido a open -> (66,38): g=59, h=98, f=157
-Open -> (66,38): g=59, h=98, f=157
-Neighbor -> (65,38): g=60, h=97, f=157
-Añadido a open -> (65,38): g=60, h=97, f=157
-Open -> (65,38): g=60, h=97, f=157
-Neighbor -> (64,38): g=61, h=96, f=157
-Añadido a open -> (64,38): g=61, h=96, f=157
-Open -> (64,38): g=61, h=96, f=157
-Neighbor -> (63,38): g=62, h=95, f=157
-Añadido a open -> (63,38): g=62, h=95, f=157
-Open -> (63,38): g=62, h=95, f=157
-Neighbor -> (62,38): g=63, h=94, f=157
-Añadido a open -> (62,38): g=63, h=94, f=157
-Open -> (62,38): g=63, h=94, f=157
-Neighbor -> (61,38): g=64, h=93, f=157
-Añadido a open -> (61,38): g=64, h=93, f=157
-Open -> (61,38): g=64, h=93, f=157
-Neighbor -> (60,38): g=65, h=92, f=157
-Añadido a open -> (60,38): g=65, h=92, f=157
-Open -> (60,38): g=65, h=92, f=157
-Neighbor -> (59,38): g=66, h=91, f=157
-Añadido a open -> (59,38): g=66, h=91, f=157
-Open -> (59,38): g=66, h=91, f=157
-Neighbor -> (58,38): g=67, h=90, f=157
-Añadido a open -> (58,38): g=67, h=90, f=157
-Open -> (58,38): g=67, h=90, f=157
-Neighbor -> (57,38): g=68, h=89, f=157
-Añadido a open -> (57,38): g=68, h=89, f=157
-Open -> (57,38): g=68, h=89, f=157
-Open -> (67,80): g=16, h=141, f=157
-Open -> (68,80): g=15, h=142, f=157
+Neighbor -> (57,36): g=71, h=87, f=158
+Open -> (68,81): g=14, h=143, f=157
+Neighbor -> (68,82): g=16, h=144, f=160
+Añadido a open -> (68,82): g=16, h=144, f=160
 Open -> (69,65): g=29, h=128, f=157
 Neighbor -> (68,65): g=30, h=127, f=157
 Añadido a open -> (68,65): g=30, h=127, f=157
 Neighbor -> (69,66): g=31, h=129, f=160
-Añadido a open -> (69,66): g=31, h=129, f=160
 Open -> (68,65): g=30, h=127, f=157
 Neighbor -> (67,65): g=31, h=126, f=157
 Añadido a open -> (67,65): g=31, h=126, f=157
@@ -2645,99 +1922,66 @@ Neighbor -> (62,66): g=38, h=122, f=160
 Añadido a open -> (62,66): g=38, h=122, f=160
 Neighbor -> (62,64): g=38, h=120, f=158
 Añadido a open -> (62,64): g=38, h=120, f=158
-Open -> (69,66): g=28, h=129, f=157
-Open -> (69,80): g=14, h=143, f=157
-Open -> (70,80): g=13, h=144, f=157
+Open -> (70,81): g=12, h=145, f=157
+Neighbor -> (70,82): g=14, h=146, f=160
+Añadido a open -> (70,82): g=14, h=146, f=160
 Open -> (71,40): g=52, h=105, f=157
 Neighbor -> (72,40): g=53, h=106, f=159
 Añadido a open -> (72,40): g=53, h=106, f=159
 Neighbor -> (71,41): g=54, h=106, f=160
-Añadido a open -> (71,41): g=54, h=106, f=160
-Open -> (71,41): g=51, h=106, f=157
-Neighbor -> (72,41): g=52, h=107, f=159
-Añadido a open -> (72,41): g=52, h=107, f=159
-Neighbor -> (71,42): g=53, h=107, f=160
-Añadido a open -> (71,42): g=53, h=107, f=160
 Open -> (71,42): g=50, h=107, f=157
 Neighbor -> (72,42): g=51, h=108, f=159
 Añadido a open -> (72,42): g=51, h=108, f=159
-Open -> (71,80): g=12, h=145, f=157
-Open -> (72,80): g=11, h=146, f=157
-Open -> (73,80): g=10, h=147, f=157
-Open -> (74,80): g=9, h=148, f=157
-Open -> (75,80): g=8, h=149, f=157
-Open -> (76,80): g=7, h=150, f=157
+Neighbor -> (71,41): g=52, h=106, f=158
+Open -> (72,81): g=10, h=147, f=157
+Neighbor -> (72,82): g=12, h=148, f=160
+Añadido a open -> (72,82): g=12, h=148, f=160
+Open -> (74,81): g=8, h=149, f=157
+Neighbor -> (74,82): g=10, h=150, f=160
+Añadido a open -> (74,82): g=10, h=150, f=160
+Open -> (76,81): g=6, h=151, f=157
+Neighbor -> (76,82): g=8, h=152, f=160
+Añadido a open -> (76,82): g=8, h=152, f=160
 Open -> (77,57): g=29, h=128, f=157
 Neighbor -> (78,57): g=30, h=129, f=159
 Añadido a open -> (78,57): g=30, h=129, f=159
-Open -> (77,58): g=28, h=129, f=157
-Neighbor -> (78,58): g=29, h=130, f=159
-Añadido a open -> (78,58): g=29, h=130, f=159
+Neighbor -> (77,58): g=31, h=129, f=160
+Open -> (77,59): g=27, h=130, f=157
+Neighbor -> (78,59): g=28, h=131, f=159
+Añadido a open -> (78,59): g=28, h=131, f=159
+Neighbor -> (77,58): g=29, h=129, f=158
+Neighbor -> (77,60): g=29, h=131, f=160
+Open -> (77,61): g=25, h=132, f=157
+Neighbor -> (78,61): g=26, h=133, f=159
+Añadido a open -> (78,61): g=26, h=133, f=159
+Neighbor -> (77,60): g=27, h=131, f=158
+Neighbor -> (77,62): g=27, h=133, f=160
+Open -> (77,63): g=23, h=134, f=157
+Neighbor -> (78,63): g=24, h=135, f=159
+Añadido a open -> (78,63): g=24, h=135, f=159
+Neighbor -> (77,62): g=25, h=133, f=158
+Neighbor -> (77,64): g=25, h=135, f=160
+Open -> (77,65): g=21, h=136, f=157
+Neighbor -> (77,64): g=23, h=135, f=158
 Open -> (77,68): g=18, h=139, f=157
 Neighbor -> (78,68): g=19, h=140, f=159
 Añadido a open -> (78,68): g=19, h=140, f=159
-Open -> (77,69): g=17, h=140, f=157
-Neighbor -> (78,69): g=18, h=141, f=159
-Añadido a open -> (78,69): g=18, h=141, f=159
+Neighbor -> (77,69): g=20, h=140, f=160
 Open -> (77,70): g=16, h=141, f=157
 Neighbor -> (78,70): g=17, h=142, f=159
 Añadido a open -> (78,70): g=17, h=142, f=159
+Neighbor -> (77,69): g=18, h=140, f=158
+Neighbor -> (77,71): g=18, h=142, f=160
 Open -> (77,72): g=14, h=143, f=157
-Open -> (77,73): g=13, h=144, f=157
-Open -> (77,80): g=6, h=151, f=157
-Open -> (78,57): g=28, h=129, f=157
-Neighbor -> (78,58): g=30, h=130, f=160
-Añadido a open -> (78,58): g=30, h=130, f=160
-Open -> (78,58): g=27, h=130, f=157
-Neighbor -> (78,59): g=29, h=131, f=160
-Añadido a open -> (78,59): g=29, h=131, f=160
-Open -> (78,59): g=26, h=131, f=157
-Neighbor -> (79,59): g=27, h=132, f=159
-Añadido a open -> (79,59): g=27, h=132, f=159
-Neighbor -> (78,60): g=28, h=132, f=160
-Añadido a open -> (78,60): g=28, h=132, f=160
-Open -> (78,60): g=25, h=132, f=157
-Neighbor -> (78,61): g=27, h=133, f=160
-Añadido a open -> (78,61): g=27, h=133, f=160
-Open -> (78,61): g=24, h=133, f=157
-Neighbor -> (79,61): g=25, h=134, f=159
-Añadido a open -> (79,61): g=25, h=134, f=159
-Neighbor -> (78,62): g=26, h=134, f=160
-Añadido a open -> (78,62): g=26, h=134, f=160
-Open -> (78,62): g=23, h=134, f=157
-Neighbor -> (79,62): g=24, h=135, f=159
-Añadido a open -> (79,62): g=24, h=135, f=159
-Neighbor -> (78,63): g=25, h=135, f=160
-Añadido a open -> (78,63): g=25, h=135, f=160
-Open -> (78,63): g=22, h=135, f=157
-Neighbor -> (78,64): g=24, h=136, f=160
-Añadido a open -> (78,64): g=24, h=136, f=160
-Open -> (78,64): g=21, h=136, f=157
-Neighbor -> (79,64): g=22, h=137, f=159
-Añadido a open -> (79,64): g=22, h=137, f=159
-Open -> (78,68): g=17, h=140, f=157
-Neighbor -> (78,67): g=19, h=139, f=158
-Añadido a open -> (78,67): g=19, h=139, f=158
-Neighbor -> (78,69): g=19, h=141, f=160
-Añadido a open -> (78,69): g=19, h=141, f=160
-Open -> (78,69): g=16, h=141, f=157
-Neighbor -> (79,69): g=17, h=142, f=159
-Añadido a open -> (79,69): g=17, h=142, f=159
-Neighbor -> (78,70): g=18, h=142, f=160
-Añadido a open -> (78,70): g=18, h=142, f=160
-Open -> (78,70): g=15, h=142, f=157
-Neighbor -> (79,70): g=16, h=143, f=159
-Añadido a open -> (79,70): g=16, h=143, f=159
-Neighbor -> (78,71): g=17, h=143, f=160
-Añadido a open -> (78,71): g=17, h=143, f=160
-Open -> (78,71): g=14, h=143, f=157
+Neighbor -> (77,71): g=16, h=142, f=158
+Neighbor -> (77,73): g=16, h=144, f=160
+Open -> (77,75): g=11, h=146, f=157
 Open -> (43,38): g=83, h=75, f=158
 Neighbor -> (43,37): g=84, h=74, f=158
 Añadido a open -> (43,37): g=84, h=74, f=158
 Neighbor -> (42,38): g=85, h=74, f=159
 Añadido a open -> (42,38): g=85, h=74, f=159
 Neighbor -> (44,38): g=85, h=76, f=161
-Añadido a open -> (44,38): g=85, h=76, f=161
 Open -> (43,37): g=84, h=74, f=158
 Neighbor -> (43,36): g=85, h=73, f=158
 Añadido a open -> (43,36): g=85, h=73, f=158
@@ -2827,377 +2071,222 @@ Neighbor -> (42,25): g=98, h=61, f=159
 Añadido a open -> (42,25): g=98, h=61, f=159
 Neighbor -> (44,25): g=98, h=63, f=161
 Añadido a open -> (44,25): g=98, h=63, f=161
-Open -> (44,38): g=82, h=76, f=158
-Neighbor -> (44,37): g=83, h=75, f=158
-Neighbor -> (45,38): g=84, h=77, f=161
-Añadido a open -> (45,38): g=84, h=77, f=161
-Open -> (44,37): g=83, h=75, f=158
-Neighbor -> (44,36): g=84, h=74, f=158
-Añadido a open -> (44,36): g=84, h=74, f=158
-Neighbor -> (45,37): g=85, h=76, f=161
-Añadido a open -> (45,37): g=85, h=76, f=161
-Open -> (44,36): g=84, h=74, f=158
-Neighbor -> (44,35): g=85, h=73, f=158
-Neighbor -> (45,36): g=86, h=75, f=161
-Añadido a open -> (45,36): g=86, h=75, f=161
-Open -> (44,35): g=85, h=73, f=158
-Neighbor -> (44,34): g=86, h=72, f=158
-Añadido a open -> (44,34): g=86, h=72, f=158
-Neighbor -> (45,35): g=87, h=74, f=161
-Añadido a open -> (45,35): g=87, h=74, f=161
-Open -> (44,34): g=86, h=72, f=158
-Neighbor -> (44,33): g=87, h=71, f=158
-Añadido a open -> (44,33): g=87, h=71, f=158
-Neighbor -> (45,34): g=88, h=73, f=161
-Añadido a open -> (45,34): g=88, h=73, f=161
-Open -> (44,33): g=87, h=71, f=158
-Neighbor -> (44,32): g=88, h=70, f=158
-Añadido a open -> (44,32): g=88, h=70, f=158
-Neighbor -> (45,33): g=89, h=72, f=161
-Añadido a open -> (45,33): g=89, h=72, f=161
-Open -> (44,32): g=88, h=70, f=158
-Neighbor -> (44,31): g=89, h=69, f=158
-Neighbor -> (45,32): g=90, h=71, f=161
-Añadido a open -> (45,32): g=90, h=71, f=161
-Open -> (44,31): g=89, h=69, f=158
-Neighbor -> (44,30): g=90, h=68, f=158
-Añadido a open -> (44,30): g=90, h=68, f=158
-Neighbor -> (45,31): g=91, h=70, f=161
-Añadido a open -> (45,31): g=91, h=70, f=161
-Open -> (44,30): g=90, h=68, f=158
-Neighbor -> (44,29): g=91, h=67, f=158
-Añadido a open -> (44,29): g=91, h=67, f=158
-Neighbor -> (45,30): g=92, h=69, f=161
-Añadido a open -> (45,30): g=92, h=69, f=161
-Open -> (44,29): g=91, h=67, f=158
-Neighbor -> (44,28): g=92, h=66, f=158
-Añadido a open -> (44,28): g=92, h=66, f=158
-Neighbor -> (45,29): g=93, h=68, f=161
-Añadido a open -> (45,29): g=93, h=68, f=161
-Open -> (44,28): g=92, h=66, f=158
-Neighbor -> (44,27): g=93, h=65, f=158
-Añadido a open -> (44,27): g=93, h=65, f=158
-Neighbor -> (45,28): g=94, h=67, f=161
-Añadido a open -> (45,28): g=94, h=67, f=161
-Open -> (44,27): g=93, h=65, f=158
-Neighbor -> (44,26): g=94, h=64, f=158
-Añadido a open -> (44,26): g=94, h=64, f=158
-Neighbor -> (45,27): g=95, h=66, f=161
-Añadido a open -> (45,27): g=95, h=66, f=161
-Open -> (44,26): g=94, h=64, f=158
-Neighbor -> (44,25): g=95, h=63, f=158
-Añadido a open -> (44,25): g=95, h=63, f=158
-Neighbor -> (45,26): g=96, h=65, f=161
-Añadido a open -> (45,26): g=96, h=65, f=161
-Open -> (44,25): g=95, h=63, f=158
-Neighbor -> (45,25): g=97, h=64, f=161
-Añadido a open -> (45,25): g=97, h=64, f=161
 Open -> (45,38): g=81, h=77, f=158
 Neighbor -> (45,37): g=82, h=76, f=158
+Añadido a open -> (45,37): g=82, h=76, f=158
+Neighbor -> (44,38): g=83, h=76, f=159
 Neighbor -> (46,38): g=83, h=78, f=161
-Añadido a open -> (46,38): g=83, h=78, f=161
 Open -> (45,37): g=82, h=76, f=158
 Neighbor -> (45,36): g=83, h=75, f=158
 Añadido a open -> (45,36): g=83, h=75, f=158
+Neighbor -> (44,37): g=84, h=75, f=159
 Neighbor -> (46,37): g=84, h=77, f=161
 Añadido a open -> (46,37): g=84, h=77, f=161
 Open -> (45,36): g=83, h=75, f=158
 Neighbor -> (45,35): g=84, h=74, f=158
+Añadido a open -> (45,35): g=84, h=74, f=158
+Neighbor -> (44,36): g=85, h=74, f=159
 Neighbor -> (46,36): g=85, h=76, f=161
 Añadido a open -> (46,36): g=85, h=76, f=161
 Open -> (45,35): g=84, h=74, f=158
 Neighbor -> (45,34): g=85, h=73, f=158
 Añadido a open -> (45,34): g=85, h=73, f=158
+Neighbor -> (44,35): g=86, h=73, f=159
 Neighbor -> (46,35): g=86, h=75, f=161
 Añadido a open -> (46,35): g=86, h=75, f=161
 Open -> (45,34): g=85, h=73, f=158
 Neighbor -> (45,33): g=86, h=72, f=158
 Añadido a open -> (45,33): g=86, h=72, f=158
+Neighbor -> (44,34): g=87, h=72, f=159
 Neighbor -> (46,34): g=87, h=74, f=161
 Añadido a open -> (46,34): g=87, h=74, f=161
 Open -> (45,33): g=86, h=72, f=158
 Neighbor -> (45,32): g=87, h=71, f=158
 Añadido a open -> (45,32): g=87, h=71, f=158
+Neighbor -> (44,33): g=88, h=71, f=159
 Neighbor -> (46,33): g=88, h=73, f=161
 Añadido a open -> (46,33): g=88, h=73, f=161
 Open -> (45,32): g=87, h=71, f=158
 Neighbor -> (45,31): g=88, h=70, f=158
+Añadido a open -> (45,31): g=88, h=70, f=158
+Neighbor -> (44,32): g=89, h=70, f=159
 Neighbor -> (46,32): g=89, h=72, f=161
 Añadido a open -> (46,32): g=89, h=72, f=161
 Open -> (45,31): g=88, h=70, f=158
 Neighbor -> (45,30): g=89, h=69, f=158
 Añadido a open -> (45,30): g=89, h=69, f=158
+Neighbor -> (44,31): g=90, h=69, f=159
 Neighbor -> (46,31): g=90, h=71, f=161
 Añadido a open -> (46,31): g=90, h=71, f=161
 Open -> (45,30): g=89, h=69, f=158
 Neighbor -> (45,29): g=90, h=68, f=158
 Añadido a open -> (45,29): g=90, h=68, f=158
+Neighbor -> (44,30): g=91, h=68, f=159
 Neighbor -> (46,30): g=91, h=70, f=161
 Añadido a open -> (46,30): g=91, h=70, f=161
 Open -> (45,29): g=90, h=68, f=158
 Neighbor -> (45,28): g=91, h=67, f=158
 Añadido a open -> (45,28): g=91, h=67, f=158
+Neighbor -> (44,29): g=92, h=67, f=159
 Neighbor -> (46,29): g=92, h=69, f=161
 Añadido a open -> (46,29): g=92, h=69, f=161
 Open -> (45,28): g=91, h=67, f=158
 Neighbor -> (45,27): g=92, h=66, f=158
 Añadido a open -> (45,27): g=92, h=66, f=158
+Neighbor -> (44,28): g=93, h=66, f=159
 Neighbor -> (46,28): g=93, h=68, f=161
 Añadido a open -> (46,28): g=93, h=68, f=161
 Open -> (45,27): g=92, h=66, f=158
 Neighbor -> (45,26): g=93, h=65, f=158
 Añadido a open -> (45,26): g=93, h=65, f=158
+Neighbor -> (44,27): g=94, h=65, f=159
 Neighbor -> (46,27): g=94, h=67, f=161
 Añadido a open -> (46,27): g=94, h=67, f=161
 Open -> (45,26): g=93, h=65, f=158
 Neighbor -> (45,25): g=94, h=64, f=158
 Añadido a open -> (45,25): g=94, h=64, f=158
+Neighbor -> (44,26): g=95, h=64, f=159
 Neighbor -> (46,26): g=95, h=66, f=161
 Añadido a open -> (46,26): g=95, h=66, f=161
 Open -> (45,25): g=94, h=64, f=158
+Neighbor -> (44,25): g=96, h=63, f=159
 Neighbor -> (46,25): g=96, h=65, f=161
 Añadido a open -> (46,25): g=96, h=65, f=161
-Open -> (46,38): g=80, h=78, f=158
-Neighbor -> (46,37): g=81, h=77, f=158
-Neighbor -> (47,38): g=82, h=79, f=161
-Añadido a open -> (47,38): g=82, h=79, f=161
-Open -> (46,37): g=81, h=77, f=158
-Neighbor -> (46,36): g=82, h=76, f=158
-Añadido a open -> (46,36): g=82, h=76, f=158
-Neighbor -> (47,37): g=83, h=78, f=161
-Añadido a open -> (47,37): g=83, h=78, f=161
-Open -> (46,36): g=82, h=76, f=158
-Neighbor -> (46,35): g=83, h=75, f=158
-Neighbor -> (47,36): g=84, h=77, f=161
-Añadido a open -> (47,36): g=84, h=77, f=161
-Open -> (46,35): g=83, h=75, f=158
-Neighbor -> (46,34): g=84, h=74, f=158
-Añadido a open -> (46,34): g=84, h=74, f=158
-Neighbor -> (47,35): g=85, h=76, f=161
-Añadido a open -> (47,35): g=85, h=76, f=161
-Open -> (46,34): g=84, h=74, f=158
-Neighbor -> (46,33): g=85, h=73, f=158
-Añadido a open -> (46,33): g=85, h=73, f=158
-Neighbor -> (47,34): g=86, h=75, f=161
-Añadido a open -> (47,34): g=86, h=75, f=161
-Open -> (46,33): g=85, h=73, f=158
-Neighbor -> (46,32): g=86, h=72, f=158
-Añadido a open -> (46,32): g=86, h=72, f=158
-Neighbor -> (47,33): g=87, h=74, f=161
-Añadido a open -> (47,33): g=87, h=74, f=161
-Open -> (46,32): g=86, h=72, f=158
-Neighbor -> (46,31): g=87, h=71, f=158
-Neighbor -> (47,32): g=88, h=73, f=161
-Añadido a open -> (47,32): g=88, h=73, f=161
-Open -> (46,31): g=87, h=71, f=158
-Neighbor -> (46,30): g=88, h=70, f=158
-Añadido a open -> (46,30): g=88, h=70, f=158
-Neighbor -> (47,31): g=89, h=72, f=161
-Añadido a open -> (47,31): g=89, h=72, f=161
-Open -> (46,30): g=88, h=70, f=158
-Neighbor -> (46,29): g=89, h=69, f=158
-Añadido a open -> (46,29): g=89, h=69, f=158
-Neighbor -> (47,30): g=90, h=71, f=161
-Añadido a open -> (47,30): g=90, h=71, f=161
-Open -> (46,29): g=89, h=69, f=158
-Neighbor -> (46,28): g=90, h=68, f=158
-Añadido a open -> (46,28): g=90, h=68, f=158
-Neighbor -> (47,29): g=91, h=70, f=161
-Añadido a open -> (47,29): g=91, h=70, f=161
-Open -> (46,28): g=90, h=68, f=158
-Neighbor -> (46,27): g=91, h=67, f=158
-Añadido a open -> (46,27): g=91, h=67, f=158
-Neighbor -> (47,28): g=92, h=69, f=161
-Añadido a open -> (47,28): g=92, h=69, f=161
-Open -> (46,27): g=91, h=67, f=158
-Neighbor -> (46,26): g=92, h=66, f=158
-Añadido a open -> (46,26): g=92, h=66, f=158
-Neighbor -> (47,27): g=93, h=68, f=161
-Añadido a open -> (47,27): g=93, h=68, f=161
-Open -> (46,26): g=92, h=66, f=158
-Neighbor -> (46,25): g=93, h=65, f=158
-Añadido a open -> (46,25): g=93, h=65, f=158
-Neighbor -> (47,26): g=94, h=67, f=161
-Añadido a open -> (47,26): g=94, h=67, f=161
-Open -> (46,25): g=93, h=65, f=158
-Neighbor -> (46,24): g=94, h=64, f=158
-Añadido a open -> (46,24): g=94, h=64, f=158
-Neighbor -> (47,25): g=95, h=66, f=161
-Añadido a open -> (47,25): g=95, h=66, f=161
-Open -> (46,24): g=94, h=64, f=158
-Neighbor -> (46,23): g=95, h=63, f=158
-Añadido a open -> (46,23): g=95, h=63, f=158
-Open -> (46,23): g=95, h=63, f=158
-Neighbor -> (45,23): g=97, h=62, f=159
-Añadido a open -> (45,23): g=97, h=62, f=159
-Neighbor -> (47,23): g=97, h=64, f=161
-Añadido a open -> (47,23): g=97, h=64, f=161
 Open -> (47,38): g=79, h=79, f=158
 Neighbor -> (47,37): g=80, h=78, f=158
+Añadido a open -> (47,37): g=80, h=78, f=158
+Neighbor -> (46,38): g=81, h=78, f=159
 Neighbor -> (48,38): g=81, h=80, f=161
-Añadido a open -> (48,38): g=81, h=80, f=161
 Open -> (47,37): g=80, h=78, f=158
 Neighbor -> (47,36): g=81, h=77, f=158
 Añadido a open -> (47,36): g=81, h=77, f=158
+Neighbor -> (46,37): g=82, h=77, f=159
 Neighbor -> (48,37): g=82, h=79, f=161
 Añadido a open -> (48,37): g=82, h=79, f=161
 Open -> (47,36): g=81, h=77, f=158
 Neighbor -> (47,35): g=82, h=76, f=158
+Añadido a open -> (47,35): g=82, h=76, f=158
+Neighbor -> (46,36): g=83, h=76, f=159
 Neighbor -> (48,36): g=83, h=78, f=161
 Añadido a open -> (48,36): g=83, h=78, f=161
 Open -> (47,35): g=82, h=76, f=158
 Neighbor -> (47,34): g=83, h=75, f=158
 Añadido a open -> (47,34): g=83, h=75, f=158
+Neighbor -> (46,35): g=84, h=75, f=159
 Neighbor -> (48,35): g=84, h=77, f=161
 Añadido a open -> (48,35): g=84, h=77, f=161
 Open -> (47,34): g=83, h=75, f=158
 Neighbor -> (47,33): g=84, h=74, f=158
 Añadido a open -> (47,33): g=84, h=74, f=158
+Neighbor -> (46,34): g=85, h=74, f=159
 Neighbor -> (48,34): g=85, h=76, f=161
 Añadido a open -> (48,34): g=85, h=76, f=161
 Open -> (47,33): g=84, h=74, f=158
 Neighbor -> (47,32): g=85, h=73, f=158
 Añadido a open -> (47,32): g=85, h=73, f=158
+Neighbor -> (46,33): g=86, h=73, f=159
 Neighbor -> (48,33): g=86, h=75, f=161
 Añadido a open -> (48,33): g=86, h=75, f=161
 Open -> (47,32): g=85, h=73, f=158
 Neighbor -> (47,31): g=86, h=72, f=158
+Añadido a open -> (47,31): g=86, h=72, f=158
+Neighbor -> (46,32): g=87, h=72, f=159
 Neighbor -> (48,32): g=87, h=74, f=161
 Añadido a open -> (48,32): g=87, h=74, f=161
 Open -> (47,31): g=86, h=72, f=158
 Neighbor -> (47,30): g=87, h=71, f=158
 Añadido a open -> (47,30): g=87, h=71, f=158
+Neighbor -> (46,31): g=88, h=71, f=159
 Neighbor -> (48,31): g=88, h=73, f=161
 Añadido a open -> (48,31): g=88, h=73, f=161
 Open -> (47,30): g=87, h=71, f=158
 Neighbor -> (47,29): g=88, h=70, f=158
 Añadido a open -> (47,29): g=88, h=70, f=158
+Neighbor -> (46,30): g=89, h=70, f=159
 Neighbor -> (48,30): g=89, h=72, f=161
 Añadido a open -> (48,30): g=89, h=72, f=161
 Open -> (47,29): g=88, h=70, f=158
 Neighbor -> (47,28): g=89, h=69, f=158
 Añadido a open -> (47,28): g=89, h=69, f=158
+Neighbor -> (46,29): g=90, h=69, f=159
 Neighbor -> (48,29): g=90, h=71, f=161
 Añadido a open -> (48,29): g=90, h=71, f=161
 Open -> (47,28): g=89, h=69, f=158
 Neighbor -> (47,27): g=90, h=68, f=158
+Añadido a open -> (47,27): g=90, h=68, f=158
+Neighbor -> (46,28): g=91, h=68, f=159
 Neighbor -> (48,28): g=91, h=70, f=161
 Añadido a open -> (48,28): g=91, h=70, f=161
 Open -> (47,27): g=90, h=68, f=158
 Neighbor -> (47,26): g=91, h=67, f=158
 Añadido a open -> (47,26): g=91, h=67, f=158
+Neighbor -> (46,27): g=92, h=67, f=159
 Neighbor -> (48,27): g=92, h=69, f=161
 Añadido a open -> (48,27): g=92, h=69, f=161
 Open -> (47,26): g=91, h=67, f=158
 Neighbor -> (47,25): g=92, h=66, f=158
 Añadido a open -> (47,25): g=92, h=66, f=158
+Neighbor -> (46,26): g=93, h=66, f=159
 Neighbor -> (48,26): g=93, h=68, f=161
 Añadido a open -> (48,26): g=93, h=68, f=161
 Open -> (47,25): g=92, h=66, f=158
+Neighbor -> (46,25): g=94, h=65, f=159
 Neighbor -> (48,25): g=94, h=67, f=161
 Añadido a open -> (48,25): g=94, h=67, f=161
-Open -> (48,38): g=78, h=80, f=158
-Neighbor -> (48,37): g=79, h=79, f=158
-Neighbor -> (49,38): g=80, h=81, f=161
-Añadido a open -> (49,38): g=80, h=81, f=161
-Open -> (48,37): g=79, h=79, f=158
-Neighbor -> (48,36): g=80, h=78, f=158
-Añadido a open -> (48,36): g=80, h=78, f=158
-Neighbor -> (49,37): g=81, h=80, f=161
-Añadido a open -> (49,37): g=81, h=80, f=161
-Open -> (48,36): g=80, h=78, f=158
-Neighbor -> (48,35): g=81, h=77, f=158
-Neighbor -> (49,36): g=82, h=79, f=161
-Añadido a open -> (49,36): g=82, h=79, f=161
-Open -> (48,35): g=81, h=77, f=158
-Neighbor -> (48,34): g=82, h=76, f=158
-Añadido a open -> (48,34): g=82, h=76, f=158
-Neighbor -> (49,35): g=83, h=78, f=161
-Añadido a open -> (49,35): g=83, h=78, f=161
-Open -> (48,34): g=82, h=76, f=158
-Neighbor -> (48,33): g=83, h=75, f=158
-Añadido a open -> (48,33): g=83, h=75, f=158
-Neighbor -> (49,34): g=84, h=77, f=161
-Añadido a open -> (49,34): g=84, h=77, f=161
-Open -> (48,33): g=83, h=75, f=158
-Neighbor -> (48,32): g=84, h=74, f=158
-Añadido a open -> (48,32): g=84, h=74, f=158
-Neighbor -> (49,33): g=85, h=76, f=161
-Añadido a open -> (49,33): g=85, h=76, f=161
-Open -> (48,32): g=84, h=74, f=158
-Neighbor -> (48,31): g=85, h=73, f=158
-Neighbor -> (49,32): g=86, h=75, f=161
-Añadido a open -> (49,32): g=86, h=75, f=161
-Open -> (48,31): g=85, h=73, f=158
-Neighbor -> (48,30): g=86, h=72, f=158
-Añadido a open -> (48,30): g=86, h=72, f=158
-Neighbor -> (49,31): g=87, h=74, f=161
-Añadido a open -> (49,31): g=87, h=74, f=161
-Open -> (48,30): g=86, h=72, f=158
-Neighbor -> (48,29): g=87, h=71, f=158
-Añadido a open -> (48,29): g=87, h=71, f=158
-Neighbor -> (49,30): g=88, h=73, f=161
-Añadido a open -> (49,30): g=88, h=73, f=161
-Open -> (48,29): g=87, h=71, f=158
-Neighbor -> (48,28): g=88, h=70, f=158
-Añadido a open -> (48,28): g=88, h=70, f=158
-Neighbor -> (49,29): g=89, h=72, f=161
-Añadido a open -> (49,29): g=89, h=72, f=161
-Open -> (48,28): g=88, h=70, f=158
-Neighbor -> (48,27): g=89, h=69, f=158
-Añadido a open -> (48,27): g=89, h=69, f=158
-Neighbor -> (49,28): g=90, h=71, f=161
-Añadido a open -> (49,28): g=90, h=71, f=161
-Open -> (48,27): g=89, h=69, f=158
-Neighbor -> (48,26): g=90, h=68, f=158
-Añadido a open -> (48,26): g=90, h=68, f=158
-Neighbor -> (49,27): g=91, h=70, f=161
-Añadido a open -> (49,27): g=91, h=70, f=161
-Open -> (48,26): g=90, h=68, f=158
-Neighbor -> (48,25): g=91, h=67, f=158
-Añadido a open -> (48,25): g=91, h=67, f=158
-Neighbor -> (49,26): g=92, h=69, f=161
-Añadido a open -> (49,26): g=92, h=69, f=161
-Open -> (48,25): g=91, h=67, f=158
-Neighbor -> (49,25): g=93, h=68, f=161
-Añadido a open -> (49,25): g=93, h=68, f=161
 Open -> (49,38): g=77, h=81, f=158
 Neighbor -> (49,37): g=78, h=80, f=158
+Añadido a open -> (49,37): g=78, h=80, f=158
+Neighbor -> (48,38): g=79, h=80, f=159
 Open -> (49,37): g=78, h=80, f=158
 Neighbor -> (49,36): g=79, h=79, f=158
 Añadido a open -> (49,36): g=79, h=79, f=158
+Neighbor -> (48,37): g=80, h=79, f=159
 Open -> (49,36): g=79, h=79, f=158
 Neighbor -> (49,35): g=80, h=78, f=158
+Añadido a open -> (49,35): g=80, h=78, f=158
+Neighbor -> (48,36): g=81, h=78, f=159
 Open -> (49,35): g=80, h=78, f=158
 Neighbor -> (49,34): g=81, h=77, f=158
 Añadido a open -> (49,34): g=81, h=77, f=158
+Neighbor -> (48,35): g=82, h=77, f=159
 Open -> (49,34): g=81, h=77, f=158
 Neighbor -> (49,33): g=82, h=76, f=158
 Añadido a open -> (49,33): g=82, h=76, f=158
+Neighbor -> (48,34): g=83, h=76, f=159
 Open -> (49,33): g=82, h=76, f=158
 Neighbor -> (49,32): g=83, h=75, f=158
 Añadido a open -> (49,32): g=83, h=75, f=158
+Neighbor -> (48,33): g=84, h=75, f=159
 Open -> (49,32): g=83, h=75, f=158
 Neighbor -> (49,31): g=84, h=74, f=158
+Añadido a open -> (49,31): g=84, h=74, f=158
+Neighbor -> (48,32): g=85, h=74, f=159
 Open -> (49,31): g=84, h=74, f=158
 Neighbor -> (49,30): g=85, h=73, f=158
 Añadido a open -> (49,30): g=85, h=73, f=158
+Neighbor -> (48,31): g=86, h=73, f=159
 Open -> (49,30): g=85, h=73, f=158
 Neighbor -> (49,29): g=86, h=72, f=158
 Añadido a open -> (49,29): g=86, h=72, f=158
+Neighbor -> (48,30): g=87, h=72, f=159
 Open -> (49,29): g=86, h=72, f=158
 Neighbor -> (49,28): g=87, h=71, f=158
 Añadido a open -> (49,28): g=87, h=71, f=158
+Neighbor -> (48,29): g=88, h=71, f=159
 Open -> (49,28): g=87, h=71, f=158
 Neighbor -> (49,27): g=88, h=70, f=158
 Añadido a open -> (49,27): g=88, h=70, f=158
+Neighbor -> (48,28): g=89, h=70, f=159
 Open -> (49,27): g=88, h=70, f=158
 Neighbor -> (49,26): g=89, h=69, f=158
 Añadido a open -> (49,26): g=89, h=69, f=158
+Neighbor -> (48,27): g=90, h=69, f=159
 Open -> (49,26): g=89, h=69, f=158
 Neighbor -> (49,25): g=90, h=68, f=158
 Añadido a open -> (49,25): g=90, h=68, f=158
+Neighbor -> (48,26): g=91, h=68, f=159
 Open -> (49,25): g=90, h=68, f=158
+Neighbor -> (48,25): g=92, h=67, f=159
 Open -> (51,34): g=79, h=79, f=158
 Neighbor -> (51,33): g=80, h=78, f=158
 Añadido a open -> (51,33): g=80, h=78, f=158
@@ -3242,166 +2331,217 @@ Open -> (51,38): g=75, h=83, f=158
 Neighbor -> (51,37): g=76, h=82, f=158
 Añadido a open -> (51,37): g=76, h=82, f=158
 Neighbor -> (52,38): g=77, h=84, f=161
-Añadido a open -> (52,38): g=77, h=84, f=161
 Open -> (51,37): g=76, h=82, f=158
+Neighbor -> (51,36): g=77, h=81, f=158
 Neighbor -> (52,37): g=78, h=83, f=161
 Añadido a open -> (52,37): g=78, h=83, f=161
-Open -> (52,38): g=74, h=84, f=158
-Neighbor -> (52,37): g=75, h=83, f=158
-Neighbor -> (53,38): g=76, h=85, f=161
-Añadido a open -> (53,38): g=76, h=85, f=161
-Open -> (52,37): g=75, h=83, f=158
-Neighbor -> (53,37): g=77, h=84, f=161
-Añadido a open -> (53,37): g=77, h=84, f=161
+Open -> (51,36): g=77, h=81, f=158
+Neighbor -> (52,36): g=79, h=82, f=161
 Open -> (53,38): g=73, h=85, f=158
 Neighbor -> (53,37): g=74, h=84, f=158
 Añadido a open -> (53,37): g=74, h=84, f=158
+Neighbor -> (52,38): g=75, h=84, f=159
 Open -> (53,37): g=74, h=84, f=158
+Neighbor -> (53,36): g=75, h=83, f=158
+Neighbor -> (52,37): g=76, h=83, f=159
+Open -> (53,36): g=75, h=83, f=158
+Neighbor -> (52,36): g=77, h=82, f=159
+Neighbor -> (54,36): g=77, h=84, f=161
 Open -> (54,22): g=88, h=70, f=158
 Open -> (55,41): g=68, h=90, f=158
 Neighbor -> (55,42): g=69, h=91, f=160
 Añadido a open -> (55,42): g=69, h=91, f=160
 Neighbor -> (56,41): g=70, h=91, f=161
-Añadido a open -> (56,41): g=70, h=91, f=161
 Neighbor -> (54,41): g=70, h=89, f=159
 Añadido a open -> (54,41): g=70, h=89, f=159
-Open -> (56,41): g=67, h=91, f=158
-Neighbor -> (56,42): g=68, h=92, f=160
-Añadido a open -> (56,42): g=68, h=92, f=160
-Neighbor -> (57,41): g=69, h=92, f=161
-Añadido a open -> (57,41): g=69, h=92, f=161
 Open -> (57,24): g=83, h=75, f=158
 Neighbor -> (57,23): g=84, h=74, f=158
 Añadido a open -> (57,23): g=84, h=74, f=158
 Open -> (57,23): g=84, h=74, f=158
 Neighbor -> (56,23): g=86, h=73, f=159
-Añadido a open -> (56,23): g=86, h=73, f=159
 Neighbor -> (58,23): g=86, h=75, f=161
 Añadido a open -> (58,23): g=86, h=75, f=161
+Open -> (57,26): g=81, h=77, f=158
+Neighbor -> (58,26): g=83, h=78, f=161
+Open -> (57,28): g=79, h=79, f=158
+Neighbor -> (58,28): g=81, h=80, f=161
+Open -> (57,30): g=77, h=81, f=158
+Neighbor -> (58,30): g=79, h=82, f=161
+Open -> (57,32): g=75, h=83, f=158
+Neighbor -> (58,32): g=77, h=84, f=161
+Open -> (57,34): g=73, h=85, f=158
+Neighbor -> (58,34): g=75, h=86, f=161
+Open -> (57,36): g=71, h=87, f=158
+Neighbor -> (58,36): g=73, h=88, f=161
 Open -> (57,41): g=66, h=92, f=158
 Neighbor -> (57,42): g=67, h=93, f=160
 Añadido a open -> (57,42): g=67, h=93, f=160
 Neighbor -> (58,41): g=68, h=93, f=161
-Añadido a open -> (58,41): g=68, h=93, f=161
-Open -> (58,41): g=65, h=93, f=158
-Neighbor -> (58,42): g=66, h=94, f=160
-Añadido a open -> (58,42): g=66, h=94, f=160
+Neighbor -> (56,41): g=68, h=91, f=159
+Open -> (59,26): g=79, h=79, f=158
+Neighbor -> (58,26): g=81, h=78, f=159
+Neighbor -> (60,26): g=81, h=80, f=161
+Open -> (59,28): g=77, h=81, f=158
+Neighbor -> (58,28): g=79, h=80, f=159
+Neighbor -> (60,28): g=79, h=82, f=161
+Open -> (59,30): g=75, h=83, f=158
+Neighbor -> (58,30): g=77, h=82, f=159
+Neighbor -> (60,30): g=77, h=84, f=161
+Open -> (59,32): g=73, h=85, f=158
+Neighbor -> (58,32): g=75, h=84, f=159
+Neighbor -> (60,32): g=75, h=86, f=161
+Open -> (59,34): g=71, h=87, f=158
+Neighbor -> (58,34): g=73, h=86, f=159
+Neighbor -> (60,34): g=73, h=88, f=161
+Open -> (59,36): g=69, h=89, f=158
+Neighbor -> (58,36): g=71, h=88, f=159
+Neighbor -> (60,36): g=71, h=90, f=161
 Open -> (60,41): g=63, h=95, f=158
 Neighbor -> (60,42): g=64, h=96, f=160
 Añadido a open -> (60,42): g=64, h=96, f=160
+Open -> (61,26): g=77, h=81, f=158
+Neighbor -> (60,26): g=79, h=80, f=159
+Neighbor -> (62,26): g=79, h=82, f=161
+Open -> (61,28): g=75, h=83, f=158
+Neighbor -> (60,28): g=77, h=82, f=159
+Neighbor -> (62,28): g=77, h=84, f=161
+Open -> (61,30): g=73, h=85, f=158
+Neighbor -> (60,30): g=75, h=84, f=159
+Neighbor -> (62,30): g=75, h=86, f=161
+Open -> (61,32): g=71, h=87, f=158
+Neighbor -> (60,32): g=73, h=86, f=159
+Neighbor -> (62,32): g=73, h=88, f=161
+Open -> (61,34): g=69, h=89, f=158
+Neighbor -> (60,34): g=71, h=88, f=159
+Neighbor -> (62,34): g=71, h=90, f=161
+Open -> (61,36): g=67, h=91, f=158
+Neighbor -> (60,36): g=69, h=90, f=159
+Neighbor -> (62,36): g=69, h=92, f=161
 Open -> (61,82): g=21, h=137, f=158
 Neighbor -> (61,83): g=22, h=138, f=160
 Añadido a open -> (61,83): g=22, h=138, f=160
 Neighbor -> (62,82): g=23, h=138, f=161
-Añadido a open -> (62,82): g=23, h=138, f=161
 Neighbor -> (60,82): g=23, h=136, f=159
 Añadido a open -> (60,82): g=23, h=136, f=159
 Open -> (62,64): g=38, h=120, f=158
 Neighbor -> (61,64): g=40, h=119, f=159
 Añadido a open -> (61,64): g=40, h=119, f=159
-Open -> (62,82): g=20, h=138, f=158
-Neighbor -> (62,83): g=21, h=139, f=160
-Añadido a open -> (62,83): g=21, h=139, f=160
-Neighbor -> (63,82): g=22, h=139, f=161
-Añadido a open -> (63,82): g=22, h=139, f=161
+Open -> (63,26): g=75, h=83, f=158
+Neighbor -> (62,26): g=77, h=82, f=159
+Neighbor -> (64,26): g=77, h=84, f=161
+Open -> (63,28): g=73, h=85, f=158
+Neighbor -> (62,28): g=75, h=84, f=159
+Neighbor -> (64,28): g=75, h=86, f=161
+Open -> (63,30): g=71, h=87, f=158
+Neighbor -> (62,30): g=73, h=86, f=159
+Neighbor -> (64,30): g=73, h=88, f=161
+Open -> (63,32): g=69, h=89, f=158
+Neighbor -> (62,32): g=71, h=88, f=159
+Neighbor -> (64,32): g=71, h=90, f=161
+Open -> (63,34): g=67, h=91, f=158
+Neighbor -> (62,34): g=69, h=90, f=159
+Neighbor -> (64,34): g=69, h=92, f=161
+Open -> (63,36): g=65, h=93, f=158
+Neighbor -> (62,36): g=67, h=92, f=159
+Neighbor -> (64,36): g=67, h=94, f=161
 Open -> (63,82): g=19, h=139, f=158
 Neighbor -> (63,83): g=20, h=140, f=160
 Añadido a open -> (63,83): g=20, h=140, f=160
 Neighbor -> (64,82): g=21, h=140, f=161
-Añadido a open -> (64,82): g=21, h=140, f=161
+Neighbor -> (62,82): g=21, h=138, f=159
 Open -> (64,64): g=36, h=122, f=158
-Open -> (64,82): g=18, h=140, f=158
-Neighbor -> (64,83): g=19, h=141, f=160
-Añadido a open -> (64,83): g=19, h=141, f=160
-Neighbor -> (65,82): g=20, h=141, f=161
-Añadido a open -> (65,82): g=20, h=141, f=161
+Open -> (65,26): g=73, h=85, f=158
+Neighbor -> (64,26): g=75, h=84, f=159
+Neighbor -> (66,26): g=75, h=86, f=161
+Open -> (65,28): g=71, h=87, f=158
+Neighbor -> (64,28): g=73, h=86, f=159
+Neighbor -> (66,28): g=73, h=88, f=161
+Open -> (65,30): g=69, h=89, f=158
+Neighbor -> (64,30): g=71, h=88, f=159
+Neighbor -> (66,30): g=71, h=90, f=161
+Open -> (65,32): g=67, h=91, f=158
+Neighbor -> (64,32): g=69, h=90, f=159
+Neighbor -> (66,32): g=69, h=92, f=161
+Open -> (65,34): g=65, h=93, f=158
+Neighbor -> (64,34): g=67, h=92, f=159
+Neighbor -> (66,34): g=67, h=94, f=161
+Open -> (65,36): g=63, h=95, f=158
+Neighbor -> (64,36): g=65, h=94, f=159
+Neighbor -> (66,36): g=65, h=96, f=161
 Open -> (65,82): g=17, h=141, f=158
 Neighbor -> (65,83): g=18, h=142, f=160
 Añadido a open -> (65,83): g=18, h=142, f=160
 Neighbor -> (66,82): g=19, h=142, f=161
-Añadido a open -> (66,82): g=19, h=142, f=161
-Open -> (66,82): g=16, h=142, f=158
-Neighbor -> (66,83): g=17, h=143, f=160
-Añadido a open -> (66,83): g=17, h=143, f=160
-Neighbor -> (67,82): g=18, h=143, f=161
-Añadido a open -> (67,82): g=18, h=143, f=161
+Neighbor -> (64,82): g=19, h=140, f=159
+Open -> (67,26): g=71, h=87, f=158
+Neighbor -> (66,26): g=73, h=86, f=159
+Open -> (67,28): g=69, h=89, f=158
+Neighbor -> (66,28): g=71, h=88, f=159
+Open -> (67,30): g=67, h=91, f=158
+Neighbor -> (66,30): g=69, h=90, f=159
+Open -> (67,32): g=65, h=93, f=158
+Neighbor -> (66,32): g=67, h=92, f=159
+Open -> (67,34): g=63, h=95, f=158
+Neighbor -> (66,34): g=65, h=94, f=159
+Open -> (67,36): g=61, h=97, f=158
+Neighbor -> (66,36): g=63, h=96, f=159
 Open -> (67,82): g=15, h=143, f=158
 Neighbor -> (67,83): g=16, h=144, f=160
 Añadido a open -> (67,83): g=16, h=144, f=160
 Neighbor -> (68,82): g=17, h=144, f=161
-Añadido a open -> (68,82): g=17, h=144, f=161
+Neighbor -> (66,82): g=17, h=142, f=159
 Open -> (68,64): g=32, h=126, f=158
-Open -> (68,82): g=14, h=144, f=158
-Neighbor -> (68,83): g=15, h=145, f=160
-Añadido a open -> (68,83): g=15, h=145, f=160
-Neighbor -> (69,82): g=16, h=145, f=161
-Añadido a open -> (69,82): g=16, h=145, f=161
 Open -> (69,82): g=13, h=145, f=158
 Neighbor -> (69,83): g=14, h=146, f=160
 Añadido a open -> (69,83): g=14, h=146, f=160
 Neighbor -> (70,82): g=15, h=146, f=161
-Añadido a open -> (70,82): g=15, h=146, f=161
-Open -> (70,65): g=29, h=129, f=158
-Open -> (70,66): g=28, h=130, f=158
-Open -> (70,82): g=12, h=146, f=158
-Neighbor -> (70,83): g=13, h=147, f=160
-Añadido a open -> (70,83): g=13, h=147, f=160
-Neighbor -> (71,82): g=14, h=147, f=161
-Añadido a open -> (71,82): g=14, h=147, f=161
+Neighbor -> (68,82): g=15, h=144, f=159
+Open -> (71,41): g=52, h=106, f=158
+Neighbor -> (72,41): g=54, h=107, f=161
+Añadido a open -> (72,41): g=54, h=107, f=161
 Open -> (71,82): g=11, h=147, f=158
 Neighbor -> (71,83): g=12, h=148, f=160
 Añadido a open -> (71,83): g=12, h=148, f=160
 Neighbor -> (72,82): g=13, h=148, f=161
-Añadido a open -> (72,82): g=13, h=148, f=161
-Open -> (72,82): g=10, h=148, f=158
-Neighbor -> (72,83): g=11, h=149, f=160
-Añadido a open -> (72,83): g=11, h=149, f=160
-Neighbor -> (73,82): g=12, h=149, f=161
-Añadido a open -> (73,82): g=12, h=149, f=161
+Neighbor -> (70,82): g=13, h=146, f=159
 Open -> (73,82): g=9, h=149, f=158
 Neighbor -> (73,83): g=10, h=150, f=160
 Añadido a open -> (73,83): g=10, h=150, f=160
 Neighbor -> (74,82): g=11, h=150, f=161
-Añadido a open -> (74,82): g=11, h=150, f=161
-Open -> (74,82): g=8, h=150, f=158
-Neighbor -> (74,83): g=9, h=151, f=160
-Añadido a open -> (74,83): g=9, h=151, f=160
-Neighbor -> (75,82): g=10, h=151, f=161
-Añadido a open -> (75,82): g=10, h=151, f=161
+Neighbor -> (72,82): g=11, h=148, f=159
 Open -> (75,82): g=7, h=151, f=158
 Neighbor -> (75,83): g=8, h=152, f=160
 Añadido a open -> (75,83): g=8, h=152, f=160
 Neighbor -> (76,82): g=9, h=152, f=161
-Añadido a open -> (76,82): g=9, h=152, f=161
-Open -> (76,82): g=6, h=152, f=158
-Neighbor -> (76,83): g=7, h=153, f=160
-Añadido a open -> (76,83): g=7, h=153, f=160
-Neighbor -> (77,82): g=8, h=153, f=161
-Añadido a open -> (77,82): g=8, h=153, f=161
+Neighbor -> (74,82): g=9, h=150, f=159
 Open -> (77,58): g=29, h=129, f=158
-Open -> (77,59): g=28, h=130, f=158
+Neighbor -> (78,58): g=31, h=130, f=161
+Añadido a open -> (78,58): g=31, h=130, f=161
 Open -> (77,60): g=27, h=131, f=158
-Open -> (77,61): g=26, h=132, f=158
+Neighbor -> (78,60): g=29, h=132, f=161
+Añadido a open -> (78,60): g=29, h=132, f=161
 Open -> (77,62): g=25, h=133, f=158
-Open -> (77,63): g=24, h=134, f=158
+Neighbor -> (78,62): g=27, h=134, f=161
+Añadido a open -> (78,62): g=27, h=134, f=161
 Open -> (77,64): g=23, h=135, f=158
-Open -> (77,65): g=22, h=136, f=158
+Neighbor -> (78,64): g=25, h=136, f=161
+Añadido a open -> (78,64): g=25, h=136, f=161
 Open -> (77,69): g=18, h=140, f=158
-Open -> (77,70): g=17, h=141, f=158
+Neighbor -> (78,69): g=20, h=141, f=161
+Añadido a open -> (78,69): g=20, h=141, f=161
 Open -> (77,71): g=16, h=142, f=158
-Open -> (77,72): g=15, h=143, f=158
-Open -> (77,73): g=14, h=144, f=158
+Neighbor -> (78,71): g=18, h=143, f=161
+Añadido a open -> (78,71): g=18, h=143, f=161
 Open -> (77,82): g=5, h=153, f=158
 Neighbor -> (77,83): g=6, h=154, f=160
 Añadido a open -> (77,83): g=6, h=154, f=160
 Neighbor -> (78,82): g=7, h=154, f=161
 Añadido a open -> (78,82): g=7, h=154, f=161
-Open -> (78,67): g=19, h=139, f=158
+Neighbor -> (76,82): g=7, h=152, f=159
 Open -> (42,25): g=98, h=61, f=159
 Neighbor -> (41,25): g=99, h=60, f=159
 Añadido a open -> (41,25): g=99, h=60, f=159
 Neighbor -> (42,26): g=100, h=62, f=162
-Añadido a open -> (42,26): g=100, h=62, f=162
 Open -> (41,25): g=99, h=60, f=159
 Neighbor -> (40,25): g=100, h=59, f=159
 Añadido a open -> (40,25): g=100, h=59, f=159
@@ -3430,419 +2570,318 @@ Añadido a open -> (37,26): g=105, h=57, f=162
 Open -> (36,25): g=104, h=55, f=159
 Neighbor -> (36,26): g=106, h=56, f=162
 Añadido a open -> (36,26): g=106, h=56, f=162
-Open -> (42,26): g=97, h=62, f=159
-Neighbor -> (41,26): g=98, h=61, f=159
-Neighbor -> (42,27): g=99, h=63, f=162
-Añadido a open -> (42,27): g=99, h=63, f=162
-Open -> (41,26): g=98, h=61, f=159
-Neighbor -> (40,26): g=99, h=60, f=159
-Añadido a open -> (40,26): g=99, h=60, f=159
-Neighbor -> (41,27): g=100, h=62, f=162
-Añadido a open -> (41,27): g=100, h=62, f=162
-Open -> (40,26): g=99, h=60, f=159
-Neighbor -> (39,26): g=100, h=59, f=159
-Neighbor -> (40,27): g=101, h=61, f=162
-Añadido a open -> (40,27): g=101, h=61, f=162
-Open -> (39,26): g=100, h=59, f=159
-Neighbor -> (38,26): g=101, h=58, f=159
-Añadido a open -> (38,26): g=101, h=58, f=159
-Neighbor -> (39,27): g=102, h=60, f=162
-Añadido a open -> (39,27): g=102, h=60, f=162
-Open -> (38,26): g=101, h=58, f=159
-Neighbor -> (37,26): g=102, h=57, f=159
-Añadido a open -> (37,26): g=102, h=57, f=159
-Neighbor -> (38,27): g=103, h=59, f=162
-Añadido a open -> (38,27): g=103, h=59, f=162
-Open -> (37,26): g=102, h=57, f=159
-Neighbor -> (36,26): g=103, h=56, f=159
-Añadido a open -> (36,26): g=103, h=56, f=159
-Neighbor -> (37,27): g=104, h=58, f=162
-Añadido a open -> (37,27): g=104, h=58, f=162
-Open -> (36,26): g=103, h=56, f=159
-Neighbor -> (36,27): g=105, h=57, f=162
-Añadido a open -> (36,27): g=105, h=57, f=162
 Open -> (42,27): g=96, h=63, f=159
 Neighbor -> (41,27): g=97, h=62, f=159
 Añadido a open -> (41,27): g=97, h=62, f=159
 Neighbor -> (42,28): g=98, h=64, f=162
-Añadido a open -> (42,28): g=98, h=64, f=162
+Neighbor -> (42,26): g=98, h=62, f=160
 Open -> (41,27): g=97, h=62, f=159
 Neighbor -> (40,27): g=98, h=61, f=159
 Añadido a open -> (40,27): g=98, h=61, f=159
 Neighbor -> (41,28): g=99, h=63, f=162
 Añadido a open -> (41,28): g=99, h=63, f=162
+Neighbor -> (41,26): g=99, h=61, f=160
 Open -> (40,27): g=98, h=61, f=159
 Neighbor -> (39,27): g=99, h=60, f=159
 Añadido a open -> (39,27): g=99, h=60, f=159
 Neighbor -> (40,28): g=100, h=62, f=162
 Añadido a open -> (40,28): g=100, h=62, f=162
+Neighbor -> (40,26): g=100, h=60, f=160
 Open -> (39,27): g=99, h=60, f=159
 Neighbor -> (38,27): g=100, h=59, f=159
 Añadido a open -> (38,27): g=100, h=59, f=159
 Neighbor -> (39,28): g=101, h=61, f=162
 Añadido a open -> (39,28): g=101, h=61, f=162
+Neighbor -> (39,26): g=101, h=59, f=160
 Open -> (38,27): g=100, h=59, f=159
 Neighbor -> (37,27): g=101, h=58, f=159
 Añadido a open -> (37,27): g=101, h=58, f=159
 Neighbor -> (38,28): g=102, h=60, f=162
 Añadido a open -> (38,28): g=102, h=60, f=162
+Neighbor -> (38,26): g=102, h=58, f=160
 Open -> (37,27): g=101, h=58, f=159
 Neighbor -> (36,27): g=102, h=57, f=159
 Añadido a open -> (36,27): g=102, h=57, f=159
 Neighbor -> (37,28): g=103, h=59, f=162
 Añadido a open -> (37,28): g=103, h=59, f=162
+Neighbor -> (37,26): g=103, h=57, f=160
 Open -> (36,27): g=102, h=57, f=159
 Neighbor -> (36,28): g=104, h=58, f=162
 Añadido a open -> (36,28): g=104, h=58, f=162
-Open -> (42,28): g=95, h=64, f=159
-Neighbor -> (41,28): g=96, h=63, f=159
-Añadido a open -> (41,28): g=96, h=63, f=159
-Neighbor -> (42,29): g=97, h=65, f=162
-Añadido a open -> (42,29): g=97, h=65, f=162
-Open -> (41,28): g=96, h=63, f=159
-Neighbor -> (40,28): g=97, h=62, f=159
-Añadido a open -> (40,28): g=97, h=62, f=159
-Neighbor -> (41,29): g=98, h=64, f=162
-Añadido a open -> (41,29): g=98, h=64, f=162
-Open -> (40,28): g=97, h=62, f=159
-Neighbor -> (39,28): g=98, h=61, f=159
-Añadido a open -> (39,28): g=98, h=61, f=159
-Neighbor -> (40,29): g=99, h=63, f=162
-Añadido a open -> (40,29): g=99, h=63, f=162
-Open -> (39,28): g=98, h=61, f=159
-Neighbor -> (38,28): g=99, h=60, f=159
-Añadido a open -> (38,28): g=99, h=60, f=159
-Neighbor -> (39,29): g=100, h=62, f=162
-Añadido a open -> (39,29): g=100, h=62, f=162
-Open -> (38,28): g=99, h=60, f=159
-Neighbor -> (37,28): g=100, h=59, f=159
-Añadido a open -> (37,28): g=100, h=59, f=159
-Neighbor -> (38,29): g=101, h=61, f=162
-Añadido a open -> (38,29): g=101, h=61, f=162
-Open -> (37,28): g=100, h=59, f=159
-Neighbor -> (36,28): g=101, h=58, f=159
-Añadido a open -> (36,28): g=101, h=58, f=159
-Neighbor -> (37,29): g=102, h=60, f=162
-Añadido a open -> (37,29): g=102, h=60, f=162
-Open -> (36,28): g=101, h=58, f=159
-Neighbor -> (36,29): g=103, h=59, f=162
-Añadido a open -> (36,29): g=103, h=59, f=162
+Neighbor -> (36,26): g=104, h=56, f=160
 Open -> (42,29): g=94, h=65, f=159
 Neighbor -> (41,29): g=95, h=64, f=159
 Añadido a open -> (41,29): g=95, h=64, f=159
 Neighbor -> (42,30): g=96, h=66, f=162
-Añadido a open -> (42,30): g=96, h=66, f=162
+Neighbor -> (42,28): g=96, h=64, f=160
 Open -> (41,29): g=95, h=64, f=159
 Neighbor -> (40,29): g=96, h=63, f=159
 Añadido a open -> (40,29): g=96, h=63, f=159
 Neighbor -> (41,30): g=97, h=65, f=162
 Añadido a open -> (41,30): g=97, h=65, f=162
+Neighbor -> (41,28): g=97, h=63, f=160
 Open -> (40,29): g=96, h=63, f=159
 Neighbor -> (39,29): g=97, h=62, f=159
 Añadido a open -> (39,29): g=97, h=62, f=159
 Neighbor -> (40,30): g=98, h=64, f=162
 Añadido a open -> (40,30): g=98, h=64, f=162
+Neighbor -> (40,28): g=98, h=62, f=160
 Open -> (39,29): g=97, h=62, f=159
 Neighbor -> (38,29): g=98, h=61, f=159
 Añadido a open -> (38,29): g=98, h=61, f=159
 Neighbor -> (39,30): g=99, h=63, f=162
 Añadido a open -> (39,30): g=99, h=63, f=162
+Neighbor -> (39,28): g=99, h=61, f=160
 Open -> (38,29): g=98, h=61, f=159
 Neighbor -> (37,29): g=99, h=60, f=159
 Añadido a open -> (37,29): g=99, h=60, f=159
 Neighbor -> (38,30): g=100, h=62, f=162
 Añadido a open -> (38,30): g=100, h=62, f=162
+Neighbor -> (38,28): g=100, h=60, f=160
 Open -> (37,29): g=99, h=60, f=159
 Neighbor -> (36,29): g=100, h=59, f=159
 Añadido a open -> (36,29): g=100, h=59, f=159
 Neighbor -> (37,30): g=101, h=61, f=162
 Añadido a open -> (37,30): g=101, h=61, f=162
+Neighbor -> (37,28): g=101, h=59, f=160
 Open -> (36,29): g=100, h=59, f=159
 Neighbor -> (36,30): g=102, h=60, f=162
 Añadido a open -> (36,30): g=102, h=60, f=162
-Open -> (42,30): g=93, h=66, f=159
-Neighbor -> (41,30): g=94, h=65, f=159
-Añadido a open -> (41,30): g=94, h=65, f=159
-Neighbor -> (42,31): g=95, h=67, f=162
-Añadido a open -> (42,31): g=95, h=67, f=162
-Open -> (41,30): g=94, h=65, f=159
-Neighbor -> (40,30): g=95, h=64, f=159
-Añadido a open -> (40,30): g=95, h=64, f=159
-Neighbor -> (41,31): g=96, h=66, f=162
-Añadido a open -> (41,31): g=96, h=66, f=162
-Open -> (40,30): g=95, h=64, f=159
-Neighbor -> (39,30): g=96, h=63, f=159
-Añadido a open -> (39,30): g=96, h=63, f=159
-Neighbor -> (40,31): g=97, h=65, f=162
-Añadido a open -> (40,31): g=97, h=65, f=162
-Open -> (39,30): g=96, h=63, f=159
-Neighbor -> (38,30): g=97, h=62, f=159
-Añadido a open -> (38,30): g=97, h=62, f=159
-Neighbor -> (39,31): g=98, h=64, f=162
-Añadido a open -> (39,31): g=98, h=64, f=162
-Open -> (38,30): g=97, h=62, f=159
-Neighbor -> (37,30): g=98, h=61, f=159
-Añadido a open -> (37,30): g=98, h=61, f=159
-Neighbor -> (38,31): g=99, h=63, f=162
-Añadido a open -> (38,31): g=99, h=63, f=162
-Open -> (37,30): g=98, h=61, f=159
-Neighbor -> (36,30): g=99, h=60, f=159
-Añadido a open -> (36,30): g=99, h=60, f=159
-Neighbor -> (37,31): g=100, h=62, f=162
-Añadido a open -> (37,31): g=100, h=62, f=162
-Open -> (36,30): g=99, h=60, f=159
-Neighbor -> (36,31): g=101, h=61, f=162
-Añadido a open -> (36,31): g=101, h=61, f=162
+Neighbor -> (36,28): g=102, h=58, f=160
 Open -> (42,31): g=92, h=67, f=159
 Neighbor -> (41,31): g=93, h=66, f=159
 Añadido a open -> (41,31): g=93, h=66, f=159
 Neighbor -> (42,32): g=94, h=68, f=162
-Añadido a open -> (42,32): g=94, h=68, f=162
+Neighbor -> (42,30): g=94, h=66, f=160
 Open -> (41,31): g=93, h=66, f=159
 Neighbor -> (40,31): g=94, h=65, f=159
 Añadido a open -> (40,31): g=94, h=65, f=159
 Neighbor -> (41,32): g=95, h=67, f=162
 Añadido a open -> (41,32): g=95, h=67, f=162
+Neighbor -> (41,30): g=95, h=65, f=160
 Open -> (40,31): g=94, h=65, f=159
 Neighbor -> (39,31): g=95, h=64, f=159
 Añadido a open -> (39,31): g=95, h=64, f=159
 Neighbor -> (40,32): g=96, h=66, f=162
 Añadido a open -> (40,32): g=96, h=66, f=162
+Neighbor -> (40,30): g=96, h=64, f=160
 Open -> (39,31): g=95, h=64, f=159
 Neighbor -> (38,31): g=96, h=63, f=159
 Añadido a open -> (38,31): g=96, h=63, f=159
 Neighbor -> (39,32): g=97, h=65, f=162
 Añadido a open -> (39,32): g=97, h=65, f=162
+Neighbor -> (39,30): g=97, h=63, f=160
 Open -> (38,31): g=96, h=63, f=159
 Neighbor -> (37,31): g=97, h=62, f=159
 Añadido a open -> (37,31): g=97, h=62, f=159
 Neighbor -> (38,32): g=98, h=64, f=162
 Añadido a open -> (38,32): g=98, h=64, f=162
+Neighbor -> (38,30): g=98, h=62, f=160
 Open -> (37,31): g=97, h=62, f=159
 Neighbor -> (36,31): g=98, h=61, f=159
 Añadido a open -> (36,31): g=98, h=61, f=159
 Neighbor -> (37,32): g=99, h=63, f=162
 Añadido a open -> (37,32): g=99, h=63, f=162
+Neighbor -> (37,30): g=99, h=61, f=160
 Open -> (36,31): g=98, h=61, f=159
 Neighbor -> (36,32): g=100, h=62, f=162
 Añadido a open -> (36,32): g=100, h=62, f=162
-Open -> (42,32): g=91, h=68, f=159
-Neighbor -> (41,32): g=92, h=67, f=159
-Añadido a open -> (41,32): g=92, h=67, f=159
-Neighbor -> (42,33): g=93, h=69, f=162
-Añadido a open -> (42,33): g=93, h=69, f=162
-Open -> (41,32): g=92, h=67, f=159
-Neighbor -> (40,32): g=93, h=66, f=159
-Añadido a open -> (40,32): g=93, h=66, f=159
-Neighbor -> (41,33): g=94, h=68, f=162
-Añadido a open -> (41,33): g=94, h=68, f=162
-Open -> (40,32): g=93, h=66, f=159
-Neighbor -> (39,32): g=94, h=65, f=159
-Añadido a open -> (39,32): g=94, h=65, f=159
-Neighbor -> (40,33): g=95, h=67, f=162
-Añadido a open -> (40,33): g=95, h=67, f=162
-Open -> (39,32): g=94, h=65, f=159
-Neighbor -> (38,32): g=95, h=64, f=159
-Añadido a open -> (38,32): g=95, h=64, f=159
-Neighbor -> (39,33): g=96, h=66, f=162
-Añadido a open -> (39,33): g=96, h=66, f=162
-Open -> (38,32): g=95, h=64, f=159
-Neighbor -> (37,32): g=96, h=63, f=159
-Añadido a open -> (37,32): g=96, h=63, f=159
-Neighbor -> (38,33): g=97, h=65, f=162
-Añadido a open -> (38,33): g=97, h=65, f=162
-Open -> (37,32): g=96, h=63, f=159
-Neighbor -> (36,32): g=97, h=62, f=159
-Añadido a open -> (36,32): g=97, h=62, f=159
-Neighbor -> (37,33): g=98, h=64, f=162
-Añadido a open -> (37,33): g=98, h=64, f=162
-Open -> (36,32): g=97, h=62, f=159
-Neighbor -> (36,33): g=99, h=63, f=162
-Añadido a open -> (36,33): g=99, h=63, f=162
+Neighbor -> (36,30): g=100, h=60, f=160
 Open -> (42,33): g=90, h=69, f=159
 Neighbor -> (41,33): g=91, h=68, f=159
 Añadido a open -> (41,33): g=91, h=68, f=159
 Neighbor -> (42,34): g=92, h=70, f=162
-Añadido a open -> (42,34): g=92, h=70, f=162
+Neighbor -> (42,32): g=92, h=68, f=160
 Open -> (41,33): g=91, h=68, f=159
 Neighbor -> (40,33): g=92, h=67, f=159
 Añadido a open -> (40,33): g=92, h=67, f=159
 Neighbor -> (41,34): g=93, h=69, f=162
 Añadido a open -> (41,34): g=93, h=69, f=162
+Neighbor -> (41,32): g=93, h=67, f=160
 Open -> (40,33): g=92, h=67, f=159
 Neighbor -> (39,33): g=93, h=66, f=159
 Añadido a open -> (39,33): g=93, h=66, f=159
 Neighbor -> (40,34): g=94, h=68, f=162
 Añadido a open -> (40,34): g=94, h=68, f=162
+Neighbor -> (40,32): g=94, h=66, f=160
 Open -> (39,33): g=93, h=66, f=159
 Neighbor -> (38,33): g=94, h=65, f=159
 Añadido a open -> (38,33): g=94, h=65, f=159
 Neighbor -> (39,34): g=95, h=67, f=162
 Añadido a open -> (39,34): g=95, h=67, f=162
+Neighbor -> (39,32): g=95, h=65, f=160
 Open -> (38,33): g=94, h=65, f=159
 Neighbor -> (37,33): g=95, h=64, f=159
 Añadido a open -> (37,33): g=95, h=64, f=159
 Neighbor -> (38,34): g=96, h=66, f=162
 Añadido a open -> (38,34): g=96, h=66, f=162
+Neighbor -> (38,32): g=96, h=64, f=160
 Open -> (37,33): g=95, h=64, f=159
 Neighbor -> (36,33): g=96, h=63, f=159
 Añadido a open -> (36,33): g=96, h=63, f=159
 Neighbor -> (37,34): g=97, h=65, f=162
 Añadido a open -> (37,34): g=97, h=65, f=162
+Neighbor -> (37,32): g=97, h=63, f=160
 Open -> (36,33): g=96, h=63, f=159
 Neighbor -> (36,34): g=98, h=64, f=162
 Añadido a open -> (36,34): g=98, h=64, f=162
-Open -> (42,34): g=89, h=70, f=159
-Neighbor -> (41,34): g=90, h=69, f=159
-Añadido a open -> (41,34): g=90, h=69, f=159
-Neighbor -> (42,35): g=91, h=71, f=162
-Añadido a open -> (42,35): g=91, h=71, f=162
-Open -> (41,34): g=90, h=69, f=159
-Neighbor -> (40,34): g=91, h=68, f=159
-Añadido a open -> (40,34): g=91, h=68, f=159
-Neighbor -> (41,35): g=92, h=70, f=162
-Añadido a open -> (41,35): g=92, h=70, f=162
-Open -> (40,34): g=91, h=68, f=159
-Neighbor -> (39,34): g=92, h=67, f=159
-Añadido a open -> (39,34): g=92, h=67, f=159
-Neighbor -> (40,35): g=93, h=69, f=162
-Añadido a open -> (40,35): g=93, h=69, f=162
-Open -> (39,34): g=92, h=67, f=159
-Neighbor -> (38,34): g=93, h=66, f=159
-Añadido a open -> (38,34): g=93, h=66, f=159
-Neighbor -> (39,35): g=94, h=68, f=162
-Añadido a open -> (39,35): g=94, h=68, f=162
-Open -> (38,34): g=93, h=66, f=159
-Neighbor -> (37,34): g=94, h=65, f=159
-Añadido a open -> (37,34): g=94, h=65, f=159
-Neighbor -> (38,35): g=95, h=67, f=162
-Añadido a open -> (38,35): g=95, h=67, f=162
-Open -> (37,34): g=94, h=65, f=159
-Neighbor -> (36,34): g=95, h=64, f=159
-Añadido a open -> (36,34): g=95, h=64, f=159
-Neighbor -> (37,35): g=96, h=66, f=162
-Añadido a open -> (37,35): g=96, h=66, f=162
-Open -> (36,34): g=95, h=64, f=159
-Neighbor -> (36,35): g=97, h=65, f=162
-Añadido a open -> (36,35): g=97, h=65, f=162
+Neighbor -> (36,32): g=98, h=62, f=160
 Open -> (42,35): g=88, h=71, f=159
 Neighbor -> (41,35): g=89, h=70, f=159
 Añadido a open -> (41,35): g=89, h=70, f=159
 Neighbor -> (42,36): g=90, h=72, f=162
-Añadido a open -> (42,36): g=90, h=72, f=162
+Neighbor -> (42,34): g=90, h=70, f=160
 Open -> (41,35): g=89, h=70, f=159
 Neighbor -> (40,35): g=90, h=69, f=159
 Añadido a open -> (40,35): g=90, h=69, f=159
 Neighbor -> (41,36): g=91, h=71, f=162
 Añadido a open -> (41,36): g=91, h=71, f=162
+Neighbor -> (41,34): g=91, h=69, f=160
 Open -> (40,35): g=90, h=69, f=159
 Neighbor -> (39,35): g=91, h=68, f=159
 Añadido a open -> (39,35): g=91, h=68, f=159
 Neighbor -> (40,36): g=92, h=70, f=162
 Añadido a open -> (40,36): g=92, h=70, f=162
+Neighbor -> (40,34): g=92, h=68, f=160
 Open -> (39,35): g=91, h=68, f=159
 Neighbor -> (38,35): g=92, h=67, f=159
 Añadido a open -> (38,35): g=92, h=67, f=159
 Neighbor -> (39,36): g=93, h=69, f=162
 Añadido a open -> (39,36): g=93, h=69, f=162
+Neighbor -> (39,34): g=93, h=67, f=160
 Open -> (38,35): g=92, h=67, f=159
 Neighbor -> (37,35): g=93, h=66, f=159
 Añadido a open -> (37,35): g=93, h=66, f=159
 Neighbor -> (38,36): g=94, h=68, f=162
 Añadido a open -> (38,36): g=94, h=68, f=162
+Neighbor -> (38,34): g=94, h=66, f=160
 Open -> (37,35): g=93, h=66, f=159
 Neighbor -> (36,35): g=94, h=65, f=159
 Añadido a open -> (36,35): g=94, h=65, f=159
 Neighbor -> (37,36): g=95, h=67, f=162
 Añadido a open -> (37,36): g=95, h=67, f=162
+Neighbor -> (37,34): g=95, h=65, f=160
 Open -> (36,35): g=94, h=65, f=159
 Neighbor -> (36,36): g=96, h=66, f=162
 Añadido a open -> (36,36): g=96, h=66, f=162
-Open -> (42,36): g=87, h=72, f=159
-Neighbor -> (41,36): g=88, h=71, f=159
-Añadido a open -> (41,36): g=88, h=71, f=159
-Neighbor -> (42,37): g=89, h=73, f=162
-Añadido a open -> (42,37): g=89, h=73, f=162
-Open -> (41,36): g=88, h=71, f=159
-Neighbor -> (40,36): g=89, h=70, f=159
-Añadido a open -> (40,36): g=89, h=70, f=159
-Neighbor -> (41,37): g=90, h=72, f=162
-Añadido a open -> (41,37): g=90, h=72, f=162
-Open -> (40,36): g=89, h=70, f=159
-Neighbor -> (39,36): g=90, h=69, f=159
-Añadido a open -> (39,36): g=90, h=69, f=159
-Neighbor -> (40,37): g=91, h=71, f=162
-Añadido a open -> (40,37): g=91, h=71, f=162
-Open -> (39,36): g=90, h=69, f=159
-Neighbor -> (38,36): g=91, h=68, f=159
-Añadido a open -> (38,36): g=91, h=68, f=159
-Neighbor -> (39,37): g=92, h=70, f=162
-Añadido a open -> (39,37): g=92, h=70, f=162
-Open -> (38,36): g=91, h=68, f=159
-Neighbor -> (37,36): g=92, h=67, f=159
-Añadido a open -> (37,36): g=92, h=67, f=159
-Neighbor -> (38,37): g=93, h=69, f=162
-Añadido a open -> (38,37): g=93, h=69, f=162
-Open -> (37,36): g=92, h=67, f=159
-Neighbor -> (36,36): g=93, h=66, f=159
-Añadido a open -> (36,36): g=93, h=66, f=159
-Neighbor -> (37,37): g=94, h=68, f=162
-Añadido a open -> (37,37): g=94, h=68, f=162
-Open -> (36,36): g=93, h=66, f=159
-Neighbor -> (36,37): g=95, h=67, f=162
-Añadido a open -> (36,37): g=95, h=67, f=162
+Neighbor -> (36,34): g=96, h=64, f=160
 Open -> (42,37): g=86, h=73, f=159
 Neighbor -> (41,37): g=87, h=72, f=159
 Añadido a open -> (41,37): g=87, h=72, f=159
 Neighbor -> (42,38): g=88, h=74, f=162
-Añadido a open -> (42,38): g=88, h=74, f=162
+Neighbor -> (42,36): g=88, h=72, f=160
 Open -> (41,37): g=87, h=72, f=159
 Neighbor -> (40,37): g=88, h=71, f=159
 Añadido a open -> (40,37): g=88, h=71, f=159
 Neighbor -> (41,38): g=89, h=73, f=162
 Añadido a open -> (41,38): g=89, h=73, f=162
+Neighbor -> (41,36): g=89, h=71, f=160
 Open -> (40,37): g=88, h=71, f=159
 Neighbor -> (39,37): g=89, h=70, f=159
 Añadido a open -> (39,37): g=89, h=70, f=159
 Neighbor -> (40,38): g=90, h=72, f=162
 Añadido a open -> (40,38): g=90, h=72, f=162
+Neighbor -> (40,36): g=90, h=70, f=160
 Open -> (39,37): g=89, h=70, f=159
 Neighbor -> (38,37): g=90, h=69, f=159
 Añadido a open -> (38,37): g=90, h=69, f=159
 Neighbor -> (39,38): g=91, h=71, f=162
 Añadido a open -> (39,38): g=91, h=71, f=162
+Neighbor -> (39,36): g=91, h=69, f=160
 Open -> (38,37): g=90, h=69, f=159
 Neighbor -> (37,37): g=91, h=68, f=159
 Añadido a open -> (37,37): g=91, h=68, f=159
 Neighbor -> (38,38): g=92, h=70, f=162
 Añadido a open -> (38,38): g=92, h=70, f=162
+Neighbor -> (38,36): g=92, h=68, f=160
 Open -> (37,37): g=91, h=68, f=159
 Neighbor -> (36,37): g=92, h=67, f=159
 Añadido a open -> (36,37): g=92, h=67, f=159
 Neighbor -> (37,38): g=93, h=69, f=162
 Añadido a open -> (37,38): g=93, h=69, f=162
+Neighbor -> (37,36): g=93, h=67, f=160
 Open -> (36,37): g=92, h=67, f=159
 Neighbor -> (36,38): g=94, h=68, f=162
 Añadido a open -> (36,38): g=94, h=68, f=162
-Open -> (42,38): g=85, h=74, f=159
-Neighbor -> (41,38): g=86, h=73, f=159
-Añadido a open -> (41,38): g=86, h=73, f=159
-Open -> (41,38): g=86, h=73, f=159
-Neighbor -> (40,38): g=87, h=72, f=159
-Añadido a open -> (40,38): g=87, h=72, f=159
-Open -> (40,38): g=87, h=72, f=159
-Neighbor -> (39,38): g=88, h=71, f=159
-Añadido a open -> (39,38): g=88, h=71, f=159
-Open -> (39,38): g=88, h=71, f=159
-Neighbor -> (38,38): g=89, h=70, f=159
-Añadido a open -> (38,38): g=89, h=70, f=159
-Open -> (38,38): g=89, h=70, f=159
-Neighbor -> (37,38): g=90, h=69, f=159
-Añadido a open -> (37,38): g=90, h=69, f=159
-Open -> (37,38): g=90, h=69, f=159
-Neighbor -> (36,38): g=91, h=68, f=159
-Añadido a open -> (36,38): g=91, h=68, f=159
-Open -> (36,38): g=91, h=68, f=159
+Neighbor -> (36,36): g=94, h=66, f=160
+Open -> (44,25): g=96, h=63, f=159
+Neighbor -> (44,26): g=98, h=64, f=162
+Open -> (44,27): g=94, h=65, f=159
+Neighbor -> (44,28): g=96, h=66, f=162
+Neighbor -> (44,26): g=96, h=64, f=160
+Open -> (44,29): g=92, h=67, f=159
+Neighbor -> (44,30): g=94, h=68, f=162
+Neighbor -> (44,28): g=94, h=66, f=160
+Open -> (44,31): g=90, h=69, f=159
+Neighbor -> (44,32): g=92, h=70, f=162
+Neighbor -> (44,30): g=92, h=68, f=160
+Open -> (44,33): g=88, h=71, f=159
+Neighbor -> (44,34): g=90, h=72, f=162
+Neighbor -> (44,32): g=90, h=70, f=160
+Open -> (44,35): g=86, h=73, f=159
+Neighbor -> (44,36): g=88, h=74, f=162
+Neighbor -> (44,34): g=88, h=72, f=160
+Open -> (44,37): g=84, h=75, f=159
+Neighbor -> (44,38): g=86, h=76, f=162
+Neighbor -> (44,36): g=86, h=74, f=160
+Open -> (46,25): g=94, h=65, f=159
+Neighbor -> (46,26): g=96, h=66, f=162
+Neighbor -> (46,24): g=96, h=64, f=160
+Añadido a open -> (46,24): g=96, h=64, f=160
+Open -> (46,27): g=92, h=67, f=159
+Neighbor -> (46,28): g=94, h=68, f=162
+Neighbor -> (46,26): g=94, h=66, f=160
+Open -> (46,29): g=90, h=69, f=159
+Neighbor -> (46,30): g=92, h=70, f=162
+Neighbor -> (46,28): g=92, h=68, f=160
+Open -> (46,31): g=88, h=71, f=159
+Neighbor -> (46,32): g=90, h=72, f=162
+Neighbor -> (46,30): g=90, h=70, f=160
+Open -> (46,33): g=86, h=73, f=159
+Neighbor -> (46,34): g=88, h=74, f=162
+Neighbor -> (46,32): g=88, h=72, f=160
+Open -> (46,35): g=84, h=75, f=159
+Neighbor -> (46,36): g=86, h=76, f=162
+Neighbor -> (46,34): g=86, h=74, f=160
+Open -> (46,37): g=82, h=77, f=159
+Neighbor -> (46,38): g=84, h=78, f=162
+Neighbor -> (46,36): g=84, h=76, f=160
+Open -> (48,25): g=92, h=67, f=159
+Neighbor -> (48,26): g=94, h=68, f=162
+Open -> (48,27): g=90, h=69, f=159
+Neighbor -> (48,28): g=92, h=70, f=162
+Neighbor -> (48,26): g=92, h=68, f=160
+Open -> (48,29): g=88, h=71, f=159
+Neighbor -> (48,30): g=90, h=72, f=162
+Neighbor -> (48,28): g=90, h=70, f=160
+Open -> (48,31): g=86, h=73, f=159
+Neighbor -> (48,32): g=88, h=74, f=162
+Neighbor -> (48,30): g=88, h=72, f=160
+Open -> (48,33): g=84, h=75, f=159
+Neighbor -> (48,34): g=86, h=76, f=162
+Neighbor -> (48,32): g=86, h=74, f=160
+Open -> (48,35): g=82, h=77, f=159
+Neighbor -> (48,36): g=84, h=78, f=162
+Neighbor -> (48,34): g=84, h=76, f=160
+Open -> (48,37): g=80, h=79, f=159
+Neighbor -> (48,38): g=82, h=80, f=162
+Neighbor -> (48,36): g=82, h=78, f=160
+Open -> (50,23): g=92, h=67, f=159
+Neighbor -> (49,23): g=93, h=66, f=159
+Añadido a open -> (49,23): g=93, h=66, f=159
+Open -> (49,23): g=93, h=66, f=159
+Neighbor -> (48,23): g=94, h=65, f=159
+Añadido a open -> (48,23): g=94, h=65, f=159
+Open -> (48,23): g=94, h=65, f=159
+Neighbor -> (47,23): g=95, h=64, f=159
+Añadido a open -> (47,23): g=95, h=64, f=159
+Open -> (47,23): g=95, h=64, f=159
+Neighbor -> (46,23): g=96, h=63, f=159
+Añadido a open -> (46,23): g=96, h=63, f=159
+Open -> (46,23): g=96, h=63, f=159
+Neighbor -> (45,23): g=97, h=62, f=159
+Añadido a open -> (45,23): g=97, h=62, f=159
+Neighbor -> (46,24): g=98, h=64, f=162
 Open -> (45,23): g=97, h=62, f=159
 Neighbor -> (44,23): g=98, h=61, f=159
 Añadido a open -> (44,23): g=98, h=61, f=159
@@ -4112,16 +3151,10 @@ Neighbor -> (3,24): g=141, h=21, f=162
 Añadido a open -> (3,24): g=141, h=21, f=162
 Neighbor -> (3,22): g=141, h=19, f=160
 Añadido a open -> (3,22): g=141, h=19, f=160
-Open -> (50,23): g=92, h=67, f=159
-Neighbor -> (49,23): g=93, h=66, f=159
-Añadido a open -> (49,23): g=93, h=66, f=159
-Open -> (49,23): g=93, h=66, f=159
-Neighbor -> (48,23): g=94, h=65, f=159
-Añadido a open -> (48,23): g=94, h=65, f=159
-Open -> (48,23): g=94, h=65, f=159
-Neighbor -> (47,23): g=95, h=64, f=159
-Añadido a open -> (47,23): g=95, h=64, f=159
-Open -> (47,23): g=95, h=64, f=159
+Open -> (52,36): g=77, h=82, f=159
+Neighbor -> (52,37): g=79, h=83, f=162
+Open -> (52,38): g=75, h=84, f=159
+Neighbor -> (52,37): g=77, h=83, f=160
 Open -> (54,41): g=70, h=89, f=159
 Neighbor -> (53,41): g=71, h=88, f=159
 Añadido a open -> (53,41): g=71, h=88, f=159
@@ -4148,7 +3181,6 @@ Añadido a open -> (49,41): g=75, h=84, f=159
 Neighbor -> (50,42): g=76, h=86, f=162
 Añadido a open -> (50,42): g=76, h=86, f=162
 Neighbor -> (50,40): g=76, h=84, f=160
-Añadido a open -> (50,40): g=76, h=84, f=160
 Open -> (49,41): g=75, h=84, f=159
 Neighbor -> (48,41): g=76, h=83, f=159
 Añadido a open -> (48,41): g=76, h=83, f=159
@@ -4173,6 +3205,21 @@ Open -> (45,41): g=79, h=80, f=159
 Neighbor -> (45,42): g=81, h=81, f=162
 Añadido a open -> (45,42): g=81, h=81, f=162
 Open -> (56,23): g=86, h=73, f=159
+Open -> (56,41): g=68, h=91, f=159
+Neighbor -> (56,42): g=70, h=92, f=162
+Añadido a open -> (56,42): g=70, h=92, f=162
+Open -> (58,26): g=81, h=78, f=159
+Open -> (58,28): g=79, h=80, f=159
+Open -> (58,30): g=77, h=82, f=159
+Open -> (58,32): g=75, h=84, f=159
+Open -> (58,34): g=73, h=86, f=159
+Open -> (58,36): g=71, h=88, f=159
+Open -> (60,26): g=79, h=80, f=159
+Open -> (60,28): g=77, h=82, f=159
+Open -> (60,30): g=75, h=84, f=159
+Open -> (60,32): g=73, h=86, f=159
+Open -> (60,34): g=71, h=88, f=159
+Open -> (60,36): g=69, h=90, f=159
 Open -> (60,82): g=23, h=136, f=159
 Neighbor -> (59,82): g=24, h=135, f=159
 Añadido a open -> (59,82): g=24, h=135, f=159
@@ -4241,146 +3288,122 @@ Añadido a open -> (50,81): g=35, h=125, f=160
 Open -> (61,64): g=40, h=119, f=159
 Neighbor -> (61,63): g=42, h=118, f=160
 Añadido a open -> (61,63): g=42, h=118, f=160
-Open -> (62,81): g=22, h=137, f=159
-Open -> (63,81): g=21, h=138, f=159
-Open -> (64,81): g=20, h=139, f=159
-Open -> (65,81): g=19, h=140, f=159
-Open -> (66,81): g=18, h=141, f=159
-Open -> (67,81): g=17, h=142, f=159
-Open -> (68,81): g=16, h=143, f=159
+Open -> (62,26): g=77, h=82, f=159
+Open -> (62,28): g=75, h=84, f=159
+Open -> (62,30): g=73, h=86, f=159
+Open -> (62,32): g=71, h=88, f=159
+Open -> (62,34): g=69, h=90, f=159
+Open -> (62,36): g=67, h=92, f=159
+Open -> (62,82): g=21, h=138, f=159
+Neighbor -> (62,83): g=23, h=139, f=162
+Añadido a open -> (62,83): g=23, h=139, f=162
+Open -> (64,26): g=75, h=84, f=159
+Open -> (64,28): g=73, h=86, f=159
+Open -> (64,30): g=71, h=88, f=159
+Open -> (64,32): g=69, h=90, f=159
+Open -> (64,34): g=67, h=92, f=159
+Open -> (64,36): g=65, h=94, f=159
+Open -> (64,82): g=19, h=140, f=159
+Neighbor -> (64,83): g=21, h=141, f=162
+Añadido a open -> (64,83): g=21, h=141, f=162
+Open -> (66,26): g=73, h=86, f=159
+Open -> (66,28): g=71, h=88, f=159
+Open -> (66,30): g=69, h=90, f=159
+Open -> (66,32): g=67, h=92, f=159
+Open -> (66,34): g=65, h=94, f=159
+Open -> (66,36): g=63, h=96, f=159
+Open -> (66,82): g=17, h=142, f=159
+Neighbor -> (66,83): g=19, h=143, f=162
+Añadido a open -> (66,83): g=19, h=143, f=162
+Open -> (68,82): g=15, h=144, f=159
+Neighbor -> (68,83): g=17, h=145, f=162
+Añadido a open -> (68,83): g=17, h=145, f=162
 Open -> (69,25): g=71, h=88, f=159
 Neighbor -> (70,25): g=72, h=89, f=161
 Añadido a open -> (70,25): g=72, h=89, f=161
 Neighbor -> (69,26): g=73, h=89, f=162
-Añadido a open -> (69,26): g=73, h=89, f=162
-Open -> (69,26): g=70, h=89, f=159
-Neighbor -> (70,26): g=71, h=90, f=161
-Añadido a open -> (70,26): g=71, h=90, f=161
-Neighbor -> (69,27): g=72, h=90, f=162
-Añadido a open -> (69,27): g=72, h=90, f=162
 Open -> (69,27): g=69, h=90, f=159
 Neighbor -> (70,27): g=70, h=91, f=161
 Añadido a open -> (70,27): g=70, h=91, f=161
+Neighbor -> (69,26): g=71, h=89, f=160
 Neighbor -> (69,28): g=71, h=91, f=162
-Añadido a open -> (69,28): g=71, h=91, f=162
-Open -> (69,28): g=68, h=91, f=159
-Neighbor -> (70,28): g=69, h=92, f=161
-Añadido a open -> (70,28): g=69, h=92, f=161
-Neighbor -> (69,29): g=70, h=92, f=162
-Añadido a open -> (69,29): g=70, h=92, f=162
 Open -> (69,29): g=67, h=92, f=159
 Neighbor -> (70,29): g=68, h=93, f=161
 Añadido a open -> (70,29): g=68, h=93, f=161
+Neighbor -> (69,28): g=69, h=91, f=160
 Neighbor -> (69,30): g=69, h=93, f=162
-Añadido a open -> (69,30): g=69, h=93, f=162
-Open -> (69,30): g=66, h=93, f=159
-Neighbor -> (70,30): g=67, h=94, f=161
-Añadido a open -> (70,30): g=67, h=94, f=161
-Neighbor -> (69,31): g=68, h=94, f=162
-Añadido a open -> (69,31): g=68, h=94, f=162
 Open -> (69,31): g=65, h=94, f=159
 Neighbor -> (70,31): g=66, h=95, f=161
 Añadido a open -> (70,31): g=66, h=95, f=161
+Neighbor -> (69,30): g=67, h=93, f=160
 Neighbor -> (69,32): g=67, h=95, f=162
-Añadido a open -> (69,32): g=67, h=95, f=162
-Open -> (69,32): g=64, h=95, f=159
-Neighbor -> (70,32): g=65, h=96, f=161
-Añadido a open -> (70,32): g=65, h=96, f=161
-Neighbor -> (69,33): g=66, h=96, f=162
-Añadido a open -> (69,33): g=66, h=96, f=162
 Open -> (69,33): g=63, h=96, f=159
 Neighbor -> (70,33): g=64, h=97, f=161
 Añadido a open -> (70,33): g=64, h=97, f=161
+Neighbor -> (69,32): g=65, h=95, f=160
 Neighbor -> (69,34): g=65, h=97, f=162
-Añadido a open -> (69,34): g=65, h=97, f=162
-Open -> (69,34): g=62, h=97, f=159
-Neighbor -> (70,34): g=63, h=98, f=161
-Añadido a open -> (70,34): g=63, h=98, f=161
-Neighbor -> (69,35): g=64, h=98, f=162
-Añadido a open -> (69,35): g=64, h=98, f=162
 Open -> (69,35): g=61, h=98, f=159
 Neighbor -> (70,35): g=62, h=99, f=161
 Añadido a open -> (70,35): g=62, h=99, f=161
+Neighbor -> (69,34): g=63, h=97, f=160
 Neighbor -> (69,36): g=63, h=99, f=162
-Añadido a open -> (69,36): g=63, h=99, f=162
-Open -> (69,36): g=60, h=99, f=159
-Neighbor -> (70,36): g=61, h=100, f=161
-Añadido a open -> (70,36): g=61, h=100, f=161
-Neighbor -> (69,37): g=62, h=100, f=162
-Añadido a open -> (69,37): g=62, h=100, f=162
 Open -> (69,37): g=59, h=100, f=159
 Neighbor -> (70,37): g=60, h=101, f=161
 Añadido a open -> (70,37): g=60, h=101, f=161
+Neighbor -> (69,36): g=61, h=99, f=160
 Neighbor -> (69,38): g=61, h=101, f=162
-Añadido a open -> (69,38): g=61, h=101, f=162
-Open -> (69,38): g=58, h=101, f=159
-Neighbor -> (70,38): g=59, h=102, f=161
-Añadido a open -> (70,38): g=59, h=102, f=161
-Open -> (69,81): g=15, h=144, f=159
-Open -> (70,81): g=14, h=145, f=159
-Open -> (71,81): g=13, h=146, f=159
+Open -> (70,82): g=13, h=146, f=159
+Neighbor -> (70,83): g=15, h=147, f=162
+Añadido a open -> (70,83): g=15, h=147, f=162
 Open -> (72,40): g=53, h=106, f=159
 Neighbor -> (73,40): g=54, h=107, f=161
 Añadido a open -> (73,40): g=54, h=107, f=161
 Neighbor -> (72,39): g=55, h=105, f=160
 Añadido a open -> (72,39): g=55, h=105, f=160
 Neighbor -> (72,41): g=55, h=107, f=162
-Añadido a open -> (72,41): g=55, h=107, f=162
-Open -> (72,41): g=52, h=107, f=159
-Neighbor -> (73,41): g=53, h=108, f=161
-Añadido a open -> (73,41): g=53, h=108, f=161
-Neighbor -> (72,42): g=54, h=108, f=162
-Añadido a open -> (72,42): g=54, h=108, f=162
 Open -> (72,42): g=51, h=108, f=159
 Neighbor -> (73,42): g=52, h=109, f=161
 Añadido a open -> (73,42): g=52, h=109, f=161
-Open -> (72,81): g=12, h=147, f=159
-Open -> (73,81): g=11, h=148, f=159
-Open -> (74,81): g=10, h=149, f=159
-Open -> (75,81): g=9, h=150, f=159
-Open -> (76,81): g=8, h=151, f=159
-Open -> (77,81): g=7, h=152, f=159
-Neighbor -> (78,81): g=8, h=153, f=161
-Añadido a open -> (78,81): g=8, h=153, f=161
+Neighbor -> (72,41): g=53, h=107, f=160
+Open -> (72,82): g=11, h=148, f=159
+Neighbor -> (72,83): g=13, h=149, f=162
+Añadido a open -> (72,83): g=13, h=149, f=162
+Open -> (74,82): g=9, h=150, f=159
+Neighbor -> (74,83): g=11, h=151, f=162
+Añadido a open -> (74,83): g=11, h=151, f=162
+Open -> (76,82): g=7, h=152, f=159
+Neighbor -> (76,83): g=9, h=153, f=162
+Añadido a open -> (76,83): g=9, h=153, f=162
 Open -> (78,57): g=30, h=129, f=159
-Open -> (78,58): g=29, h=130, f=159
+Neighbor -> (78,58): g=32, h=130, f=162
+Open -> (78,59): g=28, h=131, f=159
+Neighbor -> (79,59): g=29, h=132, f=161
+Añadido a open -> (79,59): g=29, h=132, f=161
+Neighbor -> (78,58): g=30, h=130, f=160
+Neighbor -> (78,60): g=30, h=132, f=162
+Open -> (78,61): g=26, h=133, f=159
+Neighbor -> (79,61): g=27, h=134, f=161
+Añadido a open -> (79,61): g=27, h=134, f=161
+Neighbor -> (78,60): g=28, h=132, f=160
+Neighbor -> (78,62): g=28, h=134, f=162
+Open -> (78,63): g=24, h=135, f=159
+Neighbor -> (78,62): g=26, h=134, f=160
+Neighbor -> (78,64): g=26, h=136, f=162
 Open -> (78,68): g=19, h=140, f=159
-Open -> (78,69): g=18, h=141, f=159
-Neighbor -> (79,69): g=19, h=142, f=161
-Añadido a open -> (79,69): g=19, h=142, f=161
+Neighbor -> (78,67): g=21, h=139, f=160
+Añadido a open -> (78,67): g=21, h=139, f=160
+Neighbor -> (78,69): g=21, h=141, f=162
 Open -> (78,70): g=17, h=142, f=159
 Neighbor -> (79,70): g=18, h=143, f=161
 Añadido a open -> (79,70): g=18, h=143, f=161
+Neighbor -> (78,69): g=19, h=141, f=160
+Neighbor -> (78,71): g=19, h=143, f=162
 Open -> (78,81): g=6, h=153, f=159
 Neighbor -> (78,82): g=8, h=154, f=162
-Añadido a open -> (78,82): g=8, h=154, f=162
-Open -> (79,59): g=27, h=132, f=159
-Open -> (79,61): g=25, h=134, f=159
-Neighbor -> (80,61): g=26, h=135, f=161
-Añadido a open -> (80,61): g=26, h=135, f=161
-Neighbor -> (79,62): g=27, h=135, f=162
-Añadido a open -> (79,62): g=27, h=135, f=162
-Open -> (79,62): g=24, h=135, f=159
-Neighbor -> (80,62): g=25, h=136, f=161
-Añadido a open -> (80,62): g=25, h=136, f=161
-Open -> (79,64): g=22, h=137, f=159
-Neighbor -> (80,64): g=23, h=138, f=161
-Añadido a open -> (80,64): g=23, h=138, f=161
-Neighbor -> (79,65): g=24, h=138, f=162
-Añadido a open -> (79,65): g=24, h=138, f=162
-Open -> (79,69): g=17, h=142, f=159
-Neighbor -> (80,69): g=18, h=143, f=161
-Añadido a open -> (80,69): g=18, h=143, f=161
-Neighbor -> (79,70): g=19, h=143, f=162
-Añadido a open -> (79,70): g=19, h=143, f=162
-Open -> (79,70): g=16, h=143, f=159
-Neighbor -> (80,70): g=17, h=144, f=161
-Añadido a open -> (80,70): g=17, h=144, f=161
 Open -> (3,22): g=141, h=19, f=160
 Neighbor -> (3,21): g=142, h=18, f=160
 Añadido a open -> (3,21): g=142, h=18, f=160
 Neighbor -> (4,22): g=143, h=20, f=163
-Añadido a open -> (4,22): g=143, h=20, f=163
 Open -> (3,21): g=142, h=18, f=160
 Neighbor -> (3,20): g=143, h=17, f=160
 Añadido a open -> (3,20): g=143, h=17, f=160
@@ -4474,10 +3497,10 @@ Añadido a open -> (4,4): g=161, h=2, f=163
 Open -> (3,3): g=160, h=0, f=160
 ---------- PATH FOUND ----------
 
-Nodos abiertos: 1107
+Nodos abiertos: 801
 Coste total del camino: 160
 Objetivo alcanzado!
-Tiempo Consumido: 0.022849
+Tiempo Consumido: 0.040613
 Fallos: 0
 Colisiones: 0
 Muertes innecesarias: 0

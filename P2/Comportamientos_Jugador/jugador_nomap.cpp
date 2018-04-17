@@ -5,21 +5,10 @@
 #include <cmath>
 #include <vector>
 #include <set>
-#include <map>
 using namespace std;
 
-#define DEBUG 0
+#define DEBUG 1
 #define MAX_G 100000
-
-/***************** ESTRUCTURAS AUXILIARES ******************/
-
-struct comp_pos {
-  bool operator()(node * n1, node * n2) const {
-    return n1->pos < n2->pos;
-  }
-};
-
-map <node*, int, comp_pos> f;
 
 /***************** FUNCIONES AUXILIARES ******************/
 
@@ -68,9 +57,13 @@ void delete_set(set<node*, T> l) {
   }
 }
 
+int f(node * n) {
+  return n->g + n->h;
+}
+
 void printn(node * n) {
   cout << "(" << n->pos.fila << "," << n->pos.columna << "): g="
-       << n->g << ", h=" << n->h << ", f=" << f[n] << endl;
+       << n->g << ", h=" << n->h << ", f=" << f(n) << endl;
 }
 
 void reconstruct_path(stack<Action>& plan, node * goal) {
@@ -166,9 +159,15 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
                                         stack<Action>& plan,
                                         int& cost) {
   // Custom comparator for nodes
+  struct comp_pos {
+    bool operator()(node * n1, node * n2) const {
+      return n1->pos < n2->pos;
+    }
+  };
+
   struct comp_f {
     bool operator()(node * n1, node * n2) const {
-      int diff = f[n1] - f[n2];
+      int diff = f(n1) - f(n2);
       if (n1->pos == n2->pos)
         return false;
       if (diff != 0)
@@ -192,7 +191,6 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   // Start node
   node* current = mknode(origen, destino, NULL, act);
   current->g = 0;
-  f[current] = current->h;
   open_set.insert(current);
 
   // Main loop
@@ -275,10 +273,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         int tentative_g = current->g + next_cost[i];
         bool better = tentative_g < neighbors[i]->g;
 
-        if (better) {
+        if (better)
           neighbors[i]->g = tentative_g;
-          f[neighbors[i]] = neighbors[i]->g + neighbors[i]->h;
-        }
 
 #if DEBUG == 1
       cout << "Neighbor -> ";
@@ -286,6 +282,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
 #endif
 
         if (!found_in_open) { // Insert node for the first time in open set
+          cout << "Añadido a open -> ";
+          printn(neighbors[i]);
           open_set.insert(neighbors[i]);
         }
         else if (better) { // Update node in open set
@@ -304,7 +302,6 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   }
 
   if (found) {
-    cont++;  // Take into account the expansion of the goal node
 
 #if DEBUG == 1
     cout << "---------- PATH FOUND ----------\n" << endl;
@@ -315,6 +312,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     reconstruct_path(plan, current);
     VisualizaPlan(origen, plan);
     cost = current->g;
+    cont++;  // Take into account the expansion of the goal node
   }
   else {
     cost = -1;
