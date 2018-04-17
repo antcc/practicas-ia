@@ -5,10 +5,10 @@
 #include <cmath>
 #include <vector>
 #include <set>
-
 using namespace std;
 
 #define DEBUG 1
+#define MAX_G 100000
 
 /***************** FUNCIONES AUXILIARES ******************/
 
@@ -44,12 +44,13 @@ int manhattan_distance(const estado& origen, const estado& destino) {
   return abs(origen.fila - destino.fila) + abs(origen.columna - destino.columna);
 }
 
-node * mknode(const estado& pos, const estado& destino, node * parent, const stack<Action>& act, int cost) {
-  node* n = new node(parent, pos, manhattan_distance(pos, destino), act, cost);
+node * mknode(const estado& pos, const estado& destino, node * parent,
+              const stack<Action>& act) {
+  node* n = new node(parent, pos, manhattan_distance(pos, destino), act);
   return n;
 }
 
-template<typename T>
+template <typename T>
 void delete_set(set<node*, T> l) {
   for (auto it = l.begin(); it != l.end(); ++it) {
     delete *it;
@@ -61,12 +62,12 @@ int f(node * n) {
 }
 
 void printn(node * n) {
-  cout << "(" << n->pos.fila << "," << n->pos.columna << "): g=" << n->g << ", h=" << n->h << ", f=" << f(n) << endl;
+  cout << "(" << n->pos.fila << "," << n->pos.columna << "): g="
+       << n->g << ", h=" << n->h << ", f=" << f(n) << endl;
 }
 
-int reconstruct_path(stack<Action>& plan, node * goal) {
+void reconstruct_path(stack<Action>& plan, node * goal) {
   node* current = goal;
-  int cost = 0;
 
   while (current) {
     stack<Action> partial_path = current->actions;
@@ -75,10 +76,7 @@ int reconstruct_path(stack<Action>& plan, node * goal) {
       partial_path.pop();
     }
     current = current->parent;
-    cost++;
   }
-
-  return cost;
 }
 
 void AnularMatriz(vector<vector<unsigned char> >& m){
@@ -96,7 +94,15 @@ void clear_stack(stack<Action>& st) {
 
 }
 
-/***************** MÉTODOS DE LA CLASE *******************/
+/***************** IMPLEMENTACIÓN DE MÉTODOS  *******************/
+
+node::node(node * parent, const estado& pos, int h, stack<Action> actions) {
+  this->g = MAX_G;
+  this->parent = parent;
+  this->pos = pos;
+  this->h = h;
+  this->actions = actions;
+}
 
 void ComportamientoJugador::PintaPlan(stack<Action> plan) {
 	while (!plan.empty()){
@@ -138,10 +144,10 @@ void ComportamientoJugador::actualizaPos(estado& pos, Action next) {
   pos.orientacion = next + pos.orientacion;
 }
 
-bool ComportamientoJugador::esTransitable(int fil, int col) {
+bool ComportamientoJugador::esTransitable(int fil, int col) const {
   bool terreno = mapaResultado[fil][col] == 'S'
-                || mapaResultado[fil][col] == 'T'
-                || mapaResultado[fil][col] == 'K';
+                 || mapaResultado[fil][col] == 'T'
+                 || mapaResultado[fil][col] == 'K';
   return terreno;
 }
 
@@ -154,24 +160,19 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
                                         int& cost) {
   // Custom comparator for nodes
   struct comp_pos {
-    bool operator()(node * n1, node * n2) {
-      if (n1->pos.fila < n2->pos.fila)
-        return true;
-      else if (n1->pos.fila > n2->pos.fila)
-        return false;
-
-      return n1->pos.columna < n2->pos.columna;
+    bool operator()(node * n1, node * n2) const {
+      return n1->pos < n2->pos;
     }
   };
 
   struct comp_f {
-    bool operator()(node * n1, node * n2) {
-      comp_pos p;
+    bool operator()(node * n1, node * n2) const {
       int diff = f(n1) - f(n2);
-      if (diff == 0)
-        return p(n1, n2);
-      else
+      if (n1->pos == n2->pos)
+        return false;
+      if (diff != 0)
         return diff < 0;
+      return n1->pos < n2->pos;
     }
   };
 
@@ -180,6 +181,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   set<node*, comp_f> open_set;
   set<node*, comp_pos> closed_set;
   node* neighbors[4];
+  int next_cost[4];
   stack<Action> act;
 
 #if DEBUG == 1
@@ -187,7 +189,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
 #endif
 
   // Start node
-  node* current = mknode(origen, destino, NULL, act, 0);
+  node* current = mknode(origen, destino, NULL, act);
+  current->g = 0;
   open_set.insert(current);
 
   // Main loop
@@ -217,7 +220,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     actualizaPos(tmp, actFORWARD);
     if (esTransitable(tmp.fila, tmp.columna)) {
       act.push(actFORWARD);
-      neighbors[valid++] = mknode(tmp, destino, current, act, 1);
+      neighbors[valid] = mknode(tmp, destino, current, act);
+      next_cost[valid++] = 1;
       clear_stack(act);
     }
     tmp = pos;
@@ -228,7 +232,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     if (esTransitable(tmp.fila, tmp.columna)) {
       act.push(actTURN_R);
       act.push(actFORWARD);
-      neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+      neighbors[valid] = mknode(tmp, destino, current, act);
+      next_cost[valid++] = 2;
       clear_stack(act);
     }
     tmp = pos;
@@ -239,12 +244,13 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     if (esTransitable(tmp.fila, tmp.columna)) {
       act.push(actTURN_L);
       act.push(actFORWARD);
-      neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+      neighbors[valid] = mknode(tmp, destino, current, act);
+      next_cost[valid++] = 2;
       clear_stack(act);
     }
     tmp = pos;
 
-    // Move backwards
+    // Move backwards (only useful for the first move)
     if (cont == 0) {
       actualizaPos(tmp, actTURN_R);
       actualizaPos(tmp, actTURN_R);
@@ -253,32 +259,42 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
         act.push(actTURN_R);
         act.push(actTURN_R);
         act.push(actFORWARD);
-        neighbors[valid++] = mknode(tmp, destino, current, act, 2);
+        neighbors[valid] = mknode(tmp, destino, current, act);
+        next_cost[valid++] = 3;
         clear_stack(act);
       }
       tmp = pos;
     }
 
     for (int i = 0; i < valid; i++) {
-      if (closed_set.find(neighbors[i]) == closed_set.end()) {
+      if (!closed_set.count(neighbors[i])) {
         auto it = open_set.find(neighbors[i]);
+        bool found_in_open = it != open_set.end();
+        int tentative_g = current->g + next_cost[i];
+        bool better = tentative_g < neighbors[i]->g;
 
-  #if DEBUG == 1
-        cout << "Neighbor -> ";
-        printn(neighbors[i]);
-  #endif
+        if (better)
+          neighbors[i]->g = tentative_g;
 
-        if (it == open_set.end()) {
+#if DEBUG == 1
+      cout << "Neighbor -> ";
+      printn(neighbors[i]);
+#endif
+
+        if (!found_in_open) { // Insert node for the first time in open set
+          cout << "Añadido a open -> ";
+          printn(neighbors[i]);
+          open_set.insert(neighbors[i]);
+        }
+        else if (better) { // Update node in open set
+          open_set.erase(it);
           open_set.insert(neighbors[i]);
         }
         else {
-          if (neighbors[i]->g < (*it)->g) {
-            open_set.erase(it);
-            open_set.insert(neighbors[i]);
-          }
+          delete neighbors[i];
         }
       }
-      else {
+      else { // Already in closed set
         delete neighbors[i];
       }
     }
@@ -293,8 +309,10 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
 #endif
 
     // Generate actual path and print it
-    cost = reconstruct_path(plan, current);
+    reconstruct_path(plan, current);
     VisualizaPlan(origen, plan);
+    cost = current->g;
+    cont++;  // Take into account the expansion of the goal node
   }
   else {
     cost = -1;
@@ -329,6 +347,8 @@ Action ComportamientoJugador::think(Sensores sensores) {
     destino.columna = sensores.destinoC;
     if (!(hayPlan = pathFinding(pos, destino, plan, total_cost)))
       cout << "Error: no hay camino posible al destino." << endl;
+    else
+      cout << "Coste total del camino: " << total_cost << endl;
   }
 
   if (hayPlan && !plan.empty()) {

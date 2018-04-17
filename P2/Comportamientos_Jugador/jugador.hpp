@@ -13,11 +13,17 @@ struct estado {
   int columna;
   Orientation orientacion;
 
-  bool operator==(const estado& otro) {
-    return fila == otro.fila && columna == otro.columna;
+  bool operator<(const estado& otro) const {
+    if (fila != otro.fila)
+      return fila < otro.fila;
+    return columna < otro.columna;
   }
 
-  bool operator !=(const estado& otro) {
+  bool operator==(const estado& otro) const {
+    return !(*this < otro || otro < *this);
+  }
+
+  bool operator !=(const estado& otro) const {
     return !(*this == otro);
   }
 };
@@ -29,21 +35,11 @@ struct node {
   stack<Action> actions; // Actions performed to get from parent to this node
   node* parent;
 
-  node(node * parent, const estado& pos, int h, stack<Action> actions, int cost) {
-    if (parent)
-      g = parent->g + cost;
-    else
-      g = 0;
-    this->parent = parent;
-    this->pos = pos;
-    this->h = h;
-    this->actions = actions;
-  }
+  node(node * parent, const estado& pos, int h, stack<Action> actions);
 };
 
 class ComportamientoJugador : public Comportamiento {
   public:
-
     void constructor() {
       // Inicializar Variables de Estado
       pos.fila = pos.columna = 99;
@@ -81,7 +77,7 @@ class ComportamientoJugador : public Comportamiento {
 
     void VisualizaPlan(const estado &st, stack<Action> plan);
     void PintaPlan(stack<Action> plan);
-    bool esTransitable(int fil, int col);
+    bool esTransitable(int fil, int col) const;
 };
 
 #endif
