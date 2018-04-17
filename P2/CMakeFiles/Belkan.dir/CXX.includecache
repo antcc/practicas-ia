@@ -23,17 +23,9 @@ Comportamientos_Jugador/comportamientos/comportamiento.hpp
 Comportamientos_Jugador/jugador.hpp
 comportamientos/comportamiento.hpp
 Comportamientos_Jugador/comportamientos/comportamiento.hpp
-list
--
 stack
 -
-queue
--
-set
--
-map
--
-limits.h
+list
 -
 
 include/comportamientolib.hpp

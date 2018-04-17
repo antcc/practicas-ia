@@ -39,17 +39,9 @@ set
 /home/antcc/practicas-IA/P2/Comportamientos_Jugador/jugador.hpp
 comportamientos/comportamiento.hpp
 /home/antcc/practicas-IA/P2/Comportamientos_Jugador/comportamientos/comportamiento.hpp
-list
--
 stack
 -
-queue
--
-set
--
-map
--
-limits.h
+list
 -
 
 /home/antcc/practicas-IA/P2/src/comportamientos/comportamiento.cpp
