@@ -8,7 +8,7 @@
 #include <map>
 using namespace std;
 
-#define DEBUG 1
+#define DEBUG 0
 #define MAX_G 100000
 
 /***************** ESTRUCTURAS AUXILIARES ******************/
