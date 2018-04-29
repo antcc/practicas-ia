@@ -2,8 +2,12 @@
 #define COMPORTAMIENTOJUGADOR_H
 
 #include "comportamientos/comportamiento.hpp"
+#include "motorlib/util.h"
+#include <iostream>
 #include <stack>
 #include <list>
+
+typedef vector<vector<unsigned char> > TMapa;
 
 // 0=Norte, 1=Este, 2=Sur, 3=Oeste
 enum Orientation {NORTH, EAST, SOUTH, WEST};
@@ -12,6 +16,14 @@ struct estado {
   int fila;
   int columna;
   Orientation orientacion;
+
+  estado(int fil, int col, Orientation ori = NORTH) {
+    fila = fil;
+    columna = col;
+    orientacion = ori;
+  }
+
+  estado() : estado(-1, -1) { }
 
   bool operator<(const estado& otro) const {
     if (fila != otro.fila)
@@ -40,19 +52,27 @@ struct node {
 
 class ComportamientoJugador : public Comportamiento {
   public:
-    void constructor() {
+    void constructor(int size = 100) {
       // Inicializar Variables de Estado
-      pos.fila = pos.columna = 99;
-      pos.orientacion = NORTH;
+      pos.fila = pos.columna = size - 1;
+      pos.orientacion = NORTH; // Siempre aparecemos mirando al norte
       destino.fila = -1;
       destino.columna = -1;
       destino.orientacion = NORTH; // Indiferente
-      ultimaAccion = actIDLE;
-      hayPlan = false;
+      ultima_accion = actIDLE;
+      hay_plan = bien_situado = error = false;
+      nivel3 = mapaResultado[0][0] == '?';
+
+      if (nivel3) {
+        srand(time(NULL));
+        vector<unsigned char> aux (2*size, '?');
+        for (int i = 0; i < 2*size; i++)
+          mapaLocal.push_back(aux);
+      }
     }
 
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
-      constructor();
+      constructor(size);
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       constructor();
@@ -67,17 +87,26 @@ class ComportamientoJugador : public Comportamiento {
   private:
     // Declarar Variables de Estado
     estado pos, destino;
-    bool hayPlan;
+    estado pk[10];
+    bool hay_plan;
+    bool bien_situado;
+    bool nivel3;
+    bool error;
     int total_cost; // Coste total del camino actual si hay plan
-    Action ultimaAccion;
+    Action ultima_accion;
     stack<Action> plan;
+    TMapa mapaLocal;
 
     void actualizaPos(estado& pos, Action next);
-    bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan, int& cost);
-
+    void actualizaMapa(TMapa& mapa, vector<unsigned char> terreno);
+    void vuelcaMapaLocal();
+    Action caminar(vector<unsigned char> superficie);
+    void intentaCaminar(estado destino, TMapa mapa, int vida, bool PK);
+    bool esTransitable(int fil, int col, TMapa mapa, bool PK) const;
+    bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan,
+                     TMapa mapa, int vida, bool PK, int& cost);
     void VisualizaPlan(const estado &st, stack<Action> plan);
     void PintaPlan(stack<Action> plan);
-    bool esTransitable(int fil, int col) const;
 };
 
 #endif

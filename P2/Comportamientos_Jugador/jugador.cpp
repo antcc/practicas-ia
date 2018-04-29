@@ -1,24 +1,24 @@
 #include "../Comportamientos_Jugador/jugador.hpp"
-#include "motorlib/util.h"
-
-#include <iostream>
 #include <cmath>
-#include <vector>
 #include <set>
 #include <map>
 using namespace std;
 
-#define DEBUG 0
+#define DEBUG_1 0
+#define DEBUG_3 0
 #define MAX_G 100000
+#define ONE_OBJ
 
 /***************** ESTRUCTURAS AUXILIARES ******************/
 
+// Compare nodes based on their position on the map
 struct comp_pos {
   bool operator()(node * n1, node * n2) const {
     return n1->pos < n2->pos;
   }
 };
 
+// Maps each node to its fScore
 map <node*, int, comp_pos> f;
 
 /***************** FUNCIONES AUXILIARES ******************/
@@ -26,7 +26,6 @@ map <node*, int, comp_pos> f;
 namespace {
 
 Orientation operator+(const Action& act, const Orientation& ori) {
-  Orientation new_ori;
   int move;
 
   if (act == actTURN_L)
@@ -35,16 +34,12 @@ Orientation operator+(const Action& act, const Orientation& ori) {
     move = 1;
 
   switch(act) {
-    case actFORWARD:
-    case actIDLE:
-      new_ori = ori;
-      break;
     case actTURN_L:
     case actTURN_R:
-      new_ori = static_cast<Orientation>((ori + move + 4) % 4);
-      break;
+      return static_cast<Orientation>((ori + move + 4) % 4);
   }
-  return new_ori;
+
+  return ori;
 }
 
 Orientation operator+(const Orientation& ori, const Action& act) {
@@ -86,7 +81,7 @@ void reconstruct_path(stack<Action>& plan, node * goal) {
   }
 }
 
-void AnularMatriz(vector<vector<unsigned char> >& m){
+void AnularMatriz(TMapa& m){
 	for (int i=0; i<m[0].size(); i++){
 		for (int j=0; j<m.size(); j++){
 			m[i][j]=0;
@@ -135,27 +130,42 @@ void ComportamientoJugador::actualizaPos(estado& pos, Action next) {
   if (next == actFORWARD) {
     switch(pos.orientacion) {
       case NORTH:
-        pos.fila--;
-        break;
+        pos.fila--; break;
       case SOUTH:
-        pos.fila++;
-        break;
+        pos.fila++; break;
       case EAST:
-        pos.columna++;
-        break;
+        pos.columna++; break;
       case WEST:
-        pos.columna--;
-        break;
+        pos.columna--; break;
     }
   }
   pos.orientacion = next + pos.orientacion;
 }
 
-bool ComportamientoJugador::esTransitable(int fil, int col) const {
-  bool terreno = mapaResultado[fil][col] == 'S'
-                 || mapaResultado[fil][col] == 'T'
-                 || mapaResultado[fil][col] == 'K';
-  return terreno;
+bool ComportamientoJugador::esTransitable(int fil, int col,
+                                          TMapa mapa, bool PK) const {
+  bool transitable;
+  if (fil >= 0 && col >= 0 && fil < mapa[0].size() && col < mapa[0].size()) {
+    transitable = mapa[fil][col] == 'S'
+                       || mapa[fil][col] == 'T'
+                       || mapa[fil][col] == 'K'
+                       || (!PK && mapa[fil][col] == '?');
+
+#if DEBUG_3 == 1
+  cout << "La casilla (" << fil << "," << col << ") es transitable: "
+      << (transitable ? "SI" : "NO") << endl;
+#endif
+
+  }
+
+#if DEBUG_3 == 1
+  else {
+    cout << "La casilla (" << fil << "," << col << ") está fuera de los límites." << endl;
+    transitable = false;
+  }
+#endif
+
+  return transitable;
 }
 
 /**
@@ -164,6 +174,9 @@ bool ComportamientoJugador::esTransitable(int fil, int col) const {
 bool ComportamientoJugador::pathFinding(const estado& origen,
                                         const estado& destino,
                                         stack<Action>& plan,
+                                        TMapa mapa,
+                                        int vida,
+                                        bool PK,
                                         int& cost) {
   // Custom comparator for nodes
   struct comp_f {
@@ -183,9 +196,10 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   set<node*, comp_pos> closed_set;
   node* neighbors[4];
   int next_cost[4];
+  int extra = 0;
   stack<Action> act;
 
-#if DEBUG == 1
+#if DEBUG_1 == 1
   cout << "Destino -> (" << destino.fila << "," << destino.columna << ")" << endl;
 #endif
 
@@ -200,7 +214,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     auto current_it = open_set.begin();
     current = *current_it;
 
-#if DEBUG == 1
+#if DEBUG_1 == 1
     cout << "Open -> ";
     printn(current);
 #endif
@@ -213,6 +227,9 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     closed_set.insert(current);
     open_set.erase(current_it);
 
+    //if (current->g > vida)
+      //continue;
+
     // Evaluate neighbors
     int valid = 0;
     estado pos = {current->pos.fila, current->pos.columna, current->pos.orientacion};
@@ -220,44 +237,53 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
 
     // Move forward
     actualizaPos(tmp, actFORWARD);
-    if (esTransitable(tmp.fila, tmp.columna)) {
+    if (esTransitable(tmp.fila, tmp.columna, mapa, PK)) {
+      if (mapa[tmp.fila][tmp.columna] == '?')
+        extra = 1;
       act.push(actFORWARD);
       neighbors[valid] = mknode(tmp, destino, current, act);
-      next_cost[valid++] = 1;
+      next_cost[valid++] = 1 + extra;
       clear_stack(act);
     }
     tmp = pos;
+    extra = 0;
 
     // Move east
     actualizaPos(tmp, actTURN_R);
     actualizaPos(tmp, actFORWARD);
-    if (esTransitable(tmp.fila, tmp.columna)) {
+    if (esTransitable(tmp.fila, tmp.columna, mapa, PK)) {
+      if (mapa[tmp.fila][tmp.columna] == '?')
+        extra = 1;
       act.push(actTURN_R);
       act.push(actFORWARD);
       neighbors[valid] = mknode(tmp, destino, current, act);
-      next_cost[valid++] = 2;
+      next_cost[valid++] = 2 + extra;
       clear_stack(act);
     }
     tmp = pos;
+    extra = 0;
 
     // Move west
     actualizaPos(tmp, actTURN_L);
     actualizaPos(tmp, actFORWARD);
-    if (esTransitable(tmp.fila, tmp.columna)) {
+    if (esTransitable(tmp.fila, tmp.columna, mapa, PK)) {
+      if (mapa[tmp.fila][tmp.columna] == '?')
+        extra = 1;
       act.push(actTURN_L);
       act.push(actFORWARD);
       neighbors[valid] = mknode(tmp, destino, current, act);
-      next_cost[valid++] = 2;
+      next_cost[valid++] = 2 + extra;
       clear_stack(act);
     }
     tmp = pos;
+    extra = 0;
 
     // Move backwards (only useful for the first move)
     if (cont == 0) {
       actualizaPos(tmp, actTURN_R);
       actualizaPos(tmp, actTURN_R);
       actualizaPos(tmp, actFORWARD);
-      if (esTransitable(tmp.fila, tmp.columna)) {
+      if (esTransitable(tmp.fila, tmp.columna, mapa, PK)) {
         act.push(actTURN_R);
         act.push(actTURN_R);
         act.push(actFORWARD);
@@ -280,7 +306,7 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
           f[neighbors[i]] = neighbors[i]->g + neighbors[i]->h;
         }
 
-#if DEBUG == 1
+#if DEBUG_1 == 1
       if (better) {
         cout << "Neighbor -> ";
         printn(neighbors[i]);
@@ -306,14 +332,13 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   if (found) {
     cont++;  // Take into account the expansion of the goal node
 
-#if DEBUG == 1
+#if DEBUG_1 == 1
     cout << "---------- PATH FOUND ----------\n" << endl;
     cout << "Nodos abiertos: " << cont << endl;
 #endif
 
     // Generate actual path and print it
     reconstruct_path(plan, current);
-    VisualizaPlan(origen, plan);
     cost = current->g;
   }
   else {
@@ -323,39 +348,101 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
   // Free memory
   delete_set(open_set);
   delete_set(closed_set);
+  f.clear();
 
   return found;
 }
 
-Action ComportamientoJugador::think(Sensores sensores) {
+void ComportamientoJugador::actualizaMapa(TMapa& mapa,
+                                          vector<unsigned char> terreno) {
+  int cont = 0;
+  int fil;
+  int col;
+
+  for (int i = 0; i <= 3; i++) {
+    for (int j = -i; j <= i; j++) {
+      switch(pos.orientacion) {
+        case EAST:
+          fil = pos.fila + j;
+          col = pos.columna + i;
+          break;
+        case WEST:
+          fil = pos.fila - j;
+          col = pos.columna - i;
+          break;
+        case NORTH:
+          fil = pos.fila - i;
+          col = pos.columna + j;
+          break;
+        case SOUTH:
+          fil = pos.fila + i;
+          col = pos.columna - j;
+          break;
+      }
+
+      if (mapa[fil][col] == '?') {
+        mapa[fil][col] = terreno[cont];
+
+        if (!bien_situado && pk[0].fila == -1 && terreno[cont] == 'K') {
+          pk[0].fila = fil;
+          pk[0].columna = col;
+        }
+      }
+      cont++;
+    }
+  }
+}
+
+void ComportamientoJugador::vuelcaMapaLocal() {
+  int inicio_fil = pk[0].fila - pos.fila;
+  int inicio_col = pk[0].columna - pos.columna;
+  int size = mapaResultado[0].size();
+
+  for (int i = 0; i < size; i++)
+    for (int j = 0; j < size; j++)
+      if (mapaLocal[i + inicio_fil][j + inicio_col] != '?')
+        mapaResultado[i][j] = mapaLocal[i + inicio_fil][j + inicio_col];
+}
+
+void ComportamientoJugador::intentaCaminar(estado destino, TMapa mapa, int vida, bool PK) {
+  if (!hay_plan) {
+    if (!(hay_plan = pathFinding(pos, destino, plan, mapa, vida, PK, total_cost))) {
+      if (!PK) {
+        cout << "Error: no hay camino posible al destino." << endl;
+        error = true;
+      }
+      else {
+        pk[0].fila = -1; // No merece la pena ir si no hay camino posible ahora mismo
+        pk[0].columna = -1;
+      }
+    }
+    else if (!PK) {
+      VisualizaPlan(pos, plan);
+    }
+  }
+
+  if (!plan.empty()) {
+    Action next_move = plan.top();
+    estado next = pos;
+    actualizaPos(next, next_move);
+
+    if (next_move == actFORWARD && !esTransitable(next.fila, next.columna, mapa, PK)) {
+
+#if DEBUG_3 == 1
+      cout << "No puedes pasar por la casilla que tienes delante." << endl;
+#endif
+
+      hay_plan = false;
+      clear_stack(plan);
+    }
+  }
+}
+
+Action ComportamientoJugador::caminar(vector<unsigned char> superficie) {
   Action next_move;
-
-  if (sensores.mensajeF != -1) {
-    pos.fila = sensores.mensajeF;
-    pos.columna = sensores.mensajeC;
-  }
-
-  actualizaPos(pos, ultimaAccion);
-
-  if (hayPlan && (sensores.destinoF != destino.fila || sensores.destinoC != destino.columna)) {
-    cout << "\nObjetivo cambiado." << endl;
-    hayPlan = false;
-    clear_stack(plan);
-  }
-
-  // Plan itinerary the first time
-  if (!hayPlan) {
-    destino.fila = sensores.destinoF;
-    destino.columna = sensores.destinoC;
-    if (!(hayPlan = pathFinding(pos, destino, plan, total_cost)))
-      cout << "Error: no hay camino posible al destino." << endl;
-    else
-      cout << "Coste total del camino: " << total_cost << endl;
-  }
-
-  if (hayPlan && !plan.empty()) {
+  if ((!bien_situado || hay_plan) && !plan.empty()) {
     next_move = plan.top();
-    if (next_move == actFORWARD && sensores.superficie[2] == 'a')
+    if (next_move == actFORWARD && superficie[2] == 'a')
       next_move = actIDLE;
     else
       plan.pop();
@@ -364,9 +451,112 @@ Action ComportamientoJugador::think(Sensores sensores) {
     next_move = actIDLE;
   }
 
-  ultimaAccion = next_move;
-
   return next_move;
+}
+
+Action ComportamientoJugador::think(Sensores sensores) {
+  Action next_move;
+  static int reconocimiento = 0;
+
+  if (sensores.mensajeF != -1 && !bien_situado) {
+    pos.fila = sensores.mensajeF;
+    pos.columna = sensores.mensajeC;
+    bien_situado = true;
+
+    if (nivel3) {
+      vuelcaMapaLocal();
+      ultima_accion = actIDLE;
+    }
+  }
+
+  actualizaPos(pos, ultima_accion);
+
+  if (bien_situado && (hay_plan || error)
+      && (sensores.destinoF != destino.fila || sensores.destinoC != destino.columna)) {
+    cout << "\nObjetivo cambiado." << endl;
+    hay_plan = false;
+    error = false;
+    clear_stack(plan);
+  }
+
+  if (error)
+    return actIDLE;
+
+  if (!bien_situado) {  // NIVEL 3 SIN CONOCER MI POSICIÓN
+    actualizaMapa(mapaLocal, sensores.terreno);
+
+    // Andar hacia PK
+    if (pk[0].fila != -1) {
+
+#if DEBUG_3 == 1
+      cout << "Localizada casilla K en (" << pk.fila << "," << pk.columna << ")\n";
+#endif
+      reconocimiento = 4;
+      intentaCaminar(pk[0], mapaLocal, sensores.vida, true);
+      ultima_accion = caminar(sensores.superficie);
+      return ultima_accion;
+    }
+
+    // Bucar PK
+    if (pk[0].fila == -1) {
+
+      // Reconocer los alrededores la primera vez
+      if (reconocimiento < 4) {
+        reconocimiento++;
+        ultima_accion = actTURN_R;
+        return ultima_accion;
+      }
+
+      estado next = pos;
+      actualizaPos(next, actFORWARD);
+
+      if (esTransitable(next.fila, next.columna, mapaLocal, true)) {
+        if (sensores.superficie[2] != 'a')
+          ultima_accion = actFORWARD;
+        else
+          ultima_accion = actIDLE;
+      }
+
+      else
+        ultima_accion = static_cast<Action>(aleatorio(1) + 1);
+
+      return ultima_accion;
+    }
+  }
+
+  else if (nivel3) { // NIVEL 3
+    actualizaMapa(mapaResultado, sensores.terreno);
+
+    while (!hay_plan && !error) {
+      destino.fila = sensores.destinoF;
+      destino.columna = sensores.destinoC;
+
+      intentaCaminar(destino, mapaResultado, sensores.vida, false);
+    }
+
+    if (hay_plan)
+      intentaCaminar(destino, mapaResultado, sensores.vida, false);
+
+    ultima_accion = caminar(sensores.superficie);
+    return ultima_accion;
+  }
+
+  else {  // NIVEL 1 O 2
+    if (!hay_plan) {
+      destino.fila = sensores.destinoF;
+      destino.columna = sensores.destinoC;
+      if (!(hay_plan = pathFinding(pos, destino, plan, mapaResultado,
+                                   sensores.vida, false, total_cost)))
+        cout << "Error: no hay camino posible al destino." << endl;
+      else {
+        VisualizaPlan(pos, plan);
+        cout << "Coste total del camino: " << total_cost << endl;
+      }
+    }
+
+    ultima_accion = caminar(sensores.superficie);
+    return ultima_accion;
+  }
 }
 
 void ComportamientoJugador::VisualizaPlan(const estado &st, stack<Action> plan){
