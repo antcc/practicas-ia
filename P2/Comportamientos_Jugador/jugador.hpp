@@ -8,6 +8,7 @@
 #include <list>
 
 typedef vector<vector<unsigned char> > TMapa;
+typedef vector<vector<unsigned int> > TMapaCalor;
 
 // 0=Norte, 1=Este, 2=Sur, 3=Oeste
 enum Orientation {NORTH, EAST, SOUTH, WEST};
@@ -61,21 +62,24 @@ class ComportamientoJugador : public Comportamiento {
       destino.orientacion = NORTH; // Indiferente
       ultima_accion = actIDLE;
       hay_plan = bien_situado = error = false;
-      nivel3 = mapaResultado[0][0] == '?';
-
-      if (nivel3) {
-        srand(time(NULL));
-        vector<unsigned char> aux (2*size, '?');
-        for (int i = 0; i < 2*size; i++)
-          mapaLocal.push_back(aux);
-      }
+      cont_calor = 1;
     }
 
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
       constructor(size);
+      nivel3 = true;
+      srand(time(NULL));
+
+      vector<unsigned char> aux (2*size, '?');
+      vector<unsigned int> aux2(2*size, 0);
+      for (int i = 0; i < 2*size; i++) {
+        mapaLocal.push_back(aux);
+        mapaCalor.push_back(aux2);
+      }
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       constructor();
+      nivel3 = false;
     }
     ComportamientoJugador(const ComportamientoJugador & comport) : Comportamiento(comport) {}
     ~ComportamientoJugador() {}
@@ -87,21 +91,24 @@ class ComportamientoJugador : public Comportamiento {
   private:
     // Declarar Variables de Estado
     estado pos, destino;
-    estado pk[10];
+    estado pk[2];
     bool hay_plan;
     bool bien_situado;
     bool nivel3;
     bool error;
     int total_cost; // Coste total del camino actual si hay plan
+    int cont_calor;
     Action ultima_accion;
     stack<Action> plan;
     TMapa mapaLocal;
+    TMapaCalor mapaCalor;
 
     void actualizaPos(estado& pos, Action next);
     void actualizaMapa(TMapa& mapa, vector<unsigned char> terreno);
     void vuelcaMapaLocal();
     Action caminar(vector<unsigned char> superficie);
     void intentaCaminar(estado destino, TMapa mapa, int vida, bool PK);
+    estado buscarPK();
     bool esTransitable(int fil, int col, TMapa mapa, bool PK) const;
     bool pathFinding(const estado &origen, const estado &destino, stack<Action> &plan,
                      TMapa mapa, int vida, bool PK, int& cost);

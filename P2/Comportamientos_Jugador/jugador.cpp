@@ -6,8 +6,8 @@ using namespace std;
 
 #define DEBUG_1 0
 #define DEBUG_3 0
+#define ONE_OBJ 0
 #define MAX_G 100000
-#define ONE_OBJ
 
 /***************** ESTRUCTURAS AUXILIARES ******************/
 
@@ -227,8 +227,8 @@ bool ComportamientoJugador::pathFinding(const estado& origen,
     closed_set.insert(current);
     open_set.erase(current_it);
 
-    //if (current->g > vida)
-      //continue;
+    if (current->g > vida)
+      continue;
 
     // Evaluate neighbors
     int valid = 0;
@@ -383,9 +383,15 @@ void ComportamientoJugador::actualizaMapa(TMapa& mapa,
       if (mapa[fil][col] == '?') {
         mapa[fil][col] = terreno[cont];
 
-        if (!bien_situado && pk[0].fila == -1 && terreno[cont] == 'K') {
-          pk[0].fila = fil;
-          pk[0].columna = col;
+        if (!bien_situado && terreno[cont] == 'K') {
+          if (pk[0].fila == -1) {
+            pk[0].fila = fil;
+            pk[0].columna = col;
+          }
+          else {
+            pk[1].fila = fil;
+            pk[1].columna = col;
+          }
         }
       }
       cont++;
@@ -411,9 +417,11 @@ void ComportamientoJugador::intentaCaminar(estado destino, TMapa mapa, int vida,
         cout << "Error: no hay camino posible al destino." << endl;
         error = true;
       }
-      else {
-        pk[0].fila = -1; // No merece la pena ir si no hay camino posible ahora mismo
-        pk[0].columna = -1;
+      else {  // No merece la pena ir si no hay camino posible ahora mismo
+        pk[0].fila = pk[1].fila;
+        pk[0].columna = pk[1].columna;
+        pk[1].fila = -1;
+        pk[1].columna = -1;
       }
     }
     else if (!PK) {
@@ -454,26 +462,86 @@ Action ComportamientoJugador::caminar(vector<unsigned char> superficie) {
   return next_move;
 }
 
+estado ComportamientoJugador::buscarPK() {
+  int minimo = cont_calor;
+  int fil, col;
+  estado dest;
+
+  for (int i = -1; i <=1; i++) {
+    if (i == 0) {
+      for (int j = -1; j <= 1; j += 2) {
+        fil = pos.fila;
+        col = pos.columna + j;
+        if (esTransitable(fil, col, mapaLocal, true) && mapaCalor[fil][col] < minimo) {
+          minimo = mapaCalor[fil][col];
+          dest = estado{fil, col, NORTH};
+        }
+      }
+    }
+    else {
+      fil = pos.fila + i;
+      col = pos.columna;
+      if (esTransitable(fil, col, mapaLocal, true) && mapaCalor[fil][col] < minimo) {
+        minimo = mapaCalor[fil][col];
+        dest = estado{fil, col, NORTH};
+      }
+    }
+  }
+
+  return dest;
+}
+
 Action ComportamientoJugador::think(Sensores sensores) {
-  Action next_move;
+
+#if ONE_OBJ == 1
+  if (nivel3) {
+    static bool one_obj = false;
+    static estado destino_orig;
+    static bool primera = true;
+
+    if (primera) {
+      destino_orig.fila = sensores.destinoF;
+      destino_orig.columna = sensores.destinoC;
+      primera = false;
+    }
+
+    if (sensores.destinoF != destino_orig.fila || sensores.destinoC != destino_orig.columna) {
+      //cout << "Se ha encontrado un objetivo. Ya no se buscarán más." << endl;
+      one_obj = true;
+    }
+
+    if (one_obj)
+      return actTURN_R;
+  }
+#endif
+
   static int reconocimiento = 0;
 
   if (sensores.mensajeF != -1 && !bien_situado) {
+    if (nivel3) {
+      actualizaPos(pos, ultima_accion);
+      pk[0].fila = pos.fila;
+      pk[0].columna = pos.columna;
+    }
     pos.fila = sensores.mensajeF;
     pos.columna = sensores.mensajeC;
     bien_situado = true;
 
     if (nivel3) {
+      cout << "Pisada casilla K en (" << pk[0].fila << "," << pk[0].columna << ")\n";
       vuelcaMapaLocal();
       ultima_accion = actIDLE;
+      clear_stack(plan);
     }
   }
 
   actualizaPos(pos, ultima_accion);
 
+
   if (bien_situado && (hay_plan || error)
       && (sensores.destinoF != destino.fila || sensores.destinoC != destino.columna)) {
-    cout << "\nObjetivo cambiado." << endl;
+    if (!nivel3)
+      cout << "\nObjetivo cambiado." << endl;
     hay_plan = false;
     error = false;
     clear_stack(plan);
@@ -489,7 +557,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
     if (pk[0].fila != -1) {
 
 #if DEBUG_3 == 1
-      cout << "Localizada casilla K en (" << pk.fila << "," << pk.columna << ")\n";
+      cout << "Localizada casilla K en (" << pk[0].fila << "," << pk[0].columna << ")\n";
 #endif
       reconocimiento = 4;
       intentaCaminar(pk[0], mapaLocal, sensores.vida, true);
@@ -507,22 +575,45 @@ Action ComportamientoJugador::think(Sensores sensores) {
         return ultima_accion;
       }
 
-      estado next = pos;
-      actualizaPos(next, actFORWARD);
+      estado next_dest;
 
-      if (esTransitable(next.fila, next.columna, mapaLocal, true)) {
+      if (plan.empty()) {
+        mapaCalor[pos.fila][pos.columna] = cont_calor++;
+        next_dest = buscarPK();
+        pathFinding(pos, next_dest, plan, mapaLocal, sensores.vida, true, total_cost);
+      }
+
+      ultima_accion = caminar(sensores.superficie);
+      return ultima_accion;
+      }
+    }
+
+      /*
+      estado next_s;
+
+      do {
+        int random = aleatorio(8);
+
+        switch (random) {
+          case 1: ultima_accion = actTURN_R; break;
+          case 2: ultima_accion = actTURN_L; break;
+          case 3: case 4: case 5: case 6: case 7: case 8: ultima_accion = actFORWARD;
+        }
+
+        if (ultima_accion == actFORWARD) {
+          next_s = pos;
+          actualizaPos(next_s, actFORWARD);
+        }
+
+      } while (ultima_accion == actFORWARD && !esTransitable(next_s.fila, next_s.columna, mapaLocal, true));
+
+      if (ultima_accion == actFORWARD) {
         if (sensores.superficie[2] != 'a')
           ultima_accion = actFORWARD;
         else
           ultima_accion = actIDLE;
-      }
+      }*/
 
-      else
-        ultima_accion = static_cast<Action>(aleatorio(1) + 1);
-
-      return ultima_accion;
-    }
-  }
 
   else if (nivel3) { // NIVEL 3
     actualizaMapa(mapaResultado, sensores.terreno);
