@@ -6,7 +6,7 @@ using namespace std;
 
 #define DEBUG_1 0
 #define DEBUG_3 0
-#define ONE_OBJ 0
+#define ONE_OBJ 1
 #define MAX_G 100000
 
 /***************** ESTRUCTURAS AUXILIARES ******************/
