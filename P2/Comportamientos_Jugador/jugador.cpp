@@ -636,7 +636,6 @@ Action ComportamientoJugador::think(Sensores sensores) {
     if (!hay_plan) {
       destino.fila = sensores.destinoF;
       destino.columna = sensores.destinoC;
-	  cout << "Destino: " << destino.fila << "," << destino.columna << endl;
       if (!(hay_plan = pathFinding(pos, destino, plan, mapaResultado,
                                    sensores.vida, false, total_cost)))
         cout << "Error: no hay camino posible al destino." << endl;
