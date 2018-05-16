@@ -1,0 +1,5 @@
+*.jar
+*.sh
+MancalaEngine/*
+!MancalaEngine/GriffinBot.cpp
+!MancalaEngine/GriffinBot.h
