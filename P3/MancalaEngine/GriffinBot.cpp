@@ -8,8 +8,12 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
+
+#define ITERATIVE_DEEPENING 1
+#define MAX_DEPTH 11
 
 /*****
 
@@ -20,12 +24,10 @@ using namespace std;
 
 * Tabla hash
 
-* Tener en cuenta en la heurística los turnos extra
+* Añadir H3 a la heurística. Modificarla para que la raíz siempre sea max,
+* pero la heurística tenga en cuenta J1 y J2
 
-* Revisar heurística (J1, J2, modifier)
-* En la raíz, maximizing = true??
-
-* Iterative deepening? considerar guardar el orden de los nodos para no tener que volver
+* Iterative deepening: considerar guardar el orden de los nodos para no tener que volver
 * a ordenar los hijos ya explorados.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -125,7 +127,7 @@ namespace {
    * Implementation of MTD-f search algorithm
    *
    */
-  Move mtdf(Node * root, Bound first_guess, int depth) {
+  pair<Bound, Move> mtdf(Node * root, Bound first_guess, int depth) {
     pair<Bound, Move> best_action;
     Bound best_bound = first_guess;
     int upper_bound = 1 << 10;   // + infinity
@@ -143,7 +145,7 @@ namespace {
         lower_bound = best_bound;
     }
 
-    return best_action.second;
+    return best_action;
   }
 
 }
@@ -187,8 +189,22 @@ string GriffinBot::getName() {
 Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state) {
   Move next_move;
   Node* root = new Node(state, M_NONE, getPlayer() == J1);
+  Bound first_guess = 0;
 
-  next_move = mtdf(root, 0, 10);
+#if ITERATIVE_DEEPENING == 1
+
+  for (int d = 1; d <= MAX_DEPTH; d++) {
+    auto solution = mtdf(root, first_guess, d);
+    first_guess = solution.first;
+    next_move = solution.second;
+  }
+
+#else
+
+  next_move = mtdf(root, first_guess, MAX_DEPTH).second;
+
+#endif
+
   delete root;
 
 	return next_move;
