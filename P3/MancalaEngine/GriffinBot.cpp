@@ -6,21 +6,25 @@
 
 #include "GriffinBot.h"
 #include <string>
-#include <cstdlib>
 #include <iostream>
+#include <algorithm>
 #include <unordered_set>
 
 using namespace std;
+using Heuristic = Node::Heuristic;
 
+#define DEBUG 0
 #define ITERATIVE_DEEPENING 1
-#define MAX_DEPTH 11
+#define MAX_DEPTH 13
 
 /*****
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 * EN EL CUTOFF-TEST HAY QUE TENER EN CUENTA
-* EL TIEMPO MÁXIMO Y LOS NODOS quiescent.
+* EL TIEMPO MÁXIMO Y LOS NODOS quiescent (tener en cuenta que es mejor si eres tú el último que decide) --> MAX_DEPTH impar
+
+* Iterative deepening: In case your program has a strong oscillation in the values it finds for odd and even search depths, you might be better off by feeding MTD(f) its return value of two plies ago, not one, as the above code does. MTD(f) works best with a stable Principal Variation (doesn't every program?) Although the transposition table greatly reduces the cost of doing a re-search, it is still a good idea to not re-search excessively. As a rule, in the deeper iterations of quiet positions in good programs MTD(f) typically performs between 5 and 15 passes before it finds the minimax value.
 
 * Tabla hash. considerar guardar el orden de los nodos para no tener que volver
 * a ordenar los hijos ya explorados.
@@ -31,6 +35,24 @@ using namespace std;
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 *******/
+
+Player Node::Heuristic::player;
+Heuristic Node::h;
+
+Heuristic::Heuristic(){
+}
+
+Heuristic::Heuristic(Player p) {
+  player = p;
+}
+
+Bound Heuristic::heuristic(Node * n) const {
+  Player rival = player == J1 ? J2 : J1;
+  int rival_score = n->board.getScore(rival);
+  int h1 = n->board.getScore(player) - rival_score;
+  int h3 = 25 - rival_score;
+  return 0.85 * h1 + 0.15 * h3;
+}
 
 namespace {
 
@@ -46,30 +68,14 @@ namespace {
     }
   }
 
-  /**
-   * Heuristic function to evaluate the score of a board
-   *
-   */
-  int heuristic(Node * n) {
-    Player rival = n->self == J1 ? J2 : J1;
-    int rival_score = n->board.getScore(rival);
-    return n->board.getScore(n->self) - rival_score;
-  }
-
 }
 
-Node::Node(const GameState& board, Move prev_move, bool maximizing_player) {
+Node::Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h) {
+  this->h = h;
   this->board = board;
   this->prev_move = prev_move;
   this->maximizing_player = maximizing_player;
-  this->h_value = heuristic(this);
-}
-
-Player Node::self = NONE;
-
-void Node::setPlayer(Player p) {
-  if (self == NONE)
-    self = p;
+  this->h_value = h.heuristic(this);
 }
 
 NodeQueue Node::children() const {
@@ -78,7 +84,7 @@ NodeQueue Node::children() const {
     GameState new_board = board.simulateMove((Move) i);
     bool maximizing = new_board.getCurrentPlayer() == board.getCurrentPlayer()
                       ? maximizing_player : !maximizing_player;
-    Node* node = new Node(new_board, (Move) i, maximizing);
+    Node* node = new Node(new_board, (Move) i, maximizing, h);
     q.push(node);
   }
 
@@ -118,6 +124,13 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
       auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, beta).first;
       children.pop();
 
+#if DEBUG == 1
+
+      cerr << "MAX " << ", Depth " << depth << ", Move " << child->prev_move << ", Heuristic "
+           << child->h_value << endl;
+
+#endif
+
       if (child_bound > best_bound) {
         best_bound = child_bound;
         best_move = child->prev_move;
@@ -144,6 +157,13 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
       auto child = children.top();
       auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, beta).first;
       children.pop();
+
+#if DEBUG == 1
+
+      cerr << "MIN " << ", Depth " << depth << ", Move " << child->prev_move << ", Heuristic "
+           << child->h_value << endl;
+
+#endif
 
       if (child_bound < best_bound) {
         best_bound = child_bound;
@@ -191,15 +211,14 @@ pair<Bound, Move> GriffinBot::mtdf(Node * root, Bound first_guess, int depth) {
 }
 
 Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state) {
-  Node::setPlayer(getPlayer());
-
+  static Heuristic heuristic(getPlayer());
   Move next_move;
-  Node* root = new Node(state, M_NONE, true);
+  Node* root = new Node(state, M_NONE, true, heuristic);
   Bound first_guess = 0;
 
 #if ITERATIVE_DEEPENING == 1
 
-  for (int d = 1; d <= MAX_DEPTH; d++) {
+  for (int d = 1; d <= MAX_DEPTH; d += 2) {
     auto solution = mtdf(root, first_guess, d);
     first_guess = solution.first;
     next_move = solution.second;
