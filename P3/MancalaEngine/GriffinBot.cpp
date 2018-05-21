@@ -8,38 +8,52 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#include <unordered_set>
 
 using namespace std;
 using Heuristic = Node::Heuristic;
 
+#define INFINITY 1 << 10
 #define DEBUG 0
 #define ITERATIVE_DEEPENING 1
 #define MAX_DEPTH 13
 
 /*****
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 * EN EL CUTOFF-TEST HAY QUE TENER EN CUENTA
-* EL TIEMPO MÁXIMO Y LOS NODOS quiescent (tener en cuenta que es mejor si eres tú el último que decide) --> MAX_DEPTH impar
+* EL TIEMPO MÁXIMO.
 
-* Iterative deepening: In case your program has a strong oscillation in the values it finds for odd and even search depths, you might be better off by feeding MTD(f) its return value of two plies ago, not one, as the above code does. MTD(f) works best with a stable Principal Variation (doesn't every program?) Although the transposition table greatly reduces the cost of doing a re-search, it is still a good idea to not re-search excessively. As a rule, in the deeper iterations of quiet positions in good programs MTD(f) typically performs between 5 and 15 passes before it finds the minimax value.
+* QUIESCENCE SEARCH (https://en.wikipedia.org/wiki/Quiescence_search)
+
+* Tener en cuenta en la heurística que en la práctica con 25 fichas has ganado.
+
+* LOS DELETES!!
 
 * Tabla hash. considerar guardar el orden de los nodos para no tener que volver
-* a ordenar los hijos ya explorados.
-
-* Añadir H3 a la heurística. Modificarla para que la raíz siempre sea max,
-* pero la heurística tenga en cuenta J1 y J2
+* a ordenar los hijos ya explorados. (best_move)
+The move-ordering sort was based on four factors (in order of precedence): transposition-table suggestions,
+extra turns, captures, and right-to-left default ordering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 *******/
 
-Player Node::Heuristic::player;
-Heuristic Node::h;
+namespace {
+  void print_table(const TTable& t) {
+    NodeHash hash;
+    for (auto entry : t) {
+      cerr << "Hash=" << hash(entry.first) << ", Bound=" << entry.second.value
+           << ", Age=" << entry.second.age << endl;
+    }
+  }
+}
 
-Heuristic::Heuristic(){
+/*************************************************
+*                   HEURISTIC                    *
+**************************************************/
+
+Player Heuristic::player;
+
+Heuristic::Heuristic() {
 }
 
 Heuristic::Heuristic(Player p) {
@@ -51,78 +65,260 @@ Bound Heuristic::heuristic(Node * n) const {
   int rival_score = n->board.getScore(rival);
   int h1 = n->board.getScore(player) - rival_score;
   int h3 = 25 - rival_score;
-  return 0.85 * h1 + 0.15 * h3;
+  return 1 * h1 + 0 * h3;
 }
 
-namespace {
+/*************************************************
+*                      NODE                      *
+**************************************************/
 
-  /**
-   * Delete a NodeQueue
-   *
-   */
-  void deleteQueue(NodeQueue& q) {
-    while (!q.empty()) {
-      auto value = q.top();
-      q.pop();
-      delete value;
-    }
-  }
+Heuristic Node::h;
 
-}
-
-Node::Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h) {
+Node::Node(const GameState& board, Move prev_move, bool is_maximizing, const Heuristic& h) {
   this->h = h;
   this->board = board;
   this->prev_move = prev_move;
-  this->maximizing_player = maximizing_player;
+  this->is_maximizing = is_maximizing;
   this->h_value = h.heuristic(this);
 }
 
-NodeQueue Node::children() const {
-  NodeQueue q;
-  for (int i = 1; i <= 6; i++) {
+/**
+ * Return an ordered list of children of the current node.
+ * @see NodeOrder
+ */
+NodeList Node::children() {
+  NodeList l;
+  for (int i = 1; i <= NUM_PITS; i++) {
     GameState new_board = board.simulateMove((Move) i);
     bool maximizing = new_board.getCurrentPlayer() == board.getCurrentPlayer()
-                      ? maximizing_player : !maximizing_player;
-    Node* node = new Node(new_board, (Move) i, maximizing, h);
-    q.push(node);
+                      ? is_maximizing : !is_maximizing;
+    l[i-1] = new Node(new_board, (Move) i, maximizing, h);
   }
 
-  return q;
-}
+  NodeOrder comp;
+  sort(l.begin(), l.end(), comp);
 
-GriffinBot::GriffinBot() {
-}
-
-GriffinBot::~GriffinBot() {
-}
-
-void GriffinBot::initialize() {
-}
-
-string GriffinBot::getName() {
-	return "GriffinBot";
+  return l;
 }
 
 /**
- * Implementation of memory-enhanced alpha-beta pruning
- *
+ * Delete remaining children of current node
  */
-pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
+
+void Node::deleteChildren(NodeList& children, int begin) {
+  for (int i = begin; i < NUM_PITS; i++) {
+    delete children[i];
+    children[i] = 0;
+  }
+}
+
+/**
+ * Custom ordering for nodes.
+ * The ordering is determined by the heuristic value of the node.
+ */
+bool NodeOrder::operator()(Node * n1, Node * n2) const {
+  return n1->h_value > n2->h_value;
+}
+
+/**
+ * Custom comparator for nodes
+ * Two nodes are considered equal if they represent the same
+ * state in the game.
+ */
+bool NodeComp::operator()(Node * n1, Node * n2) const {
+  Player p1 = n1->board.getCurrentPlayer();
+  Player p2 = n2->board.getCurrentPlayer();
+
+  if (p1 != p2)
+    return false;
+
+  Player other = p1 == J1 ? J2 : J1;
+
+  for (int i = 0; i <= NUM_PITS; i++) {
+    if (n1->board.getSeedsAt(p1, (Position) i)
+        != n2->board.getSeedsAt(p1, (Position) i))
+      return false;
+    if (n1->board.getSeedsAt(other, (Position) i)
+        != n2->board.getSeedsAt(other, (Position) i))
+      return false;
+  }
+
+  return true;
+}
+
+/**
+ * Custom hash function for nodes.
+ */
+size_t NodeHash::operator()(Node * n) const {
+  Player p = n->board.getCurrentPlayer();
+  Player other = p == J1 ? J2 : J1;
+  string node_str = p == J1 ? "J1" : "J2";
+
+  for (int i = 0; i <= NUM_PITS; i++) {
+    node_str += n->board.getSeedsAt(p, (Position) i);
+    node_str += n->board.getSeedsAt(other, (Position) i);
+  }
+
+  return hash<string>()(node_str);
+}
+
+/*************************************************
+*                    GRIFFINBOT                  *
+**************************************************/
+
+/**
+ * Implementation of memory-enhanced alpha-beta pruning
+ */
+pair<Bound, Move>
+GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
+  Bound best_bound;
+  Move best_move;
+  NodeInfo entry;
+  bool table_hit = false;
+  auto entry_it = table.find(node);
+
+  if (entry_it != table.end()) { // hit
+    entry = (*entry_it).second;
+
+    if (entry.depth >= depth && entry.age == num_moves) {
+      table_hit = true;
+
+      if (entry.is_lowerbound && entry.value > alpha)
+        alpha = entry.value;
+      else if (!entry.is_lowerbound && entry.value < beta)
+        beta = entry.value;
+      if (alpha >= beta)
+        return make_pair(entry.value, entry.best_move);
+    }
+  }
+
+  if (depth == 0 || node->board.isFinalState()) {
+    best_bound = node->h_value;
+    best_move = M_NONE;
+  }
+
+  else if (node->is_maximizing) {
+    best_bound = -INFINITY;
+    int a = alpha;
+    auto children = node->children();
+
+    // Move ordering
+    /*if (table_hit && entry.best_move != M_NONE) {
+      int i = 0;
+      while (children[i]->prev_move != entry.best_move)
+        i++;
+
+      if (i > 0) {
+        auto temp = children[0];
+        children[0] = children[i];
+        children[i] = temp;
+
+        NodeComp comp;
+        sort(next(children.begin()), children.end(), comp);
+      }
+    }*/
+
+    for (int i = 0; i < NUM_PITS; i++) {
+      auto child = children[i];
+      auto child_bound = alphaBetaWithMemory(child, depth - 1, a, beta).first;
+
+#if DEBUG == 1
+
+      cerr << "MAX " << ", Depth " << depth << ", Move " << child->prev_move << ", Heuristic "
+           << child->h_value << endl;
+
+#endif
+
+      if (child_bound > best_bound) {
+        best_bound = child_bound;
+        best_move = child->prev_move;
+      }
+
+      a = max(a, best_bound);
+
+      if (best_bound >= beta) {
+        break;
+      }
+    }
+  }
+
+  else {// minimizing
+    best_bound = INFINITY;
+    int b = beta;
+    auto children = node->children();
+
+    // Move ordering
+    /*if (table_hit && entry.best_move != M_NONE) {
+      int i = 0;
+      while (children[i]->prev_move != entry.best_move)
+        i++;
+
+      if (i > 0) {
+        auto temp = children[0];
+        children[0] = children[i];
+        children[i] = temp;
+
+        NodeComp comp;
+        sort(next(children.begin()), children.end(), comp);
+      }
+    }*/
+
+    for (int i = 0; i < NUM_PITS; i++) {
+      auto child = children[i];
+
+      auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, b).first;
+
+#if DEBUG == 1
+
+      cerr << "MAX " << ", Depth " << depth << ", Move " << child->prev_move << ", Heuristic "
+           << child->h_value << endl;
+
+#endif
+
+      if (child_bound < best_bound) {
+        best_bound = child_bound;
+        best_move = child->prev_move;
+      }
+
+      b = min(b, best_bound);
+
+      if (best_bound <= alpha) {
+        break;
+      }
+    }
+  }
+
+  if (best_bound <= alpha) {
+    if (table_hit)
+      best_move = entry.best_move;
+    table[node] = {depth, num_moves, false, best_bound, best_move};
+  }
+
+  if (best_bound >= beta) {
+    table[node] = {depth, num_moves, true, best_bound, best_move};
+  }
+
+  return make_pair(best_bound, best_move);
+}
+
+/**
+ * Implementation of standard alpha-beta pruning
+ *
+pair<Bound, Move>
+GriffinBot::alphaBeta(Node * node, int depth, int alpha, int beta) {
   if (depth == 0 || node->board.isFinalState())
     return make_pair(node->h_value, M_NONE);
 
   Bound best_bound;
   Move best_move;
-  NodeQueue children = node->children();
+  auto children = node->children();
 
-  if (node->maximizing_player) {
-    best_bound = - (1 << 10);  // - infinity
+  if (node->is_maximizing) {
+    best_bound = -INFINITY;
 
-    while (!children.empty()) {
-      auto child = children.top();
-      auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, beta).first;
-      children.pop();
+    for (int i = 0; i < NUM_PITS; i++) {
+      auto child = children[i];
+      auto child_bound = alphaBeta(child, depth - 1, alpha, beta).first;
 
 #if DEBUG == 1
 
@@ -137,12 +333,10 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
       }
 
       alpha = max(alpha, best_bound);
-
-      // DELETE PROVISIONAL
       delete child;
 
       if (beta <= alpha) {
-        deleteQueue(children);
+        node->deleteChildren(children, i+1);
         break;
       }
     }
@@ -151,12 +345,11 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
   }
 
   else {  // minimizing_player
-    best_bound = 1 << 10;  // + infinity
+    best_bound = INFINITY;
 
-    while (!children.empty()) {
-      auto child = children.top();
-      auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, beta).first;
-      children.pop();
+    for (int i = 0; i < NUM_PITS; i++) {
+      auto child = children[i];
+      auto child_bound = alphaBeta(child, depth - 1, alpha, beta).first;
 
 #if DEBUG == 1
 
@@ -171,12 +364,10 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
       }
 
       beta = min(beta, best_bound);
-
-      // DELETE PROVISIONAL
       delete child;
 
       if (beta <= alpha) {
-        deleteQueue(children);
+        node->deleteChildren(children, i+1);
         break;
       }
     }
@@ -189,11 +380,12 @@ pair<Bound, Move> GriffinBot::alphaBetaWithMemory(Node * node, int depth, int al
  * Implementation of MTD-f search algorithm
  *
  */
-pair<Bound, Move> GriffinBot::mtdf(Node * root, Bound first_guess, int depth) {
+pair<Bound, Move>
+GriffinBot::mtdf(Node * root, Bound first_guess, int depth) {
   pair<Bound, Move> best_action;
   Bound best_bound = first_guess;
-  int upper_bound = 1 << 10;   // + infinity
-  int lower_bound = - (1 << 10);  // - infinity
+  int upper_bound = INFINITY;
+  int lower_bound = -INFINITY;
 
   while (lower_bound < upper_bound) {
     int beta = max(best_bound, lower_bound + 1);
@@ -210,11 +402,25 @@ pair<Bound, Move> GriffinBot::mtdf(Node * root, Bound first_guess, int depth) {
   return best_action;
 }
 
+GriffinBot::GriffinBot() {
+  num_moves = 0;
+}
+
+GriffinBot::~GriffinBot() {
+}
+
+void GriffinBot::initialize() {
+}
+
+string GriffinBot::getName() {
+	return "GriffinBot";
+}
+
 Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state) {
   static Heuristic heuristic(getPlayer());
   Move next_move;
-  Node* root = new Node(state, M_NONE, true, heuristic);
   Bound first_guess = 0;
+  Node* root = new Node(state, M_NONE, true, heuristic);
 
 #if ITERATIVE_DEEPENING == 1
 
@@ -226,11 +432,14 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 
 #else
 
+  cerr << "TRANSPOSITION TABLE" << endl;
+  //print_table(table);
+
   next_move = mtdf(root, first_guess, MAX_DEPTH).second;
 
 #endif
 
-  delete root;
+  num_moves++;
 
 	return next_move;
 }
