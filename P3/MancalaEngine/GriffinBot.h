@@ -22,6 +22,7 @@ struct NodeHash;
 using Bound = int;
 using NodeList = array<Node*, NUM_PITS>;
 using TTable = std::unordered_map<Node*, NodeInfo, NodeHash, NodeComp>;
+using BoundAndMove = std::pair<Bound, Move>;
 
 /**
  * Data structure that represents a state in the search space.
@@ -51,6 +52,7 @@ struct Node {
   Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h);
   NodeList children();
   void deleteChildren(NodeList& children, int begin);
+  bool hasExtraTurn(Node * parent);
 };
 
 /**
@@ -103,9 +105,9 @@ class GriffinBot : Bot {
     TTable table;
     int num_moves;
 
-    std::pair<Bound, Move> alphaBeta(Node * node, int depth, int alpha, int beta);
-    std::pair<Bound, Move> alphaBetaWithMemory(Node * node, int depth, int alpha, int beta);
-    std::pair<Bound, Move> mtdf(Node * root, Bound first_guess, int depth);
+    BoundAndMove alphaBeta(Node * node, int depth, int alpha, int beta);
+    BoundAndMove alphaBetaWithMemory(Node * node, int depth, int alpha, int beta);
+    BoundAndMove mtdf(Node * root, Bound first_guess, int depth);
 };
 
 #endif /* GRIFFINBOT_H_ */
