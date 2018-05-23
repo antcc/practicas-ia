@@ -5,3 +5,4 @@ GreedyBot/*
 Bots/*
 !MancalaEngine/GriffinBot.cpp
 !MancalaEngine/GriffinBot.h
+gmon.out

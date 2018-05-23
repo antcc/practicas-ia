@@ -30,6 +30,10 @@ using Heuristic = Node::Heuristic;
   - Futility pruning
   - Listener??
 
+  - NODE SORT BY HEURISTIC VALUE: ASCENDING FOR MAX NODE, DESCENSING FOR MIN !!
+  - y clasificar por capturas, robos, heurística??
+  - Primero tener en cuenta el best node del hash, y después el orden definido.
+
 * Actualizar firstguess cada 2 turnos?
 
 * resolver empates en los máximos/mínimos de alfabeta
@@ -119,6 +123,13 @@ NodeList Node::children() {
                     ? is_maximizing : !is_maximizing;
   l[5] = new Node(new_board, (Move) 6, maximizing, h);
 
+#if MOVE_ORDERING == 1
+
+  NodeOrder order(is_maximizing);
+  sort(l.begin(), l.end(), order);
+
+#endif
+
   return l;
 }
 
@@ -140,11 +151,24 @@ bool Node::hasExtraTurn(Node * parent) {
 }
 
 /**
+ * Constructor for NodeOrder
+ */
+NodeOrder::NodeOrder(bool is_parent_maximizing) {
+  this->is_parent_maximizing = is_parent_maximizing;
+}
+
+/**
  * Custom ordering for nodes.
  * The ordering is determined by the heuristic value of the node.
+ *
+ * @pre n1.is_maximizing == n2.is_maximizing
  */
 bool NodeOrder::operator()(Node * n1, Node * n2) const {
-  return n1->h_value > n2->h_value;
+  int diff = n1->h_value - n2->h_value;
+  if (is_parent_maximizing)
+    return diff > 0;
+  else
+    return diff < 0;
 }
 
 /**
@@ -248,8 +272,11 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
       while (children[i]->prev_move != entry.best_move)
         i++;
 
-      if (i > 0)
+      if (i > 0) {
         swap(children[0], children[i]);
+        NodeOrder order(node->is_maximizing);
+        sort(next(children.begin()), children.end(), order);
+      }
     }
 
 #endif
@@ -282,8 +309,11 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
       while (children[i]->prev_move != entry.best_move)
         i++;
 
-      if (i > 0)
+      if (i > 0) {
         swap(children[0], children[i]);
+        NodeOrder order(node->is_maximizing);
+        sort(next(children.begin()), children.end(), order);
+      }
     }
 
 #endif
@@ -443,11 +473,14 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
     time_span = duration_cast<duration<double>> (end - begin);
 
 #if DEBUG == 1
+
     cerr << "Profundidad: " << d << "\nTiempo acumulado: " << time_span.count() << "\nBound: " << solution.first << "\nMovimiento: " << solution.second << endl;
 
 #endif
 
   }
+
+  cerr << "Tiempo total del movimiento: " << time_span.count() << endl;
 
 #else
 

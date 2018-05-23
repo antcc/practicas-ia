@@ -59,6 +59,9 @@ struct Node {
  * Custom ordering for nodes
  */
 struct NodeOrder {
+  bool is_parent_maximizing;
+
+  NodeOrder(bool is_parent_maximizing);
   bool operator()(Node * n1, Node * n2) const;
 };
 
