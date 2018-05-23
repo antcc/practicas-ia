@@ -312,6 +312,9 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
     table[node] = {depth, num_moves, true, best_bound, best_move};
   }
 
+  if (best_bound > alpha && best_bound < beta)
+    delete node;
+
   return make_pair(best_bound, best_move);
 }
 
