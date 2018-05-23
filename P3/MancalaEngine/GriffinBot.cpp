@@ -14,34 +14,30 @@ using namespace std;
 using namespace chrono;
 using Heuristic = Node::Heuristic;
 
-#define INFINITY 1 << 10
 #define DEBUG 0
 #define ITERATIVE_DEEPENING 1
-#define MAX_DEPTH 50
 #define MOVE_ORDERING 1
+
+#define INFINITY 1024
+#define MAX_DEPTH 50
+#define MAX_TIME_SPAN 0.95
+
 
 /*****
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 * Optimizar:
   - QUIESCENCE SEARCH (https://en.wikipedia.org/wiki/Quiescence_search)
-  - MOVE ORDERING (in order of precedence: transposition-table suggestions,
-  extra turns, captures, and right-to-left default ordering). One may save the move generation at all, if the hash move actually fails high. !!
-  - Futility pruning
-  - Listener??
-
-  - NODE SORT BY HEURISTIC VALUE: ASCENDING FOR MAX NODE, DESCENSING FOR MIN !!
-  - y clasificar por capturas, robos, heurística??
-  - Primero tener en cuenta el best node del hash, y después el orden definido.
-
-* Actualizar firstguess cada 2 turnos?
+  - Actualizar firstguess cada 2 turnos?
+  - Futility pruning? (Luis)
+  - Mirar código en C del paper
+  - Ordenar la lista de hijos de forma eficiente
+  - No limpiar la tabla entre iteraciones?
 
 * resolver empates en los máximos/mínimos de alfabeta
 
-* LOS DELETES!!
-
 * Considerar guardar el orden de los nodos para no tener que volver
-* a ordenar los hijos ya explorados.
+* a ordenar los hijos ya explorados. Implica guardar el árbol
 *
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 *******/
@@ -160,11 +156,10 @@ NodeOrder::NodeOrder(bool is_parent_maximizing) {
 /**
  * Custom ordering for nodes.
  * The ordering is determined by the heuristic value of the node.
- *
- * @pre n1.is_maximizing == n2.is_maximizing
  */
 bool NodeOrder::operator()(Node * n1, Node * n2) const {
   int diff = n1->h_value - n2->h_value;
+
   if (is_parent_maximizing)
     return diff > 0;
   else
@@ -464,7 +459,7 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 
   duration<double> time_span = duration_cast<duration<double>> (end - begin);
 
-  for (int d = 1; time_span.count() < 1.0 && d <= MAX_DEPTH; d++) {
+  for (int d = 1; time_span.count() < MAX_TIME_SPAN && d <= MAX_DEPTH; d++) {
     auto solution = mtdf(root, first_guess, d);
     next_move = solution.second;
     first_guess = solution.first;
@@ -481,6 +476,7 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
   }
 
   cerr << "Tiempo total del movimiento: " << time_span.count() << endl;
+  cerr << "Tamaño del hash: " << table.size() << endl;
 
 #else
 
