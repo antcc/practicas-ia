@@ -19,9 +19,11 @@ using Heuristic = Node::Heuristic;
 #define MOVE_ORDERING 1
 
 #define INFINITY 1024
-#define MAX_DEPTH 50
-#define MAX_TIME_SPAN 0.95
+#define TIMEOUT 666
+#define MAX_DEPTH 40
+#define MAX_TIME_SPAN 1.95 * 1e3  // milliseconds
 
+int main() __attribute__((optimize("-O2")));
 
 /*****
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -130,16 +132,6 @@ NodeList Node::children() {
 }
 
 /**
- * Delete remaining children of current node
- */
-void Node::deleteChildren(NodeList& children, int begin) {
-  for (int i = begin; i < NUM_PITS; i++) {
-    delete children[i];
-    children[i] = 0;
-  }
-}
-
-/**
  * Returns true if the node produces an extra turn.
  */
 bool Node::hasExtraTurn(Node * parent) {
@@ -233,6 +225,13 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
   NodeInfo entry;
   bool table_hit = false;
 
+  // Check time
+  auto end = high_resolution_clock::now();
+  auto time_span = duration_cast<milliseconds> (end - begin);
+
+  if (time_span.count() >= MAX_TIME_SPAN)
+    return make_pair(TIMEOUT, M_NONE);
+
   auto entry_it = table.find(node);
 
   if (entry_it != table.end()) { // Table hit
@@ -280,6 +279,9 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
       auto child = children[i];
       auto child_bound = alphaBetaWithMemory(child, depth - 1, a, beta).first;
 
+      if (child_bound == TIMEOUT)
+        return make_pair(TIMEOUT, M_NONE);
+
       if (child_bound > best_bound) {
         best_bound = child_bound;
         best_move = child->prev_move;
@@ -317,6 +319,9 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
       auto child = children[i];
       auto child_bound = alphaBetaWithMemory(child, depth - 1, alpha, b).first;
 
+      if (child_bound == TIMEOUT)
+        return make_pair(TIMEOUT, M_NONE);
+
       if (child_bound < best_bound) {
         best_bound = child_bound;
         best_move = child->prev_move;
@@ -344,68 +349,6 @@ GriffinBot::alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) {
 }
 
 /**
- * Implementation of standard alpha-beta pruning
- */
-BoundAndMove
-GriffinBot::alphaBeta(Node * node, int depth, int alpha, int beta) {
-  if (depth == 0 || node->board.isFinalState())
-    return make_pair(node->h_value, M_NONE);
-
-  Bound best_bound;
-  Move best_move;
-
-  auto children = node->children();
-
-  if (node->is_maximizing) {
-    best_bound = -INFINITY;
-
-    for (int i = 0; i < NUM_PITS; i++) {
-      auto child = children[i];
-      auto child_bound = alphaBeta(child, depth - 1, alpha, beta).first;
-
-      if (child_bound > best_bound) {
-        best_bound = child_bound;
-        best_move = child->prev_move;
-      }
-
-      alpha = max(alpha, best_bound);
-      delete child;
-
-      if (beta <= alpha) {
-        node->deleteChildren(children, i+1);
-        break;
-      }
-    }
-
-    return make_pair(best_bound, best_move);
-  }
-
-  else {  // minimizing_player
-    best_bound = INFINITY;
-
-    for (int i = 0; i < NUM_PITS; i++) {
-      auto child = children[i];
-      auto child_bound = alphaBeta(child, depth - 1, alpha, beta).first;
-
-      if (child_bound < best_bound) {
-        best_bound = child_bound;
-        best_move = child->prev_move;
-      }
-
-      beta = min(beta, best_bound);
-      delete child;
-
-      if (beta <= alpha) {
-        node->deleteChildren(children, i+1);
-        break;
-      }
-    }
-
-    return make_pair(best_bound, best_move);
-  }
-}
-
-/**
  * Implementation of MTD-f search algorithm
  *
  */
@@ -420,6 +363,10 @@ GriffinBot::mtdf(Node * root, Bound first_guess, int depth) {
     int beta = max(best_bound, lower_bound + 1);
     best_action = alphaBetaWithMemory(root, depth, beta - 1, beta);
     best_bound = best_action.first;
+
+    // Check time
+    if (best_bound == TIMEOUT)
+      return best_action;
 
     // Update current bounds
     if (best_bound < beta)
@@ -452,30 +399,28 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
   Bound first_guess = 0;
   Node* root = new Node(state, M_NONE, true, heuristic);
 
+  begin = high_resolution_clock::now();
+
 #if ITERATIVE_DEEPENING == 1
 
-  high_resolution_clock::time_point begin = high_resolution_clock::now();
-  high_resolution_clock::time_point end = high_resolution_clock::now();
-
-  duration<double> time_span = duration_cast<duration<double>> (end - begin);
-
-  for (int d = 1; time_span.count() < MAX_TIME_SPAN && d <= MAX_DEPTH; d++) {
+  for (int d = 1; d <= MAX_DEPTH; d++) {
     auto solution = mtdf(root, first_guess, d);
+
+    // Check time
+    if (solution.first == TIMEOUT)
+      break;
+
     next_move = solution.second;
     first_guess = solution.first;
 
-    end = chrono::high_resolution_clock::now();
-    time_span = duration_cast<duration<double>> (end - begin);
-
 #if DEBUG == 1
 
-    cerr << "Profundidad: " << d << "\nTiempo acumulado: " << time_span.count() << "\nBound: " << solution.first << "\nMovimiento: " << solution.second << endl;
+    cerr << "Profundidad: " << d << "\nBound: " << solution.first << "\nMovimiento: " << solution.second << endl;
 
 #endif
 
   }
 
-  cerr << "Tiempo total del movimiento: " << time_span.count() << endl;
   cerr << "Tamaño del hash: " << table.size() << endl;
 
 #else
@@ -483,6 +428,11 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
   next_move = mtdf(root, first_guess, MAX_DEPTH).second;
 
 #endif
+
+  auto end = high_resolution_clock::now();
+  auto time_span = duration_cast<milliseconds> (end - begin);
+
+  cerr << "Tiempo total del movimiento: " << time_span.count() / 1e3 << endl;
 
   delete root;
   num_moves++;

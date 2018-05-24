@@ -8,6 +8,7 @@
 #include <queue>
 #include <array>
 #include <unordered_map>
+#include <chrono>
 
 #ifndef GRIFFINBOT_H_
 #define GRIFFINBOT_H_
@@ -40,7 +41,7 @@ struct Node {
       Heuristic();
       Heuristic(Player p);
 
-      Bound heuristic(Node * n) const;
+      Bound heuristic(Node * n) const __attribute__((optimize("-O2")));
   };
 
   static Heuristic h;      // Evaluation function chosen for nodes
@@ -50,8 +51,7 @@ struct Node {
   bool is_maximizing;      // Whether this is a MAX or a MIN node
 
   Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h);
-  NodeList children();
-  void deleteChildren(NodeList& children, int begin);
+  NodeList children() __attribute__((optimize("-O2")));
   bool hasExtraTurn(Node * parent);
 };
 
@@ -62,7 +62,7 @@ struct NodeOrder {
   bool is_parent_maximizing;
 
   NodeOrder(bool is_parent_maximizing);
-  bool operator()(Node * n1, Node * n2) const;
+  bool operator()(Node * n1, Node * n2) const __attribute__((optimize("-O2")));
 };
 
 /**
@@ -70,14 +70,14 @@ struct NodeOrder {
  * It is independent of the order defined by NodeOrder
  */
 struct NodeComp {
-  bool operator()(Node * n1, Node * n2) const;
+  bool operator()(Node * n1, Node * n2) const __attribute__((optimize("-O2")));
 };
 
 /**
  * Custom hash function for nodes.
  */
 struct NodeHash {
-  std::size_t operator()(Node * n) const;
+  std::size_t operator()(Node * n) const __attribute__((optimize("-O2")));
 };
 
 /**
@@ -102,15 +102,15 @@ class GriffinBot : Bot {
 
     void initialize();
 	  string getName();
-	  Move nextMove(const vector<Move>& adversary, const GameState& state);
+	  Move nextMove(const vector<Move>& adversary, const GameState& state) __attribute__((optimize("-O2")));
 
   private:
     TTable table;
     int num_moves;
+    std::chrono::high_resolution_clock::time_point begin;
 
-    BoundAndMove alphaBeta(Node * node, int depth, int alpha, int beta);
-    BoundAndMove alphaBetaWithMemory(Node * node, int depth, int alpha, int beta);
-    BoundAndMove mtdf(Node * root, Bound first_guess, int depth);
+    BoundAndMove alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) __attribute__((optimize("-O2")));
+    BoundAndMove mtdf(Node * root, Bound first_guess, int depth) __attribute__((optimize("-O2")));
 };
 
 #endif /* GRIFFINBOT_H_ */
