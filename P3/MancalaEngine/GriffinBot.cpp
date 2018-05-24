@@ -29,17 +29,7 @@ int main() __attribute__((optimize("-O2")));
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 * Optimizar:
-  - QUIESCENCE SEARCH (https://en.wikipedia.org/wiki/Quiescence_search)
-  - Actualizar firstguess cada 2 turnos?
-  - Futility pruning? (Luis)
-  - Mirar código en C del paper
-  - Ordenar la lista de hijos de forma eficiente
-  - No limpiar la tabla entre iteraciones?
-
-* resolver empates en los máximos/mínimos de alfabeta
-
-* Considerar guardar el orden de los nodos para no tener que volver
-* a ordenar los hijos ya explorados. Implica guardar el árbol
+  - No limpiar la tabla entre iteraciones???
 *
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 *******/
@@ -420,8 +410,6 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 #endif
 
   }
-
-  cerr << "Tamaño del hash: " << table.size() << endl;
 
 #else
 
