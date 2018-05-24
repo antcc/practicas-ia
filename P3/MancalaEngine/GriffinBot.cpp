@@ -29,6 +29,7 @@ int main() __attribute__((optimize("-O2")));
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 * Optimizar:
+  - La heurística
   - No limpiar la tabla entre iteraciones???
 *
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
