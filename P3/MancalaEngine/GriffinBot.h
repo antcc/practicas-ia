@@ -21,8 +21,8 @@ struct NodeComp;
 struct NodeHash;
 
 using Bound = int;
-using NodeList = array<Node*, NUM_PITS>;
-using TTable = std::unordered_map<Node*, NodeInfo, NodeHash, NodeComp>;
+using NodeList = array<Node, NUM_PITS>;
+using TTable = std::unordered_map<Node, NodeInfo, NodeHash, NodeComp>;
 using BoundAndMove = std::pair<Bound, Move>;
 
 /**
@@ -41,7 +41,7 @@ struct Node {
       Heuristic();
       Heuristic(Player p);
 
-      Bound heuristic(Node * n) const __attribute__((optimize("-O2")));
+      Bound heuristic(const Node& n) const __attribute__((optimize("-O2")));
   };
 
   static Heuristic h;      // Evaluation function chosen for nodes
@@ -50,9 +50,10 @@ struct Node {
   Bound h_value;           // Heuristic value of node
   bool is_maximizing;      // Whether this is a MAX or a MIN node
 
+  Node();
   Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h);
-  NodeList children() __attribute__((optimize("-O2")));
-  bool hasExtraTurn(Node * parent);
+  NodeList children() const __attribute__((optimize("-O2")));
+  bool hasExtraTurn(const Node& parent);
 };
 
 /**
@@ -62,7 +63,7 @@ struct NodeOrder {
   bool is_parent_maximizing;
 
   NodeOrder(bool is_parent_maximizing);
-  bool operator()(Node * n1, Node * n2) const __attribute__((optimize("-O2")));
+  bool operator()(const Node& n1, const Node& n2) const __attribute__((optimize("-O2")));
 };
 
 /**
@@ -70,14 +71,14 @@ struct NodeOrder {
  * It is independent of the order defined by NodeOrder
  */
 struct NodeComp {
-  bool operator()(Node * n1, Node * n2) const __attribute__((optimize("-O2")));
+  bool operator()(const Node& n1, const Node& n2) const __attribute__((optimize("-O2")));
 };
 
 /**
  * Custom hash function for nodes.
  */
 struct NodeHash {
-  std::size_t operator()(Node * n) const __attribute__((optimize("-O2")));
+  std::size_t operator()(const Node& n) const __attribute__((optimize("-O2")));
 };
 
 /**
@@ -109,8 +110,8 @@ class GriffinBot : Bot {
     int num_moves;
     std::chrono::high_resolution_clock::time_point begin;
 
-    BoundAndMove alphaBetaWithMemory(Node * node, int depth, int alpha, int beta) __attribute__((optimize("-O2")));
-    BoundAndMove mtdf(Node * root, Bound first_guess, int depth) __attribute__((optimize("-O2")));
+    BoundAndMove alphaBetaWithMemory(const Node& node, int depth, int alpha, int beta) __attribute__((optimize("-O2")));
+    BoundAndMove mtdf(const Node& root, Bound first_guess, int depth) __attribute__((optimize("-O2")));
 };
 
 #endif /* GRIFFINBOT_H_ */
