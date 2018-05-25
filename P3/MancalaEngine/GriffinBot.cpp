@@ -8,7 +8,6 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#include <chrono>
 
 using namespace std;
 using namespace chrono;
@@ -25,6 +24,9 @@ using Heuristic = Node::Heuristic;
 
 int main() __attribute__((optimize("-O2")));
 
+int created = 0;
+int deleted = 0;
+
 /*****
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -37,8 +39,10 @@ int main() __attribute__((optimize("-O2")));
 
 namespace {
   void delete_table(TTable& table) {
-    for (auto entry : table)
+    for (auto entry : table) {
       delete entry.first;
+      deleted++;
+    }
   }
 }
 
@@ -118,6 +122,8 @@ NodeList Node::children() {
   sort(l.begin(), l.end(), order);
 
 #endif
+
+  created += 6;
 
   return l;
 }
@@ -426,5 +432,10 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
   delete root;
   num_moves++;
 
+  created++;
+  deleted++;
+
+    cerr << "Nodos creados: " << created << endl;
+    cerr << "Nodos borrados: " << deleted + table.size() << endl;
 	return next_move;
 }
