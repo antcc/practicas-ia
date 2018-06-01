@@ -31,7 +31,7 @@ using BoundAndMove = std::pair<Bound, Move>;
 struct Node {
   /**
    * Data structure that represents an (heuristic) evaluation
-   * function nodes.
+   * function for nodes.
    */
   class Heuristic {
     private:
@@ -41,7 +41,8 @@ struct Node {
       Heuristic();
       Heuristic(Player p);
 
-      Bound heuristic(const Node& n) const __attribute__((optimize("-O2")));
+      Bound heuristic(const Node& n) const
+      __attribute__((optimize("-O2")));
   };
 
   static Heuristic h;      // Evaluation function chosen for nodes
@@ -53,7 +54,7 @@ struct Node {
   Node();
   Node(const GameState& board, Move prev_move, bool maximizing_player, const Heuristic& h);
   NodeList children() const __attribute__((optimize("-O2")));
-  bool hasExtraTurn(const Node& parent);
+  bool hasExtraTurn(const Node& parent) const;
 };
 
 /**
@@ -63,7 +64,8 @@ struct NodeOrder {
   bool is_parent_maximizing;
 
   NodeOrder(bool is_parent_maximizing);
-  bool operator()(const Node& n1, const Node& n2) const __attribute__((optimize("-O2")));
+  bool operator()(const Node& n1, const Node& n2) const
+  __attribute__((optimize("-O2")));
 };
 
 /**
@@ -71,14 +73,16 @@ struct NodeOrder {
  * It is independent of the order defined by NodeOrder
  */
 struct NodeComp {
-  bool operator()(const Node& n1, const Node& n2) const __attribute__((optimize("-O2")));
+  bool operator()(const Node& n1, const Node& n2) const
+  __attribute__((optimize("-O2")));
 };
 
 /**
  * Custom hash function for nodes.
  */
 struct NodeHash {
-  std::size_t operator()(const Node& n) const __attribute__((optimize("-O2")));
+  std::size_t operator()(const Node& n) const
+  __attribute__((optimize("-O2")));
 };
 
 /**

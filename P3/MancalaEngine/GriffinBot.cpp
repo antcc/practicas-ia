@@ -24,17 +24,6 @@ using Heuristic = Node::Heuristic;
 
 int main() __attribute__((optimize("-O2")));
 
-/*****
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-* Optimizar:
-  - Optmizar nodos (ya no son punteros)
-  - La heurística
-  - No limpiar la tabla entre iteraciones???
-*
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*******/
-
 /*************************************************
 *                   HEURISTIC                    *
 **************************************************/
@@ -127,7 +116,7 @@ NodeList Node::children() const {
 /**
  * Returns true if the node produces an extra turn.
  */
-bool Node::hasExtraTurn(const Node& parent) {
+bool Node::hasExtraTurn(const Node& parent) const {
   return parent.is_maximizing == is_maximizing;
 }
 
@@ -384,6 +373,7 @@ string GriffinBot::getName() {
 
 Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state) {
   static Heuristic heuristic(getPlayer());
+  int d;
   Move next_move;
   Bound first_guess = 0;
   Node root = Node(state, M_NONE, true, heuristic);
@@ -392,7 +382,7 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 
 #if ITERATIVE_DEEPENING == 1
 
-  for (int d = 1; d <= MAX_DEPTH; d++) {
+  for (d = 1; d <= MAX_DEPTH; d++) {
     auto solution = mtdf(root, first_guess, d);
 
     // Check time
@@ -409,6 +399,8 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 #endif
 
   }
+
+  cerr << "Profundidad del movimiento: " << --d << endl;
 
 #else
 
