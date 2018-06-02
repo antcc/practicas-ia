@@ -5,7 +5,6 @@
  */
 
 #include "Bot.h"
-#include <queue>
 #include <array>
 #include <unordered_map>
 #include <chrono>

@@ -333,7 +333,7 @@ GriffinBot::alphaBetaWithMemory(const Node& node, int depth, int alpha, int beta
  */
 BoundAndMove
 GriffinBot::mtdf(const Node& root, Bound first_guess, int depth) {
-  pair<Bound, Move> best_action;
+  BoundAndMove best_action;
   Bound best_bound = first_guess;
   int upper_bound = INFINITY;
   int lower_bound = -INFINITY;

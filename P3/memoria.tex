@@ -22,8 +22,17 @@
 
 \usepackage{tabularx}
 \usepackage{adjustbox}
+\usepackage{program}
 
 \usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  % hidelinks = true,   % Oculta todos los enlaces.
+  colorlinks = true,   % Muestra todos los enlaces, sin bordes alrededor.
+  linkcolor={black},     % Color de enlaces genéricos
+  citecolor={blue!60!black},   % Color de enlaces de referencias
+  urlcolor={blue!60!black}     % Color de enlaces de URL
+}
 
 \definecolor{nord0}{HTML}{2e3440}
 \definecolor{nord4}{HTML}{d8dee9}
@@ -57,18 +66,84 @@ postbreak=\mbox{\textcolor{nord11}{$\hookrightarrow$}\space},
 
 \section{Introducción}
 
+El objetivo de esta práctica es desarrollar un bot que juegue al juego de Mancala. Para ello debemos programar un comportamiento inteligente en el mismo, para que en cada turno elija el movimiento más prometedor.
+
+Una aproximación inicial sería implementar el algoritmo minimax con poda alpha-beta visto en clase. Sin embargo, optamos por el algoritmo MTD-f \cite{mtdf}, que se trata de una variación de la poda alpha-beta con tamaño de ventana cero.
+
 \section{Diseño del algoritmo}
 
-\subsection*{Representación de un estado de búsqueda}
+\subsection*{Representación de un estado de la búsqueda}
+
+Para representar un estado en el espacio de búsqueda, empleamos una estructura de datos que agrupa los datos esenciales, a saber:
+
+\begin{verbatim}
+Node {
+  h;              // Evaluation function chosen for nodes
+  board;          // Current board state
+  prev_move;      // Movement performed to get to this node
+  h_value;        // Heuristic value of node
+  is_maximizing;  // Whether this is a MAX or a MIN node
+};
+\end{verbatim}
+
+Como vemos, en cada nodo guardamos el estado del tablero, el movimiento que nos permitió llegar hasta él, su valor heurístico (dado por una función de evaluación concreta), y si se trata de un nodo MAX ó MIN. 
+
+Además, se añade un método para generar los hijos de un nodo, que devuelve una lista de 6 nodos. Cada uno de estos hijos es el resultado de seleccionar uno de los posibles casilleros, obtenidos gracias a la función \verb|simulateMove|, y teniendo en cuenta que si el jugador asociado es el mismo que el del padre debemos mantener el mismo tipo (MAX ó MIN) que el padre, mientras que si el jugador es distinto, cambiamos el tipo.
+
+La implementación de los métodos se encuentra en el archivo \verb|AlumnoBot.cpp|.
 
 \subsection*{Descripción general del algoritmo MTD-f}
 
+La idea del algoritmo es realizar una serie de búsquedas apha-beta con tamaño de ventana \verb|0|, usando una ``buena'' cota. El pseudocódigo del algoritmo es el siguiente:
+
+\vspace{-2em}
+\begin{program}
+\FUNCT mtdf(root, f, d)
+g:=f;
+upperbound:=INFINITY
+lowerbound:=-INFINITY
+\WHILE lowerbound < upperbound \DO
+beta:= max(g, lowerbound + 1)
+g := alphaBetaWithMemory(root, beta - 1, beta, d)
+    \IF g < beta 
+    \THEN upperbound:=g
+\ELSE lowerbound:=g 
+\FI
+\OD
+|return| \ g
+\end{program}
+
+En este caso, la llamada a la función de búsqueda no devuelve el valor minimax, sino una cota del mismo, y para converger al valor exacto debemos realizar una serie de iteraciones actualizando las cotas inferiores y superiores según sea necesario.
+
+Se puede comprobar que con llamadas de ventana \verb|0|, el algoritmo de poda alpha-beta consigue cortar ramas antes. Además, se necesita una primera aproximación del valor minimax (variable \verb|first_guess|), que en una primera llamada puede ser \verb|0|.
+
 \subsection*{Detalles de implementación}
+
+Una vez programado el algoritmo MTD-f, realizamos una \textbf{búsqueda iterativa en profundidad} hasta un máximo fijado (\verb|MAX_DEPTH|). En cada iteración realizamos una llamada a \verb|mtdf|, actualizando el \verb|first_guess|, y saliendo del bucle si vemos que dicha función ha devuelto un código especial (\verb|TIMEOUT|) que indica que estamos cerca consumir los 2 segundos permitidos.
+
+Programamos una función  \verb|alphaBetaWithMemory|, que devuelve una pareja \verb|<Bound,Move>| representando el mejor valor esperado (cota) y el movimiento asociado al mismo. Esta función implementa básicamente el algoritmo de poda alpha-beta visto en clase, con la salvedad de que emplea una \textbf{tabla \textit{hash}} para ir guardando los nodos entre iteraciones. 
+
+Esta tabla hash se implementa como un \verb|unordered_map|, con una función \textit{hash} ingenua construída a partir del estado de un tablero, pues consideramos que dos nodos son iguales si sus tableros asociados lo son. La utilidad que tiene es que si encontramos un nodo en la tabla, tenemos información sobre una búsqueda anterior y las correspondientes cotas.
+
+Creamos una estructura de datos adicional, \verb|NodeInfo|, que representa una entrada de la tabla, indexada por un objeto de tipo \verb|Node|. En ella guardamos la profundidad a la que nos encontramos el nodo en la búsqueda, la ``edad'' de la información, la cota asociada al nodo (superior o inferior) y el mejor movimiento que sabemos hasta ahora que puede realizar a partir de él.
+
+También consideramos una \textbf{ordenación de movimientos}, pues es bien sabido que la poda alpha-beta es óptima si se exploran primero los mejores nodos. En nuestro caso, ordenamos los hijos de un nodo al crearlos en base a su valor heurístico. Además, si consultamos un nodo en nuestra tabla, probamos primero el movimiento que tiene asociado, con la esperanza de que sea el mejor y produzca un corte.
+
+Por último, cabe destacar que la medición de tiempos se realiza utilizando la librería \verb|std::chrono|. La estrategia es medir en cada iteración de la función \verb|alphaBetaWithMemory| el tiempo total consumido, y si llega a un umbral predefinido, devolver recursivamente un código de error. Es por esto que \textbf{en todos los movimientos se consume casi todo el tiempo permitido}, lo que nos permite llegar a profundidades grandes sin miedo a quedarnos sin tiempo.
 
 \section{Heurística}
 
+En cuanto a la heurística elegida para el valor de los nodos hoja, se ha optado por una métrica sencilla pero efectiva: \textbf{la diferencia entre el número de semillas en nuestro granero y en el de nuestro oponente}. 
+
+En un principio se probaron otras heurísticas, que medían por ejemplo lo cerca que estaba el rival de ganar, la profundidad del nodo evaluado, o la obtención de turnos extra. También se hicieron pruebas combinando alguna de estas heurísticas, pero la conclusión fue que la heurística elegida (resta de graneros) era la más eficaz y segura, pues proporcionaba el mayor número de victorias.
+
+La representación de la heurística se encapsula en una clase \verb|Heuristic|, estando esta a su vez dentro de la clase \verb|Node|. La función heurística necesita conocer si jugamos como \verb|J1| o como \verb|J2|. 
+
 
 \begin{thebibliography}{9}
+
+\bibitem{mtdf}
+\textit{Aske Plaat (1997)}. MTD(f): A Minimax Algorithm faster than NegaScout. \\ \url{https://people.csail.mit.edu/plaat/mtdf.html}
 
 \end{thebibliography}
 
