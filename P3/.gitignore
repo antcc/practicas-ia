@@ -1,5 +1,6 @@
 *.jar
 *.sh
+*.tex.swp
 MancalaEngine/*
 GreedyBot/*
 Bots/*
