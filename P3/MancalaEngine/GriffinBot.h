@@ -111,7 +111,7 @@ class GriffinBot : Bot {
 
   private:
     TTable table;
-    int num_moves;
+    int current_move;
     std::chrono::high_resolution_clock::time_point begin;
 
     BoundAndMove alphaBetaWithMemory(const Node& node, int depth, int alpha, int beta) __attribute__((optimize("-O2")));

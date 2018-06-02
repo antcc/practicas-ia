@@ -219,7 +219,7 @@ GriffinBot::alphaBetaWithMemory(const Node& node, int depth, int alpha, int beta
   if (entry_it != table.end()) { // Table hit
     entry = (*entry_it).second;
 
-    if (entry.depth >= depth && entry.age == num_moves) {
+    if (entry.depth >= depth && entry.age == current_move) {
       table_hit = true;
 
       if (entry.is_lowerbound && entry.value > alpha)
@@ -317,11 +317,11 @@ GriffinBot::alphaBetaWithMemory(const Node& node, int depth, int alpha, int beta
   }
 
   if (best_bound <= alpha) {
-    table[node] = {depth, num_moves, false, best_bound, table_hit ? entry.best_move : M_NONE};
+    table[node] = {depth, current_move, false, best_bound, table_hit ? entry.best_move : M_NONE};
   }
 
   if (best_bound >= beta) {
-    table[node] = {depth, num_moves, true, best_bound, best_move};
+    table[node] = {depth, current_move, true, best_bound, best_move};
   }
 
   return make_pair(best_bound, best_move);
@@ -358,7 +358,7 @@ GriffinBot::mtdf(const Node& root, Bound first_guess, int depth) {
 }
 
 GriffinBot::GriffinBot() {
-  num_moves = 0;
+  current_move = 0;
 }
 
 GriffinBot::~GriffinBot() {
@@ -413,7 +413,7 @@ Move GriffinBot::nextMove(const vector<Move>& adversary, const GameState& state)
 
   cerr << "Tiempo total del movimiento: " << time_span.count() / 1e3 << endl;
 
-  num_moves++;
+  current_move++;
 
 	return next_move;
 }
