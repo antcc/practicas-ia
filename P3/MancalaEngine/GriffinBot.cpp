@@ -1,5 +1,5 @@
 /*
- * GriffinBot.h
+ * GriffinBot.cpp
  *
  * Autor: Antonio Coín Castro
  */
