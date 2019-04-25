@@ -1,3 +1,7 @@
-*
+/*
+!README.md
 !.gitignore
-!Comportamientos_Jugador/jugador.*
+!Comportamientos_Jugador/
+Comportamientos_Jugador/*
+!Comportamientos_Jugador/jugador.cpp
+!Comportamientos_Jugador/jugador.hpp
